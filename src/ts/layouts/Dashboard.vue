@@ -1,5 +1,5 @@
 <template lang="pug">
-  h1 Dashboard layout
+h1 Dashboard layout
 </template>
 
 <script lang="ts">
