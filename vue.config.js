@@ -13,7 +13,9 @@ module.exports = {
     resolve: {
       extensions: ['.ts', '.vue'],
       alias: {
-        'cmp@': path.join(__dirname, 'src/components/')
+        '@': path.join(__dirname, 'src/'),
+        'c@': path.join(__dirname, 'src/ts/components/'),
+        'l@': path.join(__dirname, 'src/ts/layouts/')
       }
     }
   }

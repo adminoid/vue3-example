@@ -1,6 +1,6 @@
 # Some notes about project structure
 
-## Aliases
+## Aliases (with example)
 **jest.config.js**
 ```js
 module.exports = {
@@ -26,3 +26,16 @@ module.exports = {
 }
 ```
 
+**vue.config.js**
+```js
+module.exports = {
+  configureWebpack: {
+    resolve: {
+      extensions: ['.ts', '.vue'],
+      alias: {
+        'cmp@': path.join(__dirname, 'src/components/')
+      }
+    }
+  }
+}
+```

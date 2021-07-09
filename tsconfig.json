@@ -16,12 +16,9 @@
       "jest"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "cmp@/*": [
-        "src/components/*"
-      ]
+      "@/*": ["src/*"],
+      "c@/*": ["src/ts/components/*"],
+      "l@/*": ["src/ts/layouts/*"]
     },
     "lib": [
       "esnext",
