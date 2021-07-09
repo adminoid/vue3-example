@@ -6,11 +6,11 @@ h1 Dashboard layout
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Dashboard',
-  props: {
-    msg: String
-  }
+  name: 'Dashboard'
 })
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+h1
+  font-size: 11em
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <Dashboard msg="Welcome to Your Vue.js + TypeScript App"/>
+  <Dashboard/>
 </template>
 
 <script lang="ts">
