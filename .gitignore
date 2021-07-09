@@ -22,4 +22,4 @@ pnpm-debug.log*
 *.sw?
 
 # custom
-/docs/private
+/docs/private/
