@@ -1,28 +1,51 @@
 // Fonts
 @font-face
-    font-family: 'Plumb-Regular'
-    src: url("../assets/fonts/Plumb-Regular.ttf") format("truetype")
+    font-family: "Plumb"
+    src: url("../assets/fonts/Plumb-Regular.ttf") format('truetype')
+@font-face
+    font-family: "Plumb"
+    src: url("../assets/fonts/Plumb-Black.ttf") format('truetype')
+    font-weight: 900
+@font-face
+    font-family: "Plumb"
+    src: url("../assets/fonts/PlumbSoft-Black.ttf") format('truetype')
+    font-weight: 800
+@font-face
+    font-family: "Plumb"
+    src: url("../assets/fonts/Plumb-Bold.ttf") format('truetype')
+    font-weight: 700 // bold
+@font-face
+    font-family: "Plumb"
+    src: url("../assets/fonts/Plumb-Medium.ttf") format('truetype')
+    font-weight: 500
+@font-face
+    font-family: "Plumb"
+    src: url("../assets/fonts/Plumb-Light.ttf") format('truetype')
+    font-weight: 300
+
+//$font-family-base: $font-family-sans-serif !default
 
 // Variables
-@import 'root'
+@import "root"
 
 // Required
 @import "~bootstrap/scss/functions"
+@import "variables" // Custom variables (before system for overwriting)
 @import "~bootstrap/scss/variables"
 @import "~bootstrap/scss/mixins"
 
+
 // Optional
-//@import "~bootstrap/scss/root"
 @import "~bootstrap/scss/reboot"
-//@import "~bootstrap/scss/type"
-//@import "~bootstrap/scss/images"
+@import "~bootstrap/scss/type"
+@import "~bootstrap/scss/images"
 @import "~bootstrap/scss/containers"
 @import "~bootstrap/scss/grid"
 
 @import "~bootstrap/scss/navbar"
-@import "~bootstrap/scss/buttons"
+//@import "~bootstrap/scss/buttons"
 //@import "~bootstrap/scss/forms"
 @import "~bootstrap/scss/bootstrap-utilities"
 
 body
-    background: #f00
+    background: #C8C8C8
