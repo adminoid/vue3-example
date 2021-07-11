@@ -1,32 +1,25 @@
 <template lang="pug">
-.container
-  h1.text-success Dashboard layout
-  p.black.text-success Dashboard layout
-  p.soft-black Dashboard layout
-  p.bold Dashboard layout
-  p.medium Dashboard layout
-  p.light Dashboard layout
+top-navbar
+left-sidebar
+main-content
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import TopNavbar from 'c@/TopNavbar.vue'
+import LeftSidebar from 'c@/LeftSidebar.vue'
+import MainContent from 'c@/MainContent.vue'
 
 export default defineComponent({
-  name: 'Dashboard'
+  name: 'Dashboard',
+  components: {
+    LeftSidebar,
+    TopNavbar,
+    MainContent
+  }
 })
 </script>
 
 <style lang="sass" scoped>
-h1
-  font-size: 3em
-p.black
-  font-weight: 900
-p.soft-black
-  font-weight: 800
-p.bold
-  font-weight: bold
-p.medium
-  font-weight: 500
-p.light
-  font-weight: 300
+
 </style>
