@@ -4,7 +4,7 @@ module.exports = {
     '^.+\\.vue$': 'vue-jest'
   },
   moduleNameMapper: {
-    '@/(.*)': '<rootDir>/src/$1',
-    'c@/(.*)': '<rootDir>/src/ts/components/$1'
+    'c@/(.*)': '<rootDir>/src/ts/components/$1',
+    '@/(.*)': '<rootDir>/src/$1'
   }
 }
