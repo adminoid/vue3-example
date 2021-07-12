@@ -5,7 +5,6 @@ module.exports = {
   },
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
-    'c@/(.*)': '<rootDir>/src/ts/components/$1',
-    'l@/(.*)': '<rootDir>/src/ts/layouts/$1'
+    'c@/(.*)': '<rootDir>/src/ts/components/$1'
   }
 }

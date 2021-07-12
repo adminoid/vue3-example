@@ -18,7 +18,6 @@
     "paths": {
       "@/*": ["src/*"],
       "c@/*": ["src/ts/components/*"],
-      "l@/*": ["src/ts/layouts/*"]
     },
     "lib": [
       "esnext",

@@ -1,15 +1,15 @@
 <template>
-  <Dashboard/>
+  <DashboardLayout/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Dashboard from 'l@/Dashboard.vue'
+import DashboardLayout from 'c@/DashboardLayout.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    Dashboard
+    DashboardLayout
   }
 })
 </script>

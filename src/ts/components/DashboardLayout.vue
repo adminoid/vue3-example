@@ -11,7 +11,7 @@ import LeftSidebar from 'c@/LeftSidebar.vue'
 import MainContent from 'c@/MainContent.vue'
 
 export default defineComponent({
-  name: 'Dashboard',
+  name: 'DashboardLayout',
   components: {
     LeftSidebar,
     TopNavbar,
