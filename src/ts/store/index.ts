@@ -1,7 +1,14 @@
 import { createStore, Store } from 'vuex'
 import layout from './modules/layout'
 
-type StoreType = Store<{layout: {sidebarOpen: boolean}}>
+type StoreType = Store<{
+  layout: {
+    sidebar: {
+      open: boolean,
+      stick: boolean,
+    }
+  }
+}>
 
 export default createStore({
   modules: {

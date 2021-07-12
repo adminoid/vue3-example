@@ -1,3 +1,6 @@
 export default () => ({
-  sidebarOpen: false
+  sidebar: {
+    open: false,
+    stick: false
+  }
 })

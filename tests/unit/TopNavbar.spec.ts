@@ -10,11 +10,11 @@ describe('TopNavbar.vue', () => {
       }
     })
 
-    expect(store.state.layout.sidebarOpen).toEqual(false)
+    expect(store.state.layout.sidebar.open).toEqual(false)
 
     const link = wrapper.find('.navbar__toggle-sidebar')
     await link.trigger('click')
 
-    expect(store.state.layout.sidebarOpen).toEqual(true)
+    expect(store.state.layout.sidebar.open).toEqual(true)
   })
 })
