@@ -2,10 +2,16 @@
 nav.navbar.navbar-fixed-top
   .container-fluid
     .navbar-left
-      a.navbar__toggle-sidebar.btn-outline-dark(
-        href="#"
+      svg.navbar__sidebar-open(
         @click.prev="toggleSidebar"
-      ) (+)
+        width='45px' height='32px'
+        viewBox='0 0 45 32'
+      )
+        g(fill='#FFF')
+          rect(x='0' y='0' width='32' height='4' rx='2')
+          rect.hovered(x='0' y='14' width='32' height='4' rx='2')
+          rect(x='0' y='28' width='45' height='4' rx='2')
+      img.logo(src="/logo-white.svg")
     .navbar-right Right nav
 </template>
 
@@ -28,4 +34,14 @@ export default TopNavbar
 <style lang="sass">
 .navbar
   line-height: 2.5
+  height: 56px
+  .logo
+    margin-left: 38px
+  .navbar__sidebar-open
+    cursor: pointer
+    rect.hovered
+      transition: width 100ms ease-in-out
+    &:hover
+      rect.hovered
+        width: 45px
 </style>
