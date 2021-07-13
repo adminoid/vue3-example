@@ -24,3 +24,8 @@ const TopNavbar = defineComponent({
 
 export default TopNavbar
 </script>
+
+<style lang="sass">
+.navbar
+  line-height: 2.5
+</style>
