@@ -1,5 +1,8 @@
 <template lang="pug">
-.left-sidebar(:class="{open: sidebarOpen}") {{ width }}
+.left-sidebar(:class="{open: sidebarOpen}")
+  .left-sidebar__header
+    img.left-sidebar__close(src="/icons/close.svg")
+    img.left-sidebar__logo(src="/logo-black.svg")
   .left-sidebar__sticker
     img(src="/icons/pin-off.svg")
 </template>
@@ -27,17 +30,35 @@ export default LeftSidebar
 
 .left-sidebar
   position: fixed
-  background: #c5dce5
+  background: $left-sidebar-bg
   min-height: 100%
   width: $left-sidebar-width
   left: -$left-sidebar-width
   transition: left 100ms ease-in-out
   &.open
     left: 0
+    top: 0
   .left-sidebar__sticker
     position: absolute
     right: 0
     top: 100px
     width: 30px
     height: 30px
+  .left-sidebar__header
+    position: fixed
+    left: 0
+    top: 0
+    height: 56px
+    width: 150px
+    background: #C8C8C8
+    overflow: hidden
+    //opacity: .5
+  .left-sidebar__logo
+    position: absolute
+    left: 95px
+    top: 9px
+  .left-sidebar__close
+    position: absolute
+    left: 18px
+    top: 13px
 </style>
