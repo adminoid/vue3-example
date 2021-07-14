@@ -3,10 +3,10 @@ nav.navbar.navbar-fixed-top
   .container-fluid
     .navbar-left
       svg.navbar__sidebar-open(
-        @click="sidebarToggle"
+        @click="toggle"
         width='45px' height='32px'
         viewBox='0 0 45 32'
-        :class="{open: sidebarOpen}"
+        :class="{open: sidebarOpen, ready: animationAvailable}"
       )
         g#lines(fill='#FFF')
           rect#line-1(x='0' y='0' width='32' height='4' rx='2')
@@ -17,15 +17,21 @@ nav.navbar.navbar-fixed-top
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 const TopNavbar = defineComponent({
   setup () {
     const store = useStore()
+    const animationAvailable = ref(false)
+    const toggle = () => {
+      animationAvailable.value = true
+      store.commit('layout/sidebarToggle')
+    }
     return {
-      sidebarToggle: () => store.commit('layout/sidebarToggle'),
-      sidebarOpen: computed(_ => store.state.layout.sidebar.open)
+      sidebarOpen: computed(_ => store.state.layout.sidebar.open),
+      animationAvailable,
+      toggle
     }
   }
 })
@@ -46,30 +52,44 @@ export default TopNavbar
     z-index: 100
     rect, g#lines
       transition: all $left-sidebar-animation-speed ease-in-out
-    rect#line-1
-      animation-name: to-open
-      animation-duration: $left-sidebar-animation-speed
-      animation-fill-mode: forwards
-      width: 32px
     &:hover
       rect.hovered
         width: 45px
-    &.open
-      g#lines
-        fill: #000
+    &.ready
       rect#line-1
-        animation-name: to-close
+        animation-name: to-open-line-1
         animation-duration: $left-sidebar-animation-speed
         animation-fill-mode: forwards
-        width: 40px
-@keyframes to-close
+        width: 32px
+      &.open
+        g#lines
+          fill: #000
+        rect#line-1
+          animation-name: to-close-line-1
+          animation-duration: $left-sidebar-animation-speed
+          animation-fill-mode: forwards
+          width: 40px
+@keyframes to-close-line-1
   0%
     transform: translate(0) rotate(0deg)
   100%
     transform: translate(10px) rotate(45deg)
-@keyframes to-open
+@keyframes to-open-line-1
   0%
     transform: translate(10px) rotate(45deg)
   100%
     transform: translate(0) rotate(0deg)
+@keyframes to-close-line-2
+  0%
+    transform: translate(0) scale(1)
+    //opacity: 1
+  100%
+    transform: translateY(5px) scale(.3)
+    //opacity: 0
+//@keyframes to-open-line-2
+//  0%
+//    transform: translate(10px) rotate(45deg)
+//  100%
+//    transform: translate(0) rotate(0deg)
+
 </style>
