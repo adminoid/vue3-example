@@ -10,7 +10,7 @@ nav.navbar.navbar-fixed-top
       )
         g#lines(fill='#FFF')
           rect#line-1(x='0' y='0' width='32' height='4' rx='2')
-          rect.hovered(x='0' y='14' width='32' height='4' rx='2')
+          rect#line-2(x='0' y='14' width='32' height='4' rx='2')
           rect#line-3(x='0' y='28' width='45' height='4' rx='2')
       img.logo(src="@/assets/logo-white.svg")
     .navbar-right Right nav
@@ -53,7 +53,7 @@ export default TopNavbar
     rect, g#lines
       transition: all $left-sidebar-animation-speed ease-in-out
     &:hover
-      rect.hovered
+      rect#line-2
         width: 45px
     &.ready
       rect#line-1
@@ -61,6 +61,11 @@ export default TopNavbar
         animation-duration: $left-sidebar-animation-speed
         animation-fill-mode: forwards
         width: 32px
+      rect#line-2
+        animation-name: to-open-line-2
+        animation-duration: $left-sidebar-animation-speed
+        animation-fill-mode: forwards
+
       &.open
         g#lines
           fill: #000
@@ -69,6 +74,11 @@ export default TopNavbar
           animation-duration: $left-sidebar-animation-speed
           animation-fill-mode: forwards
           width: 40px
+        rect#line-2
+          animation-name: to-close-line-2
+          animation-duration: $left-sidebar-animation-speed
+          animation-fill-mode: forwards
+
 @keyframes to-close-line-1
   0%
     transform: translate(0) rotate(0deg)
@@ -79,17 +89,17 @@ export default TopNavbar
     transform: translate(10px) rotate(45deg)
   100%
     transform: translate(0) rotate(0deg)
+
 @keyframes to-close-line-2
   0%
-    transform: translate(0) scale(1)
-    //opacity: 1
+    opacity: 1
   100%
-    transform: translateY(5px) scale(.3)
-    //opacity: 0
-//@keyframes to-open-line-2
-//  0%
-//    transform: translate(10px) rotate(45deg)
-//  100%
-//    transform: translate(0) rotate(0deg)
+    opacity: 0
+
+@keyframes to-open-line-2
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 </style>
