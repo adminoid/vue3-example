@@ -1,10 +1,6 @@
 <template lang="pug">
 .left-sidebar(:class="{open: sidebarOpen}")
   .left-sidebar__header(:class="{open: sidebarOpen}")
-    img.left-sidebar__close(
-      src="@/assets/icons/close.svg"
-      @click="closeSidebar"
-    )
     img.left-sidebar__logo(src="@/assets/logo-black.svg")
   .left-sidebar__sticker(v-if="sidebarOpen" @click="togglePin")
     svg(v-if="sidebarPinned" width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')

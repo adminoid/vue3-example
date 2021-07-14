@@ -69,6 +69,10 @@ export default TopNavbar
         animation-name: to-open-line-2
         animation-duration: $left-sidebar-animation-speed
         animation-fill-mode: forwards
+      rect#line-3
+        animation-name: to-open-line-3
+        animation-duration: $left-sidebar-animation-speed
+        animation-fill-mode: forwards
 
       &.open
         g#lines
@@ -77,20 +81,25 @@ export default TopNavbar
           animation-name: to-close-line-1
           animation-duration: $left-sidebar-animation-speed
           animation-fill-mode: forwards
-          width: 40px
+          width: 41px
         rect#line-2
           animation-name: to-close-line-2
           animation-duration: $left-sidebar-animation-speed
           animation-fill-mode: forwards
+        rect#line-3
+          animation-name: to-close-line-3
+          animation-duration: $left-sidebar-animation-speed
+          animation-fill-mode: forwards
+          width: 41px
 
 @keyframes to-close-line-1
   0%
     transform: translate(0) rotate(0deg)
   100%
-    transform: translate(10px) rotate(45deg)
+    transform: translate(9px, 0px) rotate(45deg)
 @keyframes to-open-line-1
   0%
-    transform: translate(10px) rotate(45deg)
+    transform: translate(9px, 0px) rotate(45deg)
   100%
     transform: translate(0) rotate(0deg)
 
@@ -105,5 +114,16 @@ export default TopNavbar
     opacity: 0
   100%
     opacity: 1
+
+@keyframes to-close-line-3
+  0%
+    transform: translate(0) rotate(0deg)
+  100%
+    transform: translate(-14px, 9px) rotate(-45deg)
+@keyframes to-open-line-3
+  0%
+    transform: translate(-14px, 9px) rotate(-45deg)
+  100%
+    transform: translate(0) rotate(0deg)
 
 </style>
