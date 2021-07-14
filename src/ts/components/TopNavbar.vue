@@ -46,6 +46,11 @@ export default TopNavbar
     z-index: 100
     rect, g#lines
       transition: all $left-sidebar-animation-speed ease-in-out
+    rect#line-1
+      animation-name: to-open
+      animation-duration: $left-sidebar-animation-speed
+      animation-fill-mode: forwards
+      width: 32px
     &:hover
       rect.hovered
         width: 45px
@@ -53,13 +58,18 @@ export default TopNavbar
       g#lines
         fill: #000
       rect#line-1
-        animation-name: close
+        animation-name: to-close
         animation-duration: $left-sidebar-animation-speed
         animation-fill-mode: forwards
         width: 40px
-@keyframes close
+@keyframes to-close
   0%
     transform: translate(0) rotate(0deg)
   100%
     transform: translate(10px) rotate(45deg)
+@keyframes to-open
+  0%
+    transform: translate(10px) rotate(45deg)
+  100%
+    transform: translate(0) rotate(0deg)
 </style>
