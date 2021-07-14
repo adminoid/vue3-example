@@ -25,6 +25,10 @@ const TopNavbar = defineComponent({
     const store = useStore()
     const animationAvailable = ref(false)
     const toggle = () => {
+      /**
+       * Var animationAvailable prevented animation when the page is loaded.
+       * Animation works only after the first click
+       */
       animationAvailable.value = true
       store.commit('layout/sidebarToggle')
     }
