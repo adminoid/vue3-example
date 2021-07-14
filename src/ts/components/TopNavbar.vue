@@ -3,7 +3,7 @@ nav.navbar.navbar-fixed-top
   .container-fluid
     .navbar-left
       svg.navbar__sidebar-open(
-        @click="toggleSidebar"
+        @click="sidebarToggle"
         width='45px' height='32px'
         viewBox='0 0 45 32'
       )
@@ -23,7 +23,7 @@ const TopNavbar = defineComponent({
   setup () {
     const store = useStore()
     return {
-      toggleSidebar: () => store.commit('layout/toggleSidebar')
+      sidebarToggle: () => store.commit('layout/sidebarToggle')
     }
   }
 })

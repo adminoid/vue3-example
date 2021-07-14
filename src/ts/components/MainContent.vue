@@ -1,12 +1,33 @@
 <template lang="pug">
-main
+main(:class="{padding: hasPadding}")
   .container-fluid Main content
 </template>
 
+<script lang="ts">
+import { computed, defineComponent } from 'vue'
+import { useStore } from 'vuex'
+
+const MainContent = defineComponent({
+  setup () {
+    const store = useStore()
+    const hasPadding = computed(
+      _ => store.state.layout.sidebar.open &&
+        store.state.layout.sidebar.pinned)
+    return {
+      hasPadding
+    }
+  }
+})
+
+export default MainContent
+</script>
+
 <style lang="sass">
+@import "src/sass/variables"
 main
   float: right
   width: 100%
-  //&.with-sidebar
-  //  width: calc(100% - #{$left-sidebar-width})
+  transition: width $left-sidebar-animation-speed ease-in-out
+  &.padding
+    width: calc(100% - #{$left-sidebar-width})
 </style>
