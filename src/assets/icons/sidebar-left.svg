@@ -4,9 +4,9 @@
     <g id="layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-12.000000, -12.000000)" fill="#FFFFFF">
             <g id="sidebar-left" transform="translate(12.000000, 12.000000)">
-                <rect id="strike" x="0" y="0" width="32" height="4" rx="2"></rect>
-                <rect id="strike" x="0" y="14" width="32" height="4" rx="2"></rect>
-                <rect id="strike" x="0" y="28" width="45" height="4" rx="2"></rect>
+                <rect id="line" x="0" y="0" width="32" height="4" rx="2"></rect>
+                <rect id="line" x="0" y="14" width="32" height="4" rx="2"></rect>
+                <rect id="line" x="0" y="28" width="45" height="4" rx="2"></rect>
             </g>
         </g>
     </g>

@@ -106,4 +106,5 @@ export default LeftSidebar
     left: 18px
     top: 13px
     cursor: pointer
+    opacity: .5
 </style>

@@ -6,24 +6,26 @@ nav.navbar.navbar-fixed-top
         @click="sidebarToggle"
         width='45px' height='32px'
         viewBox='0 0 45 32'
+        :class="{open: sidebarOpen}"
       )
-        g(fill='#FFF')
-          rect(x='0' y='0' width='32' height='4' rx='2')
+        g#lines(fill='#FFF')
+          rect#line-1(x='0' y='0' width='32' height='4' rx='2')
           rect.hovered(x='0' y='14' width='32' height='4' rx='2')
-          rect(x='0' y='28' width='45' height='4' rx='2')
+          rect#line-3(x='0' y='28' width='45' height='4' rx='2')
       img.logo(src="@/assets/logo-white.svg")
     .navbar-right Right nav
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 
 const TopNavbar = defineComponent({
   setup () {
     const store = useStore()
     return {
-      sidebarToggle: () => store.commit('layout/sidebarToggle')
+      sidebarToggle: () => store.commit('layout/sidebarToggle'),
+      sidebarOpen: computed(_ => store.state.layout.sidebar.open)
     }
   }
 })
@@ -32,6 +34,7 @@ export default TopNavbar
 </script>
 
 <style lang="sass">
+@import "src/sass/variables"
 .navbar
   line-height: 2.5
   height: 56px
@@ -39,9 +42,24 @@ export default TopNavbar
     margin-left: 38px
   .navbar__sidebar-open
     cursor: pointer
-    rect.hovered
-      transition: width 100ms ease-in-out
+    position: relative
+    z-index: 100
+    rect, g#lines
+      transition: all $left-sidebar-animation-speed ease-in-out
     &:hover
       rect.hovered
         width: 45px
+    &.open
+      g#lines
+        fill: #000
+      rect#line-1
+        animation-name: close
+        animation-duration: $left-sidebar-animation-speed
+        animation-fill-mode: forwards
+        width: 40px
+@keyframes close
+  0%
+    transform: translate(0) rotate(0deg)
+  100%
+    transform: translate(10px) rotate(45deg)
 </style>
