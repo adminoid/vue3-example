@@ -1,7 +1,10 @@
 <template lang="pug">
 .left-sidebar(:class="{open: sidebarOpen}")
-  .left-sidebar__header
-    img.left-sidebar__close(src="/icons/close.svg")
+  .left-sidebar__header(:class="{open: sidebarOpen}")
+    img.left-sidebar__close(
+      src="/icons/close.svg"
+      @click="closeSidebar"
+    )
     img.left-sidebar__logo(src="/logo-black.svg")
   .left-sidebar__sticker
     img(src="/icons/pin-off.svg")
@@ -16,7 +19,8 @@ const LeftSidebar = defineComponent({
     const store = useStore()
     const sidebarOpen = computed(_ => store.state.layout.sidebar.open)
     return {
-      sidebarOpen
+      sidebarOpen,
+      closeSidebar: () => store.commit('layout/toggleSidebar')
     }
   }
 })
@@ -34,7 +38,7 @@ export default LeftSidebar
   min-height: 100%
   width: $left-sidebar-width
   left: -$left-sidebar-width
-  transition: left 100ms ease-in-out
+  transition: left $left-sidebar-animation-speed ease-in-out
   &.open
     left: 0
     top: 0
@@ -49,10 +53,12 @@ export default LeftSidebar
     left: 0
     top: 0
     height: 56px
-    width: 150px
     background: #C8C8C8
     overflow: hidden
-    //opacity: .5
+    transition: width $left-sidebar-animation-speed ease-in-out
+    width: 0
+    &.open
+      width: $left-sidebar-width
   .left-sidebar__logo
     position: absolute
     left: 95px
@@ -61,4 +67,5 @@ export default LeftSidebar
     position: absolute
     left: 18px
     top: 13px
+    cursor: pointer
 </style>

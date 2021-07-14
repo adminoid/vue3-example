@@ -3,7 +3,7 @@ nav.navbar.navbar-fixed-top
   .container-fluid
     .navbar-left
       svg.navbar__sidebar-open(
-        @click.prev="toggleSidebar"
+        @click="toggleSidebar"
         width='45px' height='32px'
         viewBox='0 0 45 32'
       )
