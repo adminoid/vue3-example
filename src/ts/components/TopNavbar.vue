@@ -11,7 +11,7 @@ nav.navbar.navbar-fixed-top
           rect(x='0' y='0' width='32' height='4' rx='2')
           rect.hovered(x='0' y='14' width='32' height='4' rx='2')
           rect(x='0' y='28' width='45' height='4' rx='2')
-      img.logo(src="/logo-white.svg")
+      img.logo(src="@/assets/logo-white.svg")
     .navbar-right Right nav
 </template>
 

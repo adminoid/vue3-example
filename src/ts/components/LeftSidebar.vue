@@ -2,10 +2,10 @@
 .left-sidebar(:class="{open: sidebarOpen}")
   .left-sidebar__header(:class="{open: sidebarOpen}")
     img.left-sidebar__close(
-      src="/icons/close.svg"
+      src="@/assets/icons/close.svg"
       @click="closeSidebar"
     )
-    img.left-sidebar__logo(src="/logo-black.svg")
+    img.left-sidebar__logo(src="@/assets/logo-black.svg")
   .left-sidebar__sticker(v-if="sidebarOpen")
     svg(width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')
       g#pin(transform='translate(-302.000000, -174.000000)' fill='#A9A9A9')
@@ -65,7 +65,7 @@ export default LeftSidebar
     display: flex
     justify-content: center
     align-items: center
-    background-image: linear-gradient(180deg, #EEEEEE 0%, #C8C8C8 100%)
+    background-image: linear-gradient(180deg, #EEE 0%, #C8C8C8 100%)
     cursor: pointer
     &:hover
       g#pin
