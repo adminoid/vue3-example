@@ -6,8 +6,21 @@
       @click="closeSidebar"
     )
     img.left-sidebar__logo(src="/logo-black.svg")
-  .left-sidebar__sticker
-    img(src="/icons/pin-off.svg")
+  .left-sidebar__sticker(v-if="sidebarOpen")
+    svg(width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')
+      g#pin(transform='translate(-302.000000, -174.000000)' fill='#A9A9A9')
+        path(d='M310.750813,186.931111 L309.444691,193.025117 C309.294141,193.141706 309.146856,193.2 309.002837,193.2'
+        +' C308.858817,193.2 308.733542,193.141706 308.627013,193.025117 L307.25486,186.931111 L310.750813,186.931111'
+        +' Z M312.601611,175 C313.135031,175.116472 313.476059,175.305786 313.624695,175.567942'
+        +' C313.77333,175.830098 313.740769,176.184841 313.52701,176.63217 L313.52701,176.63217 L312.601611,181.044686'
+        +' C313.771874,181.643738 314.641576,182.3691 315.210717,183.220773 C315.779858,184.072446 316.0412,185.039595'
+        +' 315.994741,186.122222 L315.994741,186.122222 L302.010932,186.122222'
+        +' C301.940704,185.095468 302.20883,184.128318 302.815308,183.220773'
+        +' C303.421787,182.313228 304.284705,181.587866 305.404062,181.044686 L305.404062,181.044686'
+        +' L304.478663,176.63217 C304.273019,176.168944 304.238485,175.814201 304.375063,175.567942'
+        +' 304.51164,175.321683 304.85464,175.132369 305.404062,175 L305.404062,175 Z'
+        transform='translate(309.000000, 184.100000) rotate(-315.000000) translate(-309.000000, -184.100000)')
+
 </template>
 
 <script lang="ts">
@@ -44,10 +57,19 @@ export default LeftSidebar
     top: 0
   .left-sidebar__sticker
     position: absolute
-    right: 0
+    right: -15px
     top: 100px
     width: 30px
     height: 30px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-image: linear-gradient(180deg, #EEEEEE 0%, #C8C8C8 100%)
+    cursor: pointer
+    &:hover
+      g#pin
+        fill: #57B2D9
   .left-sidebar__header
     position: fixed
     left: 0
