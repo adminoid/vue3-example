@@ -1,9 +1,8 @@
 <template lang="pug">
 nav.navbar.navbar-fixed-top
   .container-fluid
-    .navbar-left
+    a.navbar-left(@click="toggle")
       svg.navbar__sidebar-open(
-        @click="toggle"
         width='45px' height='32px'
         viewBox='0 0 45 32'
         :class="{open: sidebarOpen, ready: animationAvailable}"
