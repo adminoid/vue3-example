@@ -54,12 +54,16 @@ export default TopNavbar
     cursor: pointer
     position: relative
     z-index: 100
-    rect, g#lines
-      transition: all $left-sidebar-animation-speed ease-in-out
+    rect#line-2
+      transition: width $left-sidebar-animation-speed ease-in-out
     &:hover
       rect#line-2
         width: 45px
     &.ready
+      g#lines
+        animation-name: to-open-color
+        animation-duration: $left-sidebar-animation-speed
+        animation-fill-mode: forwards
       rect#line-1
         animation-name: to-open-line-1
         animation-duration: $left-sidebar-animation-speed
@@ -76,7 +80,9 @@ export default TopNavbar
 
       &.open
         g#lines
-          fill: #000
+          animation-name: to-close-color
+          animation-duration: $left-sidebar-animation-speed
+          animation-fill-mode: forwards
         rect#line-1
           animation-name: to-close-line-1
           animation-duration: $left-sidebar-animation-speed
@@ -125,5 +131,16 @@ export default TopNavbar
     transform: translate(-14px, 9px) rotate(-45deg)
   100%
     transform: translate(0) rotate(0deg)
+
+@keyframes to-close-color
+  0%
+    fill: #fff
+  100%
+    fill: #000
+@keyframes to-open-color
+  0%
+    fill: #000
+  100%
+    fill: #fff
 
 </style>
