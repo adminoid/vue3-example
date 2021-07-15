@@ -45,6 +45,11 @@ export default TopNavbar
 
 <style lang="sass">
 @import "src/sass/variables"
+
+@mixin animation
+  animation-duration: $left-sidebar-animation-speed
+  animation-fill-mode: forwards
+
 .navbar
   line-height: 2.5
   height: 56px
@@ -62,52 +67,51 @@ export default TopNavbar
     &.ready
       g#lines
         animation-name: to-open-color
-        animation-duration: $left-sidebar-animation-speed
-        animation-fill-mode: forwards
+        @include animation
       rect#line-1
         animation-name: to-open-line-1
-        animation-duration: $left-sidebar-animation-speed
-        animation-fill-mode: forwards
+        @include animation
         width: 32px
       rect#line-2
         animation-name: to-open-line-2
-        animation-duration: $left-sidebar-animation-speed
-        animation-fill-mode: forwards
+        @include animation
       rect#line-3
         animation-name: to-open-line-3
-        animation-duration: $left-sidebar-animation-speed
-        animation-fill-mode: forwards
+        @include animation
 
       &.open
         g#lines
           animation-name: to-close-color
-          animation-duration: $left-sidebar-animation-speed
-          animation-fill-mode: forwards
+          @include animation
         rect#line-1
           animation-name: to-close-line-1
-          animation-duration: $left-sidebar-animation-speed
-          animation-fill-mode: forwards
+          @include animation
           width: 41px
         rect#line-2
           animation-name: to-close-line-2
-          animation-duration: $left-sidebar-animation-speed
-          animation-fill-mode: forwards
+          @include animation
         rect#line-3
           animation-name: to-close-line-3
-          animation-duration: $left-sidebar-animation-speed
-          animation-fill-mode: forwards
+          @include animation
           width: 41px
+
+// before rotation
+$r0: translate(0) rotate(0deg)
+// after rotation line-1
+$r1: translate(9px, 0px) rotate(45deg)
+// after rotation line-3
+$r3: translate(-14px, 9px) rotate(-45deg)
 
 @keyframes to-close-line-1
   0%
-    transform: translate(0) rotate(0deg)
+    transform: $r0
   100%
-    transform: translate(9px, 0px) rotate(45deg)
+    transform: $r1
 @keyframes to-open-line-1
   0%
-    transform: translate(9px, 0px) rotate(45deg)
+    transform: $r1
   100%
-    transform: translate(0) rotate(0deg)
+    transform: $r0
 
 @keyframes to-close-line-2
   0%
@@ -123,14 +127,14 @@ export default TopNavbar
 
 @keyframes to-close-line-3
   0%
-    transform: translate(0) rotate(0deg)
+    transform: $r0
   100%
-    transform: translate(-14px, 9px) rotate(-45deg)
+    transform: $r3
 @keyframes to-open-line-3
   0%
-    transform: translate(-14px, 9px) rotate(-45deg)
+    transform: $r3
   100%
-    transform: translate(0) rotate(0deg)
+    transform: $r0
 
 @keyframes to-close-color
   0%
