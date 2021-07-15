@@ -12,7 +12,7 @@ describe('TopNavbar.vue', () => {
 
     expect(store.state.layout.sidebar.open).toEqual(false)
 
-    const link = wrapper.find('.navbar__toggle-sidebar')
+    const link = wrapper.find('.navbar__sidebar-open')
     await link.trigger('click')
 
     expect(store.state.layout.sidebar.open).toEqual(true)
