@@ -11,6 +11,13 @@
       g#pin(transform='translate(-303.000000, -176.000000)' fill='#A9A9A9')
         path(:d="unpinnedIconD"
         transform='translate(309.000000, 184.000000) rotate(-315.000000) translate(-309.000000, -184.000000) ')
+  .left-sidebar__body
+    ul.left-sidebar__main-menu.list-unstyled
+      li.mb-1
+        a(href) An item
+      li.mb-1
+        a(href) A second item
+
 </template>
 
 <script lang="ts">
