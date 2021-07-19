@@ -1,6 +1,6 @@
 export default () => ({
   sidebar: {
-    open: false,
-    pinned: false
+    open: true,
+    pinned: true
   }
 })

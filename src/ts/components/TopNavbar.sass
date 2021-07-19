@@ -19,6 +19,17 @@
     &:hover
       rect#line-2
         width: 45px
+    &.open
+      g#lines
+        fill: #000
+      rect#line-1
+        transform: translate(9px, 0px) rotate(45deg)
+        width: 41px
+      rect#line-2
+        opacity: 0
+      rect#line-3
+        transform: translate(-14px, 9px) rotate(-45deg)
+        width: 41px
     &.ready
       g#lines
         animation-name: to-open-color
