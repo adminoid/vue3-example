@@ -10,11 +10,10 @@ describe('TopNavbar.vue', () => {
       }
     })
 
-    expect(store.state.layout.sidebar.open).toEqual(false)
-
+    const initialSidebarStatus = store.state.layout.sidebar.open
     const link = wrapper.find('.navbar__sidebar-open')
     await link.trigger('click')
 
-    expect(store.state.layout.sidebar.open).toEqual(true)
+    expect(store.state.layout.sidebar.open).not.toEqual(initialSidebarStatus)
   })
 })
