@@ -1,7 +1,8 @@
 <template lang="pug">
 .left-sidebar(:class="{open: sidebarOpen}")
   .left-sidebar__header(:class="{open: sidebarOpen}")
-    img.left-sidebar__logo(src="@/assets/logo-black.svg")
+    router-link(to="/")
+      img.left-sidebar__logo(src="@/assets/logo-black.svg")
   a.left-sidebar__sticker(v-if="sidebarOpen" @click.prevent="togglePin")
     svg(v-if="sidebarPinned" width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')
       g#pin(transform='translate(-302.000000, -174.000000)' fill='#A9A9A9')

@@ -11,7 +11,8 @@ nav.navbar.navbar-fixed-top
           rect#line-1(x='0' y='0' width='32' height='4' rx='2')
           rect#line-2(x='0' y='14' width='32' height='4' rx='2')
           rect#line-3(x='0' y='28' width='45' height='4' rx='2')
-      img.logo(src="@/assets/logo-white.svg")
+      router-link(to="/")
+        img.logo(src="@/assets/logo-white.svg")
     .navbar-right Right nav
 </template>
 
