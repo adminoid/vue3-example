@@ -8,21 +8,23 @@ main(:class="{ padding: hasPadding }")
 import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
-import SelectObjectExample from 'c@/pages/SelectObjectExample.vue'
-import SelectTimeExample from 'c@/pages/SelectTimeExample.vue'
+import Page404 from 'c@/pages/Page404.vue'
+import ExampleOne from 'c@/pages/ExampleOne.vue'
+import ExampleTwo from 'c@/pages/ExampleTwo.vue'
 import { pascalCase } from 'change-case'
 
 const MainContent = defineComponent({
   components: {
-    SelectObjectExample,
-    SelectTimeExample
+    Page404,
+    ExampleOne,
+    ExampleTwo
   },
 
   setup () {
     const store = useStore()
     const route = useRoute()
     const pageComponent = computed(_ => {
-      let componentName: string | boolean = false
+      let componentName: string = 'Page404'
       if (route.params.page) {
         componentName = pascalCase(String(route.params.page))
       }

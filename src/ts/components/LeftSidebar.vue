@@ -14,9 +14,9 @@
   .left-sidebar__body(v-if="sidebarOpen")
     ul.left-sidebar__main-menu.list-unstyled
       li.mb-1
-        router-link(to="/select-object-example") Пример выборки объектов
+        router-link(to="/example-one") Тестовая страница №1
       li.mb-1
-        router-link(to="/select-time-example") Пример выборки среза времени
+        router-link(to="/example-two") Тестовая страница №2
 </template>
 
 <script lang="ts">
