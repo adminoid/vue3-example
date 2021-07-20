@@ -1,40 +1,34 @@
 <template lang="pug">
 main(:class="{ padding: hasPadding }")
   .container-fluid
-    component(:is="pageComponent")
+    component(:is="pageComponent || Page404")
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, resolveDynamicComponent, defineAsyncComponent } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
 import Index from 'c@/pages/Index.vue'
 import Page404 from 'c@/pages/Page404.vue'
-import ExampleOne from 'c@/pages/ExampleOne.vue'
-import ExampleTwo from 'c@/pages/ExampleTwo.vue'
 import { pascalCase } from 'change-case'
 
 const MainContent = defineComponent({
   components: {
     Index,
     Page404,
-    ExampleOne,
-    ExampleTwo
+    ExampleOne: defineAsyncComponent(() => import('c@/pages/ExampleOne.vue') as any),
+    ExampleTwo: defineAsyncComponent(() => import('c@/pages/ExampleTwo.vue') as any)
   },
 
   setup () {
     const store = useStore()
     const route = useRoute()
     const pageComponent = computed(_ => {
-      let componentName: string = 'Page404'
-      if (route.params.page) {
-        componentName = pascalCase(String(route.params.page))
-      } else if (route.path === '/') {
-        console.info('///')
-        componentName = 'Index'
+      if (route.path === '/') {
+        return 'Index'
       }
-      console.log(componentName)
-      return componentName
+      const componentName: string = pascalCase(String(route.params.page))
+      return typeof resolveDynamicComponent(componentName) !== 'string' ? componentName : 'Page404'
     })
     const hasPadding = computed(
       _ => store.state.layout.sidebar.open &&
