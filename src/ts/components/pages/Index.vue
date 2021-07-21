@@ -29,7 +29,7 @@ export default Index
 
 .washing-preview
   min-height: 250px
-  border: 1px solid $bb-blue
+  border: 2px solid $bb-gray
   border-radius: $border-radius
   background: #fff
   margin-bottom: $vertical-margin
