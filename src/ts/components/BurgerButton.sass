@@ -4,16 +4,15 @@
   animation-duration: $left-sidebar-animation-speed
   animation-fill-mode: forwards
 
-.navbar
-  line-height: 2.5
-  height: 56px
-  user-select: none
-  .logo
-    margin-left: 38px
-  .navbar__sidebar-open
+.burger
+  display: block
+  position: fixed
+  top: 12px
+  left: 12px
+  z-index: 2000
+  .burger__sidebar-open
     cursor: pointer
     position: relative
-    z-index: 100
     rect#line-2
       transition: width $left-sidebar-animation-speed ease-in-out
     &:hover
@@ -44,7 +43,6 @@
       rect#line-3
         animation-name: to-open-line-3
         @include animation
-
       &.open
         g#lines
           animation-name: to-close-color

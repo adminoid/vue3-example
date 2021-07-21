@@ -1,5 +1,19 @@
 <template lang="pug">
-h1.text-success Главная страница
+.washing-preview
+  .widget
+  .widget
+.washing-preview
+  .widget
+  .widget
+  .widget
+  .widget
+.washing-preview
+  .widget
+  .widget
+  .widget
+  .widget
+  .widget
+  .widget
 </template>
 
 <script lang="ts">
@@ -9,3 +23,18 @@ const Index = defineComponent({})
 
 export default Index
 </script>
+
+<style lang="sass">
+@import "src/sass/variables"
+
+.washing-preview
+  min-height: 250px
+  border: 1px solid $bb-blue
+  border-radius: $border-radius
+  background: #fff
+  margin-bottom: $vertical-margin
+  display: flex
+.widget
+  width: 250px
+  height: 100%
+</style>

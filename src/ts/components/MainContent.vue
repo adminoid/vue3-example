@@ -49,7 +49,7 @@ main
   float: right
   width: 100%
   transition: width $left-sidebar-animation-speed ease-in-out
-  padding: 32px 20px
+  padding: 88px 20px 32px
   &.padding
     width: calc(100% - #{$left-sidebar-width})
 </style>
