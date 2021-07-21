@@ -1,27 +1,20 @@
 <template lang="pug">
 .washing-preview
-  .widget
-  .widget
-  .widget
-  .widget
-  .widget
-  .widget
-.washing-preview
-  .widget
-  .widget
-  .widget
-  .widget
-.washing-preview
-  .widget
-  .widget
+  washing-preview-widget
+  washing-preview-widget
+  washing-preview-widget
+  washing-preview-widget
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import WashingPreviewWidget from 'c@/WashingPreviewWidget.vue'
 
-const Index = defineComponent({})
+const WashingPreview = defineComponent({
+  components: { WashingPreviewWidget }
+})
 
-export default Index
+export default WashingPreview
 </script>
 
 <style lang="sass">
@@ -32,10 +25,11 @@ export default Index
   overflow-x: scroll
   min-height: 250px
   border: 2px solid $bb-gray
-  border-radius: $border-radius
   background: #fff
   margin-bottom: $vertical-margin
   padding: 20px
+  &:hover
+    background: #000
 .widget
   flex-shrink: 0
   width: 250px

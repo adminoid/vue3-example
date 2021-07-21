@@ -8,13 +8,13 @@ main(:class="{ padding: hasPadding }")
 import { computed, defineComponent, resolveDynamicComponent, defineAsyncComponent } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute } from 'vue-router'
-import Index from 'c@/pages/Index.vue'
+import MainPage from 'c@/pages/MainPage.vue'
 import Page404 from 'c@/pages/Page404.vue'
 import { pascalCase } from 'change-case'
 
 const MainContent = defineComponent({
   components: {
-    Index,
+    MainPage,
     Page404,
     ExampleOne: defineAsyncComponent(() => import('c@/pages/ExampleOne.vue') as any),
     ExampleTwo: defineAsyncComponent(() => import('c@/pages/ExampleTwo.vue') as any)
@@ -25,7 +25,7 @@ const MainContent = defineComponent({
     const route = useRoute()
     const pageComponent = computed(_ => {
       if (route.path === '/') {
-        return 'Index'
+        return 'MainPage'
       }
       const componentName: string = pascalCase(String(route.params.page))
       return typeof resolveDynamicComponent(componentName) !== 'string' ? componentName : 'Page404'
