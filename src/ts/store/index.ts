@@ -1,6 +1,6 @@
 import { createStore, Store } from 'vuex'
 import layout from './modules/layout'
-import page from './modules/page'
+import mainPage from './modules/main-page'
 
 type StoreType = Store<{
   layout: {
@@ -17,6 +17,6 @@ type StoreType = Store<{
 export default createStore({
   modules: {
     layout,
-    page
+    mainPage
   }
 }) as StoreType

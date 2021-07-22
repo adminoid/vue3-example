@@ -6,11 +6,19 @@ washing-preview
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted } from 'vue'
+import { useStore } from 'vuex'
 import WashingPreview from 'c@/WashingPreview.vue'
 
 const MainPage = defineComponent({
-  components: { WashingPreview }
+  components: { WashingPreview },
+
+  setup () {
+    const store = useStore()
+    onMounted(async () => {
+      await store.dispatch('mainPage/getPageData')
+    })
+  }
 })
 
 export default MainPage
