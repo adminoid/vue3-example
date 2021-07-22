@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "change-case": "^4.1.2",
     "vue": "^3.0.0",
     "vue-router": "4",
@@ -36,7 +37,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^7.0.0",
-    "msw": "^0.32.2",
     "sass": "^1.35.2",
     "sass-loader": "^10.1.1",
     "typescript": "^3.9.9",

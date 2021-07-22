@@ -1,4 +1,4 @@
-type tSidebar = {
+type typeState = {
   sidebar: {
     open: boolean,
     pinned: boolean,
@@ -6,10 +6,10 @@ type tSidebar = {
 }
 
 export default {
-  sidebarToggle (state: tSidebar) {
+  sidebarToggle (state: typeState) {
     state.sidebar.open = !state.sidebar.open
   },
-  sidebarTogglePin (state: tSidebar) {
+  sidebarTogglePin (state: typeState) {
     state.sidebar.pinned = !state.sidebar.pinned
   }
 }

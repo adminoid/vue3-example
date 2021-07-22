@@ -1,41 +1,71 @@
 <template lang="pug">
 main(:class="{ padding: hasPadding }")
   .container-fluid
-    component(:is="pageComponent || Page404")
+    pre {{ pageComponent }}
+    component(:is="pageComponent")
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, resolveDynamicComponent, defineAsyncComponent } from 'vue'
+import {
+  computed,
+  defineComponent,
+  resolveComponent
+} from 'vue'
 import { useStore } from 'vuex'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { pascalCase } from 'change-case'
+import { mainContent as config } from '@/config'
+
 import MainPage from 'c@/pages/MainPage.vue'
 import Page404 from 'c@/pages/Page404.vue'
-import { pascalCase } from 'change-case'
+import ExampleOne from 'c@/pages/ExampleOne.vue'
+import ExampleTwo from 'c@/pages/ExampleTwo.vue'
 
 const MainContent = defineComponent({
   components: {
     MainPage,
     Page404,
-    ExampleOne: defineAsyncComponent(() => import('c@/pages/ExampleOne.vue') as any),
-    ExampleTwo: defineAsyncComponent(() => import('c@/pages/ExampleTwo.vue') as any)
+    ExampleOne,
+    ExampleTwo
   },
 
-  setup () {
+  setup: function () {
     const store = useStore()
     const route = useRoute()
-    const pageComponent = computed(_ => {
-      if (route.path === '/') {
-        return 'MainPage'
-      }
-      const componentName: string = pascalCase(String(route.params.page))
-      return typeof resolveDynamicComponent(componentName) !== 'string' ? componentName : 'Page404'
-    })
+    const router = useRouter()
+
     const hasPadding = computed(
       _ => store.state.layout.sidebar.open &&
         store.state.layout.sidebar.pinned)
+
+    const getUriUppercase = (uri: string|string[]) => pascalCase(String(uri)) || ''
+
+    const pageComponent = computed(() => {
+      if (route.path === '/') return 'MainPage'
+      // check if component by uri (upper cased) exist
+      const uriUppercase = getUriUppercase(route.params.page)
+      const isComponentExist = (uriUppercase: string) => typeof resolveComponent(uriUppercase) !== 'string'
+      console.log(uriUppercase, isComponentExist(uriUppercase))
+      if (isComponentExist(uriUppercase)) {
+        return uriUppercase
+      }
+      return 'Page404'
+    })
+
+    const isNeedToGetPageData = computed(() => config.exclude_pages.includes(pageComponent.value))
+
+    router.afterEach(() => {
+      if (isNeedToGetPageData.value) store.dispatch('page/getPageData', route.params.page)
+    })
+
+    const pageData = computed((): any => {
+      return store.state.page.pages['example-two']
+    })
+
     return {
       hasPadding,
-      pageComponent
+      pageComponent,
+      pageData
     }
   }
 })
