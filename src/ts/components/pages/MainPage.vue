@@ -1,23 +1,27 @@
 <template lang="pug">
-washing-preview
-washing-preview
-washing-preview
-washing-preview
+washer-preview(
+  v-for="washer in washers"
+  :key="washer.id"
+  :washer="washer"
+)
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from 'vue'
+import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
-import WashingPreview from 'c@/WashingPreview.vue'
+import WasherPreview from 'c@/WasherPreview.vue'
 
 const MainPage = defineComponent({
-  components: { WashingPreview },
+  components: { WasherPreview },
 
   setup () {
     const store = useStore()
     onMounted(async () => {
       await store.dispatch('mainPage/getPageData')
     })
+    return {
+      washers: computed(() => store.state.mainPage.washers.washers)
+    }
   }
 })
 

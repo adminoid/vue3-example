@@ -9,9 +9,7 @@ type StoreType = Store<{
       stick: boolean,
     }
   },
-  page: {
-    pages: []
-  }
+  pageData: {}
 }>
 
 export default createStore({

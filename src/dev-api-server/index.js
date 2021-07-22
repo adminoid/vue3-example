@@ -6,8 +6,6 @@ module.exports = (app, server) => {
       req,
       res
     ) => {
-      res.json({
-        test: pages[req.params.page]
-      })
+      res.json(pages[req.params.page])
     })
 }

@@ -1,26 +1,29 @@
 <template lang="pug">
-.washing-preview
-  washing-preview-widget
-  washing-preview-widget
-  washing-preview-widget
-  washing-preview-widget
+.widget {{ widget }}
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import WashingPreviewWidget from 'c@/WashingPreviewWidget.vue'
 
-const WashingPreview = defineComponent({
-  components: { WashingPreviewWidget }
+const WasherPreview = defineComponent({
+  props: {
+    widget: Object
+  },
+
+  setup (props) {
+    return {
+      widgetData: props.widget
+    }
+  }
 })
 
-export default WashingPreview
+export default WasherPreview
 </script>
 
 <style lang="sass">
 @import "src/sass/variables"
 
-.washing-preview
+.washer-preview
   display: flex
   overflow-x: scroll
   min-height: 250px
