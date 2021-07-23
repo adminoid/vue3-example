@@ -1,5 +1,5 @@
 <template lang="pug">
-a.burger(@click="toggle")
+a.burger(href="#" @click="toggle")
   svg.burger__sidebar-open(
     width='45px' height='32px'
     viewBox='0 0 45 32'

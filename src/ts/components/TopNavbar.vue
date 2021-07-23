@@ -5,7 +5,7 @@ nav.navbar.fixed-top
     .navbar-left
       router-link(to="/")
         img.navbar__logo(src="@/assets/logo-white.svg")
-a.chat-button(href @click.prevent="toggleChat")
+a.chat-button(href="#" @click.prevent="toggleChat")
   img(:src="`/icons/chat-${chatIconStatus}.svg`")
 
 </template>

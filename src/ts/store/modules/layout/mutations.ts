@@ -1,21 +1,14 @@
-type typeState = {
-  sidebar: {
-    open: boolean,
-    pinned: boolean,
-  },
-  chat: {
-    open: boolean
-  }
-}
+// importing state type of module
+import { stateType as ST } from './state'
 
 export default {
-  sidebarToggle (state: typeState) {
+  sidebarToggle (state: ST) {
     state.sidebar.open = !state.sidebar.open
   },
-  sidebarTogglePin (state: typeState) {
+  sidebarTogglePin (state: ST) {
     state.sidebar.pinned = !state.sidebar.pinned
   },
-  chatToggle (state: typeState) {
+  chatToggle (state: ST) {
     state.chat.open = !state.chat.open
   }
 }
