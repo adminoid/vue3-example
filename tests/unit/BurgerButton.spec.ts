@@ -1,17 +1,17 @@
 import { shallowMount } from '@vue/test-utils'
-import TopNavbar from 'c@/TopNavbar.vue'
+import BurgerButton from 'c@/BurgerButton.vue'
 import store from '@/ts/store'
 
-describe('TopNavbar.vue', () => {
+describe('BurgerButton.vue', () => {
   it('is open/close button affects to vuex store', async () => {
-    const wrapper = shallowMount(TopNavbar, {
+    const wrapper = shallowMount(BurgerButton, {
       global: {
         plugins: [store]
       }
     })
 
     const initialSidebarStatus = store.state.layout.sidebar.open
-    const link = wrapper.find('.navbar__sidebar-open')
+    const link = wrapper.find('.burger')
     await link.trigger('click')
 
     expect(store.state.layout.sidebar.open).not.toEqual(initialSidebarStatus)
