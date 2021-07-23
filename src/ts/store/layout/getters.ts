@@ -1,4 +1,5 @@
 export default {
-  isShowSidebar (state: any) {},
-  isShowChat (state: any) {}
+  isShowSidebar (state: any) {
+    return (state.sidebar.open && !state.chat.open)
+  }
 }
