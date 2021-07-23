@@ -23,7 +23,7 @@ const BurgerButton = defineComponent({
       store.commit('layout/sidebarToggle')
     }
     return {
-      sidebarOpen: computed(() => store.getters['layout/isShowSidebar']),
+      sidebarOpen: computed(() => store.state.layout.sidebar.open),
       animationEnabled: computed(() => store.state.layout.animationEnabled),
       toggle
     }
