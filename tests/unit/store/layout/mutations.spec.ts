@@ -23,3 +23,27 @@ describe('sidebarToggle()', () => {
     expect(state.chat.open).toEqual(true)
   })
 })
+
+describe('chatToggle()', () => {
+  it('if set chat.open = true, set also sidebar.open = false', () => {
+    const state = {
+      sidebar: { open: true },
+      chat: { open: false }
+    }
+
+    mutations.chatToggle(state)
+    expect(state.chat.open).toEqual(true)
+    expect(state.sidebar.open).toEqual(false)
+  })
+
+  it("if set chat.open = false, don't change sidebar.open", () => {
+    const state = {
+      sidebar: { open: true },
+      chat: { open: true }
+    }
+
+    mutations.chatToggle(state)
+    expect(state.chat.open).toEqual(false)
+    expect(state.sidebar.open).toEqual(true)
+  })
+})

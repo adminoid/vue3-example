@@ -10,5 +10,6 @@ export default {
   chatToggle (state: any) {
     if (!state.animationEnabled) state.animationEnabled = true
     state.chat.open = !state.chat.open
+    if (state.chat.open) state.sidebar.open = false
   }
 }
