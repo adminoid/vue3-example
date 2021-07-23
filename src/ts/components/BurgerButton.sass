@@ -1,7 +1,7 @@
 @import "src/sass/variables"
 
 @mixin animation
-  animation-duration: $left-sidebar-animation-speed
+  animation-duration: $animation-speed
   animation-fill-mode: forwards
 
 .burger
@@ -11,10 +11,9 @@
   left: 12px
   z-index: 2000
   .burger__sidebar-open
-    cursor: pointer
     position: relative
     rect#line-2
-      transition: width $left-sidebar-animation-speed ease-in-out
+      transition: width $animation-speed ease-in-out
     &:hover
       rect#line-2
         width: 45px

@@ -5,14 +5,14 @@ nav.navbar.fixed-top
     .navbar-left
       router-link(to="/")
         img.navbar__logo(src="@/assets/logo-white.svg")
-    .navbar-right
-      a.navbar__toggle-chat(href @click.prevent="toggleChat")
-        img.navbar__chat-icon(src="@/assets/icons/chat-off.svg")
+a.chat-button(href @click.prevent="toggleChat")
+  img(:src="`/icons/chat-${chatIconStatus}.svg`")
+
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-// import { useStore } from 'vuex'
+import { computed, defineComponent } from 'vue'
+import { useStore } from 'vuex'
 import BurgerButton from 'c@/BurgerButton.vue'
 
 const TopNavbar = defineComponent({
@@ -21,13 +21,14 @@ const TopNavbar = defineComponent({
   },
 
   setup () {
-    // const store = useStore()
-    const toggleChat = () => {
-      console.info('toggleChat')
-    }
+    const store = useStore()
+    const chatOpen = computed(_ => store.state.layout.chat.open)
+    const chatIconStatus = computed(() => chatOpen.value ? 'on' : 'off')
 
     return {
-      toggleChat
+      chatOpen,
+      chatIconStatus,
+      toggleChat: () => store.commit('layout/chatToggle')
     }
   }
 })
@@ -44,6 +45,10 @@ export default TopNavbar
   user-select: none
   .navbar__logo
     margin-left: 83px
-  .navbar__toggle-chat
-    display: block
+.chat-button
+  display: block
+  position: fixed
+  top: 7px
+  right: 18px
+  z-index: 2000
 </style>

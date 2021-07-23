@@ -1,0 +1,31 @@
+@import "src/sass/variables"
+
+.right-chat
+  z-index: 1200
+  position: fixed
+  background: $bb-gray
+  min-height: 100%
+  width: $right-chat-width
+  right: -$right-chat-width
+  transition: right $animation-speed ease-in-out
+  &.open
+    right: 0
+    top: 0
+  .right-chat__header
+    position: fixed
+    right: 0
+    top: 0
+    height: 56px
+    background: #C8C8C8
+    overflow: hidden
+    transition: width $animation-speed ease-in-out
+    width: 0
+    &.open
+      width: $right-chat-width
+  .right-chat__logo
+    position: absolute
+    right: 95px
+    top: 9px
+  .right-chat__body
+    padding-top: 91px
+    padding-right: 20px

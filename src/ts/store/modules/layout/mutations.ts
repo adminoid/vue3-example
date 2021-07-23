@@ -2,6 +2,9 @@ type typeState = {
   sidebar: {
     open: boolean,
     pinned: boolean,
+  },
+  chat: {
+    open: boolean
   }
 }
 
@@ -11,5 +14,8 @@ export default {
   },
   sidebarTogglePin (state: typeState) {
     state.sidebar.pinned = !state.sidebar.pinned
+  },
+  chatToggle (state: typeState) {
+    state.chat.open = !state.chat.open
   }
 }
