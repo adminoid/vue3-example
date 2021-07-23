@@ -1,9 +1,9 @@
 <template lang="pug">
-a.burger(href="#" @click="toggle")
+a.burger(href='#' @click="toggle")
   svg.burger__sidebar-open(
     width='45px' height='32px'
     viewBox='0 0 45 32'
-    :class="{open: sidebarOpen, ready: animationAvailable}"
+    :class="{open: sidebarOpen, ready: animationEnabled}"
   )
     g#lines(fill='#FFF')
       rect#line-1(x='0' y='0' width='32' height='4' rx='2')
@@ -13,24 +13,18 @@ a.burger(href="#" @click="toggle")
 
 <script lang="ts">
 
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 
 const BurgerButton = defineComponent({
   setup () {
     const store = useStore()
-    const animationAvailable = ref(false)
     const toggle = () => {
-      /**
-       * Var animationAvailable prevented animation when the page is loaded.
-       * Animation works only after the first click
-       */
-      animationAvailable.value = true
       store.commit('layout/sidebarToggle')
     }
     return {
-      sidebarOpen: computed(_ => store.state.layout.sidebar.open),
-      animationAvailable,
+      sidebarOpen: computed(() => store.getters['layout/isShowSidebar']),
+      animationEnabled: computed(() => store.state.layout.animationEnabled),
       toggle
     }
   }

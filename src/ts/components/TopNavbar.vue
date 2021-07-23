@@ -5,7 +5,7 @@ nav.navbar.fixed-top
     .navbar-left
       router-link(to="/")
         img.navbar__logo(src="@/assets/logo-white.svg")
-a.chat-button(href="#" @click.prevent="toggleChat")
+a.chat-button(href='#' @click.prevent="chatToggle")
   img(:src="`/icons/chat-${chatIconStatus}.svg`")
 
 </template>
@@ -28,7 +28,7 @@ const TopNavbar = defineComponent({
     return {
       chatOpen,
       chatIconStatus,
-      toggleChat: () => store.commit('layout/chatToggle')
+      chatToggle: () => store.commit('layout/chatToggle')
     }
   }
 })
@@ -49,6 +49,6 @@ export default TopNavbar
   display: block
   position: fixed
   top: 7px
-  right: 18px
+  right: 11px
   z-index: 2000
 </style>

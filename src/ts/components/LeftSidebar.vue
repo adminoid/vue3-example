@@ -29,7 +29,7 @@ const LeftSidebar = defineComponent({
   setup () {
     const store = useStore()
     return {
-      sidebarOpen: computed(_ => store.state.layout.sidebar.open),
+      sidebarOpen: computed(() => store.getters['layout/isShowSidebar']),
       sidebarPinned: computed(_ => store.state.layout.sidebar.pinned),
       closeSidebar: () => store.commit('layout/sidebarToggle'),
       togglePin: () => store.commit('layout/sidebarTogglePin'),
