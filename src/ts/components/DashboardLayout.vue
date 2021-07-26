@@ -1,4 +1,5 @@
 <template lang="pug">
+content-window
 top-navbar
 left-sidebar
 main-content
@@ -11,6 +12,7 @@ import TopNavbar from 'c@/TopNavbar.vue'
 import LeftSidebar from 'c@/LeftSidebar.vue'
 import MainContent from 'c@/MainContent.vue'
 import RightChat from 'c@/RightChat.vue'
+import ContentWindow from 'c@/ContentWindow.vue'
 
 export default defineComponent({
   name: 'DashboardLayout',
@@ -18,7 +20,8 @@ export default defineComponent({
     LeftSidebar,
     TopNavbar,
     MainContent,
-    RightChat
+    RightChat,
+    ContentWindow
   }
 })
 </script>

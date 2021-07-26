@@ -50,5 +50,5 @@ export default TopNavbar
   position: fixed
   top: 7px
   right: 11px
-  z-index: 2000
+  z-index: 1300
 </style>

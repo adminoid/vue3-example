@@ -11,5 +11,12 @@ export default {
     if (!state.animationEnabled) state.animationEnabled = true
     state.chat.open = !state.chat.open
     if (state.chat.open) state.sidebar.open = false
+  },
+  windowOpen (state: any, payload: any) {
+    state.window.start = payload
+    state.window.open = true
+  },
+  windowClose (state: any) {
+    state.window.open = false
   }
 }
