@@ -47,8 +47,6 @@ export default WasherPreview
   background: #fff
   margin-bottom: $vertical-margin
   padding: 20px
-  &:hover
-    background: #000
 .widget
   flex-shrink: 0
   width: 250px
