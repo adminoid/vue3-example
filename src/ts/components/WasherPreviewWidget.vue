@@ -1,10 +1,11 @@
 <template lang="pug">
-.widget {{ widget }}
-  a.widget__expand-btn(href='#')
+.widget(ref="widgetEl") {{ widget }}
+  a.widget__expand-btn(href='#' @click.prevent="createWindow")
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, onMounted, ref } from 'vue'
+import { getDistances } from '@/ts/helpers/dom'
 
 const WasherPreview = defineComponent({
   props: {
@@ -12,8 +13,20 @@ const WasherPreview = defineComponent({
   },
 
   setup (props) {
+    const widgetEl = ref()
+    onMounted(() => {
+      if (props.widget?.id === 0) {
+        console.log(getDistances(widgetEl.value))
+        setTimeout(() => {
+          console.log(getDistances(widgetEl.value))
+        }, 3000)
+      }
+    })
+    const createWindow = () => console.info('createWindow()')
     return {
-      widgetData: props.widget
+      widgetData: props.widget,
+      widgetEl,
+      createWindow
     }
   }
 })
