@@ -1,21 +1,38 @@
 <template lang="pug">
 .overlap(v-if="windowOpen" @click.self="windowClose")
-  .overlap__window(:style="wStyle")
+  .overlap__window(:style="wStyle") {{ wStyle }}
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, watch, ref } from 'vue'
 import { useStore } from 'vuex'
 
 const ContentWindow = defineComponent({
   setup () {
     const store = useStore()
-    const wStyle = computed(() => ({
-      width: store.state.layout.window.start.width + 'px',
-      height: store.state.layout.window.start.height + 'px',
-      left: store.state.layout.window.start.x + 'px',
-      top: store.state.layout.window.start.y + 'px'
-    }))
+    const wStyle = ref({})
+    watch(() => store.state.layout.window.open, (val) => {
+      if (val) {
+        wStyle.value = {
+          width: store.state.layout.window.start.width + 'px',
+          height: store.state.layout.window.start.height + 'px',
+          left: store.state.layout.window.start.x + 'px',
+          top: store.state.layout.window.start.y + 'px'
+        }
+
+        setTimeout(() => {
+          wStyle.value = {
+            width: 'calc(100% - 100px)',
+            height: 'calc(100% - 100px)',
+            left: '50px',
+            top: '50px',
+            right: '50px',
+            bottom: '50px'
+          }
+        }, 0)
+      }
+    })
+
     const windowOpen = computed(_ => store.state.layout.window.open)
     const windowClose = () => {
       store.commit('layout/windowClose')
@@ -33,6 +50,8 @@ export default ContentWindow
 </script>
 
 <style lang="sass">
+@import "src/sass/variables"
+
 .overlap
   position: fixed
   top: 0
@@ -44,4 +63,5 @@ export default ContentWindow
   .overlap__window
     position: absolute
     background: #0237d7
+    transition: all $animation-speed ease-in-out
 </style>
