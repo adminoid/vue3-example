@@ -22,6 +22,8 @@ const WasherPreview = defineComponent({
       }
     })
     const store = useStore()
+
+    // todo: add widgetEl, who expanding, to store, then dynamically calculate width, height, left, top parameters when open and close
     const windowOpen = () => {
       const size = {
         width: widgetEl.value.getBoundingClientRect().width,
