@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "yarn serve & yarn api",
-    "api": "nodemon ./src/dev-api-server/index.js",
+    "api": "nodemon --watch 'src/dev-api-server/*' -e js ./src/dev-api-server/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
