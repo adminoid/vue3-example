@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run serve & npm run api",
+    "dev": "yarn serve & yarn api",
     "api": "nodemon ./src/dev-api-server/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

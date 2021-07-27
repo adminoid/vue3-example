@@ -1,6 +1,5 @@
 import axios from 'axios'
-// change when host changed (for dev testing api only)
-const host = 'http://localhost:8081'
+const host = process.env.VUE_APP_API_HOST
 
 export default {
   async getPageData ({ commit }: { commit: Function }) {
