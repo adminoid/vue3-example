@@ -4,8 +4,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue'
-import { getDistances } from '@/ts/helpers/dom'
+import { defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 const WasherPreview = defineComponent({
@@ -13,31 +12,12 @@ const WasherPreview = defineComponent({
     widget: Object
   },
 
-  setup (props) {
+  setup () {
     const widgetEl = ref()
-    onMounted(() => {
-      if (props.widget?.id === 0) {
-        setTimeout(() => {
-        }, 3000)
-      }
-    })
     const store = useStore()
-
-    // todo: add widgetEl, who expanding, to store, then dynamically calculate width, height, left, top parameters when open and close
-    const windowOpen = () => {
-      const size = {
-        width: widgetEl.value.getBoundingClientRect().width,
-        height: widgetEl.value.getBoundingClientRect().height
-      }
-      const distances = getDistances(widgetEl.value)
-      store.commit('layout/windowOpen', {
-        ...size,
-        ...distances
-      })
-    }
+    const windowOpen = () => store.commit('layout/windowOpen', widgetEl.value)
 
     return {
-      widgetData: props.widget,
       widgetEl,
       windowOpen
     }

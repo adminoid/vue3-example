@@ -11,3 +11,13 @@ export const getDistances = (el: HTMLElement) => {
 
   return { x: xPosition, y: yPosition }
 }
+
+export const getAttrs = (el: HTMLElement) => {
+  const distances = getDistances(el)
+  return {
+    width: el.getBoundingClientRect().width + 'px',
+    height: el.getBoundingClientRect().height + 'px',
+    left: distances.x + 'px',
+    top: distances.y + 'px'
+  }
+}

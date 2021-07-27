@@ -16,6 +16,7 @@ export default () => ({
       y: 0,
       width: 0,
       height: 0
-    }
+    },
+    element: HTMLElement
   }
 })

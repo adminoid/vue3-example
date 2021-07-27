@@ -1,3 +1,5 @@
+import { getAttrs } from '@/ts/helpers/dom'
+
 export default {
   sidebarToggle (state: any) {
     if (!state.animationEnabled) state.animationEnabled = true
@@ -12,11 +14,26 @@ export default {
     state.chat.open = !state.chat.open
     if (state.chat.open) state.sidebar.open = false
   },
-  windowOpen (state: any, payload: any) {
-    state.window.start = payload
+  windowOpen (state: any, element: HTMLElement) {
+    // todo: get element and calculate css attrs
+    state.window.element = element
+    const attrs = getAttrs(element)
+    console.log(attrs)
+    // console.log(this.commit)
+
+    state.window.start = attrs
     state.window.open = true
   },
   windowClose (state: any) {
+    const attrs = getAttrs(state.window.element)
+    console.log(attrs)
+    state.window.element = HTMLElement
+    state.window.start = {
+      x: 0,
+      y: 0,
+      width: 0,
+      height: 0
+    }
     state.window.open = false
   }
 }

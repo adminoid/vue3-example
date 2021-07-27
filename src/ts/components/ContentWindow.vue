@@ -1,5 +1,5 @@
 <template lang="pug">
-.overlap(v-if="windowOpen" @click.self="windowClose")
+.overlap(v-if="isWindowOpen" @click.self="windowClose")
   .overlap__window(:style="wStyle") {{ wStyle }}
 </template>
 
@@ -13,13 +13,8 @@ const ContentWindow = defineComponent({
     const wStyle = ref({})
     watch(() => store.state.layout.window.open, (val) => {
       if (val) {
-        wStyle.value = {
-          width: store.state.layout.window.start.width + 'px',
-          height: store.state.layout.window.start.height + 'px',
-          left: store.state.layout.window.start.x + 'px',
-          top: store.state.layout.window.start.y + 'px'
-        }
-
+        // todo: put there params from store (calculated in mutation)
+        wStyle.value = store.state.layout.window.start
         setTimeout(() => {
           wStyle.value = {
             width: 'calc(100% - 100px)',
@@ -33,13 +28,13 @@ const ContentWindow = defineComponent({
       }
     })
 
-    const windowOpen = computed(_ => store.state.layout.window.open)
+    const isWindowOpen = computed(_ => store.state.layout.window.open)
     const windowClose = () => {
       store.commit('layout/windowClose')
     }
 
     return {
-      windowOpen,
+      isWindowOpen,
       wStyle,
       windowClose
     }
