@@ -1,23 +1,23 @@
 <template lang="pug">
 transition(name="delay")
   .overlap(v-show="isWindowOpen" @click.self="windowClose")
-    .overlap__window(:style="wStyle") {{ wStyle }}
+    .overlap__window(:style="wStyle")
+      .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
+        h1 {{ data.name }}
+        h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
       a.overlap__close(href='#' @click.prevent="windowClose")
         svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
           g#icons(stroke='none' stroke-width='1' fill='#000')
             rect#rect(
-              transform='rotate(-315.000000)'
-                +'translate(15.909903, 15.909903)'
-                +'translate(-15.909903, -15.909903)'
+              transform='translate(15.909903, 15.909903) rotate(-315.000000) translate(-15.909903, -15.909903)'
               x='13.9099026' y='-4.59009742'
               width='4' height='41' rx='2'
             )
             rect#rect(
-              transform='rotate(-315.000000)'
-                +'scale(-1, 1)'
-                +'translate(15.909903, 15.909903)'
-                +'translate(-15.909903, -15.909903)'
-              x='13.9099026' y='-4.59009742' width='4' height='41' rx='2')
+              transform='translate(15.909903, 15.909903) scale(-1, 1) rotate(-315.000000) translate(-15.909903, -15.909903)'
+              x='13.9099026' y='-4.59009742'
+              width='4' height='41' rx='2'
+            )
 
 </template>
 
@@ -56,7 +56,8 @@ const ContentWindow = defineComponent({
     return {
       isWindowOpen,
       wStyle,
-      windowClose: () => store.commit('layout/windowClose')
+      windowClose: () => store.commit('layout/windowClose'),
+      data: computed(_ => store.state.layout.window.data) as any
     }
   }
 })

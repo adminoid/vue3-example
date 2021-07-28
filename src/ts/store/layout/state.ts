@@ -17,6 +17,7 @@ export default () => ({
       width: 0,
       height: 0
     },
-    element: HTMLElement
+    element: HTMLElement,
+    data: {}
   }
 })

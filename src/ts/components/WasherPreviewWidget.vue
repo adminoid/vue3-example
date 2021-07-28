@@ -1,5 +1,8 @@
 <template lang="pug">
-.preview-widget(ref="widgetEl") {{ widget }}
+.preview-widget(ref="widgetEl")
+  .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
+    h1 {{ widget.name }}
+    p.d-flex.mt-3.justify-content-center Id: {{ widget.id }}
   a.widget__expand-btn(href='#' @click.prevent="windowOpen")
     svg(width='37px' height='31px' xmlns='http://www.w3.org/2000/svg')
       g#icons(stroke='none' stroke-width='1' fill='#57B2D9')
@@ -22,10 +25,17 @@ const WasherPreview = defineComponent({
     widget: Object
   },
 
-  setup () {
+  setup (props) {
     const widgetEl = ref()
     const store = useStore()
-    const windowOpen = () => store.commit('layout/windowOpen', widgetEl.value)
+    const windowOpen = () => {
+      console.log(props)
+      console.log(props.widget)
+      store.commit('layout/windowOpen', {
+        el: widgetEl.value,
+        data: props.widget
+      })
+    }
 
     return {
       widgetEl,
