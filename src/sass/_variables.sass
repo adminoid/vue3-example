@@ -1,16 +1,27 @@
 $font-family-sans-serif: var(--bs-font-sans-serif) !default
 $font-family-monospace: var(--bs-font-monospace) !default
 
+// Brand book
+$bb-blue: #57B2D9
+$bb-dark-gray: #C8C8C8
+$bb-soft-gray: #dbdbdb
+$bb-gray: #DFDFDF
+
 // Custom
 $animation-speed: 170ms
 $left-sidebar-width: 309px
 $right-chat-width: 270px
-// Brand book
-$bb-blue: #57B2D9
-$bb-dark-gray: #C8C8C8
-$bb-soft-gray: #F5F5F5
-$bb-gray: #DFDFDF
+$overlap-bg: fade-out($bb-blue, .2)
 
 // Overrides
 $navbar-padding-y: .4 !default
 $vertical-margin: 32px
+
+// Custom mixins
+@mixin window
+  border: 2px solid lighten($bb-blue, 20%)
+  border-radius: 5px
+  background: #fff
+@mixin animation
+  animation-duration: $animation-speed
+  animation-fill-mode: forwards

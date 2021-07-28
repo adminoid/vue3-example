@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget(ref="widgetEl") {{ widget }}
+.preview-widget(ref="widgetEl") {{ widget }}
   a.widget__expand-btn(href='#' @click.prevent="windowOpen")
 </template>
 
@@ -30,21 +30,15 @@ export default WasherPreview
 <style lang="sass">
 @import "src/sass/variables"
 
-.washer-preview
-  display: flex
-  overflow-x: scroll
-  min-height: 250px
-  border: 2px solid $bb-gray
-  background: #fff
-  margin-bottom: $vertical-margin
-  padding: 20px
-.widget
+.preview-widget
   flex-shrink: 0
   width: 250px
   height: 206px
-  background: $bb-blue
+  background: red
   margin-right: 20px
   position: relative
+  padding: 7px
+  @include window
   .widget__expand-btn
     display: none
     position: absolute

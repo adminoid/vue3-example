@@ -2,6 +2,8 @@
 transition(name="delay")
   .overlap(v-show="isWindowOpen" @click.self="windowClose")
     .overlap__window(:style="wStyle") {{ wStyle }}
+      a.overlap__close(href='#' @click.prevent="windowClose")
+        img(src="@/assets/icons/close-btn.svg")
 </template>
 
 <script lang="ts">
@@ -53,6 +55,9 @@ export default ContentWindow
 .delay-enter-active,
 .delay-leave-active
   transition: all $animation-speed ease-in-out
+.delay-enter-from,
+.delay-leave-to
+  opacity: 0
 
 .overlap
   position: fixed
@@ -61,9 +66,15 @@ export default ContentWindow
   bottom: 0
   left: 0
   z-index: 1400
-  background: rgba(41, 163, 184, 0.31) // todo: change to actual
+  background: $overlap-bg
   .overlap__window
+    @include window
     position: absolute
-    background: #0237d7
     transition: all $animation-speed ease-in-out
+    padding: 20px 70px 20px 20px
+  .overlap__close
+    display: block
+    position: absolute
+    right: 20px
+    top: 20px
 </style>

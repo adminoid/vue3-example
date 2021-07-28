@@ -38,21 +38,13 @@ export default WasherPreview
 
 <style lang="sass">
 @import "src/sass/variables"
-
 .washer-preview
   display: flex
   overflow-x: scroll
   min-height: 250px
-  border: 2px solid $bb-gray
-  background: #fff
+  border: 2px solid lighten($bb-blue, 20%)
+  border-radius: 5px
+  background: lighten($bb-blue, 30%)
   margin-bottom: $vertical-margin
   padding: 20px
-.widget
-  flex-shrink: 0
-  width: 250px
-  height: 206px
-  background: $bb-blue
-  margin-right: 20px
-  &:last-child
-    margin-right: 0
 </style>
