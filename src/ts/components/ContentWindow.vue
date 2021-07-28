@@ -3,7 +3,22 @@ transition(name="delay")
   .overlap(v-show="isWindowOpen" @click.self="windowClose")
     .overlap__window(:style="wStyle") {{ wStyle }}
       a.overlap__close(href='#' @click.prevent="windowClose")
-        img(src="@/assets/icons/close-btn.svg")
+        svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
+          g#icons(stroke='none' stroke-width='1' fill='#000')
+            rect#rect(
+              transform='rotate(-315.000000)'
+                +'translate(15.909903, 15.909903)'
+                +'translate(-15.909903, -15.909903)'
+              x='13.9099026' y='-4.59009742'
+              width='4' height='41' rx='2'
+            )
+            rect#rect(
+              transform='rotate(-315.000000)'
+                +'scale(-1, 1)'
+                +'translate(15.909903, 15.909903)'
+                +'translate(-15.909903, -15.909903)'
+              x='13.9099026' y='-4.59009742' width='4' height='41' rx='2')
+
 </template>
 
 <script lang="ts">
@@ -77,4 +92,9 @@ export default ContentWindow
     position: absolute
     right: 20px
     top: 20px
+    g#icons
+      transition: fill $animation-speed ease-in-out
+    &:hover
+      g#icons
+        fill: $bb-blue
 </style>
