@@ -36,7 +36,8 @@ const routes = [
   },
   {
     path: '/metrics',
-    component: Metrics
+    component: Metrics,
+    title: 'TiTle'
   },
   {
     path: '/monitoring',
