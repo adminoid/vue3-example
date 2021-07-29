@@ -55,6 +55,17 @@ ul.main-menu.list-unstyled
     router-link(to="/bonus") ALLES Bonus
   li.mb-1
     router-link(to="/accounting") Учет
+    ul.main-menu__submenu.list-unstyled
+      li.mb-1
+        router-link(to="/accounting/consumables") Учет расходников и коммуникаций
+      li.mb-1
+        router-link(to="/accounting/properties") Хозяйственный учет
+      li.mb-1
+        router-link(to="/accounting/tax-salary") Налоги и зарплата
+      li.mb-1
+        router-link(to="/accounting/object-logs") Журнал объекта
+      li.mb-1
+        router-link(to="/accounting/service") Сервисный учет объекта
   li.mb-1
     router-link(to="/economics") Экономика
   li.mb-1
