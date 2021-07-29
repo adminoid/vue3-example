@@ -9,29 +9,19 @@ import sectionSettings from '@/ts/router/sections/settings'
 
 // Statistic pages
 import Statistic from 'c@/pages/Statistic.vue'
-import StatisticCommon from 'c@/pages/Statistic/StatisticCommon.vue'
-import StatisticHourly from 'c@/pages/Statistic/StatisticHourly.vue'
-import StatisticDaily from 'c@/pages/Statistic/StatisticDaily.vue'
-import StatisticPrograms from 'c@/pages/Statistic/StatisticPrograms.vue'
-import StatisticAvgCheck from 'c@/pages/Statistic/StatisticAvgCheck.vue'
+import sectionStatistic from '@/ts/router/sections/statistic'
 
 // Finance pages
 import Finance from 'c@/pages/Finance.vue'
-import FinanceCash from 'c@/pages/Finance/FinanceCash.vue'
-import FinanceCollectionHistory from 'c@/pages/Finance/FinanceCollectionHistory.vue'
+import sectionFinance from '@/ts/router/sections/finance'
 
 // Accounting pages
 import Accounting from 'c@/pages/Accounting.vue'
-import AccountingConsumables from 'c@/pages/Accounting/AccountingConsumables.vue'
-import AccountingProperties from 'c@/pages/Accounting/AccountingProperties.vue'
-import AccountingTaxSalary from 'c@/pages/Accounting/AccountingTaxSalary.vue'
-import AccountingObjectLogs from 'c@/pages/Accounting/AccountingObjectLogs.vue'
-import AccountingService from 'c@/pages/Accounting/AccountingService.vue'
+import sectionAccounting from '@/ts/router/sections/accounting'
 
 // Economics pages
 import Economics from 'c@/pages/Economics.vue'
-import EconomicsProfitability from 'c@/pages/Economics/EconomicsProfitability.vue'
-import EconomicsPayback from 'c@/pages/Economics/EconomicsPayback.vue'
+import sectionEconomics from '@/ts/router/sections/economics'
 
 import Analytics from 'c@/pages/Analytics.vue'
 
@@ -60,42 +50,12 @@ const routes = [
   {
     path: '/statistic',
     component: Statistic,
-    children: [
-      {
-        path: 'common',
-        component: StatisticCommon
-      },
-      {
-        path: 'hourly',
-        component: StatisticHourly
-      },
-      {
-        path: 'daily',
-        component: StatisticDaily
-      },
-      {
-        path: 'programs',
-        component: StatisticPrograms
-      },
-      {
-        path: 'avg-check',
-        component: StatisticAvgCheck
-      }
-    ]
+    children: sectionStatistic
   },
   {
     path: '/finance',
     component: Finance,
-    children: [
-      {
-        path: 'cash',
-        component: FinanceCash
-      },
-      {
-        path: 'collection-history',
-        component: FinanceCollectionHistory
-      }
-    ]
+    children: sectionFinance
   },
   {
     path: '/bonus',
@@ -104,42 +64,12 @@ const routes = [
   {
     path: '/accounting',
     component: Accounting,
-    children: [
-      {
-        path: 'consumables',
-        component: AccountingConsumables
-      },
-      {
-        path: 'properties',
-        component: AccountingProperties
-      },
-      {
-        path: 'tax-salary',
-        component: AccountingTaxSalary
-      },
-      {
-        path: 'object-logs',
-        component: AccountingObjectLogs
-      },
-      {
-        path: 'service',
-        component: AccountingService
-      }
-    ]
+    children: sectionAccounting
   },
   {
     path: '/economics',
     component: Economics,
-    children: [
-      {
-        path: 'profitability',
-        component: EconomicsProfitability
-      },
-      {
-        path: 'payback',
-        component: EconomicsPayback
-      }
-    ]
+    children: sectionEconomics
   },
   {
     path: '/analytics',
