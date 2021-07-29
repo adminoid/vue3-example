@@ -119,11 +119,11 @@ const routes = [
     children: [
       {
         path: 'cash',
-        component: 'FinanceCash'
+        component: FinanceCash
       },
       {
         path: 'collection-history',
-        component: 'FinanceCollectionHistory'
+        component: FinanceCollectionHistory
       }
     ]
   },

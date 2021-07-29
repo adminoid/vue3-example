@@ -45,6 +45,12 @@ ul.main-menu.list-unstyled
 
   li.mb-1
     router-link(to="/finance") Финансы
+    ul.main-menu__submenu.list-unstyled
+      li.mb-1
+        router-link(to="/finance/cash") Деньги в кассе
+      li.mb-1
+        router-link(to="/finance/collection-history") История инкассаций
+
   li.mb-1
     router-link(to="/bonus") ALLES Bonus
   li.mb-1
