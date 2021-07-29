@@ -1,11 +1,22 @@
 <template lang="pug">
-h1.text-info Настройки
+h1.text-info(v-if="fullPath === '/settings'") Настройки
+router-view(v-else)
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 
-const Settings = defineComponent({})
+const Settings = defineComponent({
+  setup () {
+    const router = useRouter()
+    const fullPath = computed(() => router.currentRoute.value.fullPath)
+
+    return {
+      fullPath
+    }
+  }
+})
 
 export default Settings
 </script>
