@@ -28,8 +28,21 @@ ul.main-menu.list-unstyled
         router-link(to="/settings/options") Настройки опций объекта
       li.mb-1
         router-link(to="/settings/description") Описание объекта
+
   li.mb-1
     router-link(to="/statistic") Статистика
+    ul.main-menu__submenu.list-unstyled
+      li.mb-1
+        router-link(to="/statistic/common") Статистика общая
+      li.mb-1
+        router-link(to="/statistic/hourly") График по часам
+      li.mb-1
+        router-link(to="/statistic/daily") График по дням
+      li.mb-1
+        router-link(to="/statistic/programs") Использование программ
+      li.mb-1
+        router-link(to="/statistic/avg-check") Средний чек
+
   li.mb-1
     router-link(to="/finance") Финансы
   li.mb-1
