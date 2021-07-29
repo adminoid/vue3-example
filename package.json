@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn serve & yarn api",
-    "api": "nodemon --watch 'src/dev-api-server/*' -e js ./src/dev-api-server/index.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "yarn serve & yarn api",
+    "api": "nodemon --watch 'src/dev-api-server/*' -e js ./src/dev-api-server/index.js"
   },
   "dependencies": {
     "axios": "^0.21.1",

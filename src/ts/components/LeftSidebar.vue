@@ -15,9 +15,23 @@
   .left-sidebar__body(v-if="sidebarOpen")
     ul.left-sidebar__main-menu.list-unstyled
       li.mb-1
-        router-link(to="/example-one") Тестовая страница №1
+        router-link(to="/metrics") Метрики
       li.mb-1
-        router-link(to="/example-two") Тестовая страница №2
+        router-link(to="/monitoring") Мониторинг
+      li.mb-1
+        router-link(to="/settings") Настройки
+      li.mb-1
+        router-link(to="/statistic") Статистика
+      li.mb-1
+        router-link(to="/finance") Финансы
+      li.mb-1
+        router-link(to="/bonus") ALLES Bonus
+      li.mb-1
+        router-link(to="/accounting") Учет
+      li.mb-1
+        router-link(to="/economics") Экономика
+      li.mb-1
+        router-link(to="/analytics") Анализ мойки
 </template>
 
 <script lang="ts">
