@@ -87,10 +87,13 @@ export default MainMenu
 @import "src/sass/variables"
 
 .main-menu
-  li a
+  > li a
     color: black
     &:hover
       color: darken($bb-blue, 30%)
   .main-menu__submenu
-    padding-left: 10px
+    padding: 4px 0 1px 8px
+    > li a
+      font-size: 15px
+
 </style>
