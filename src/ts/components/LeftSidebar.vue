@@ -13,55 +13,20 @@
         path(:d="unpinnedIconD"
         transform='translate(309.000000, 184.000000) rotate(-315.000000) translate(-309.000000, -184.000000) ')
   .left-sidebar__body(v-if="sidebarOpen")
-    ul.left-sidebar__main-menu.list-unstyled
-
-      li.mb-1
-        router-link(to="/metrics") Метрики
-
-      li.mb-1
-        router-link(to="/monitoring") Мониторинг
-
-      li.mb-1
-        router-link(to="/settings") Настройки
-        ul.list-unstyled
-          li.mb-1
-            router-link(to="/settings/program-cost") Стоимость программ
-          li.mb-1
-            router-link(to="/settings/chem-dosage") Дозация химии
-          li.mb-1
-            router-link(to="/settings/pressure") Настройка давления
-          li.mb-1
-            router-link(to="/settings/posts") Посты и пылесосы
-          li.mb-1
-            router-link(to="/settings/one-time") Одноразовые настройки
-          li.mb-1
-            router-link(to="/settings/customers") Пользователи
-          li.mb-1
-            router-link(to="/settings/cash") Онлайн касса
-          li.mb-1
-            router-link(to="/settings/options") Настройки опций объекта
-          li.mb-1
-            router-link(to="/settings/description") Описание объекта
-      li.mb-1
-        router-link(to="/statistic") Статистика
-      li.mb-1
-        router-link(to="/finance") Финансы
-      li.mb-1
-        router-link(to="/bonus") ALLES Bonus
-      li.mb-1
-        router-link(to="/accounting") Учет
-      li.mb-1
-        router-link(to="/economics") Экономика
-      li.mb-1
-        router-link(to="/analytics") Анализ мойки
+    main-menu
 </template>
 
 <script lang="ts">
 import { computed, defineComponent } from 'vue'
 import { useStore } from 'vuex'
 import { pinnedIconD, unpinnedIconD } from '@/ts/includes/svg'
+import MainMenu from 'c@/MainMenu.vue'
 
 const LeftSidebar = defineComponent({
+  components: {
+    MainMenu
+  },
+
   setup () {
     const store = useStore()
     return {
