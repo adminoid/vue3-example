@@ -36,7 +36,11 @@ import AccountingTaxSalary from 'c@/pages/Accounting/AccountingTaxSalary.vue'
 import AccountingObjectLogs from 'c@/pages/Accounting/AccountingObjectLogs.vue'
 import AccountingService from 'c@/pages/Accounting/AccountingService.vue'
 
+// Economics pages
 import Economics from 'c@/pages/Economics.vue'
+import EconomicsProfitability from 'c@/pages/Economics/EconomicsProfitability.vue'
+import EconomicsPayback from 'c@/pages/Economics/EconomicsPayback.vue'
+
 import Analytics from 'c@/pages/Analytics.vue'
 
 // Service components
@@ -170,7 +174,17 @@ const routes = [
   },
   {
     path: '/economics',
-    component: Economics
+    component: Economics,
+    children: [
+      {
+        path: 'profitability',
+        component: EconomicsProfitability
+      },
+      {
+        path: 'payback',
+        component: EconomicsPayback
+      }
+    ]
   },
   {
     path: '/analytics',

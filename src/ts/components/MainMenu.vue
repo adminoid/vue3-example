@@ -68,6 +68,11 @@ ul.main-menu.list-unstyled
         router-link(to="/accounting/service") Сервисный учет объекта
   li.mb-1
     router-link(to="/economics") Экономика
+    ul.main-menu__submenu.list-unstyled
+      li.mb-1
+        router-link(to="/economics/profitability") Доходность
+      li.mb-1
+        router-link(to="/economics/payback") Окупаемость мойки
   li.mb-1
     router-link(to="/analytics") Анализ мойки
 </template>
