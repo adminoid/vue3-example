@@ -28,7 +28,6 @@ export default MainMenu
 
 <style lang="sass">
 @import "src/sass/variables"
-
 .main-menu
   padding-left: 0
   list-style: none
@@ -36,8 +35,13 @@ export default MainMenu
     position: relative
     a
       color: black
+      transition: color $animation-speed-fast ease
+      #expand
+        transition: fill $animation-speed-fast ease
       &:hover
-        color: darken($bb-blue, 30%)
+        color: $bb-blue-darken
+        #expand
+          fill: $bb-blue-darken
   .main-menu__si // main menu second level item
     a
       font-size: 15px
