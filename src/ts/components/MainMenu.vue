@@ -1,5 +1,4 @@
 <template lang="pug">
-//pre {{ items }}
 ul.main-menu.list-unstyled(v-if="items.length > 0")
   li.mb-1(v-for="item in items")
     router-link(:to="item.uri") {{ item.title }}
@@ -15,7 +14,7 @@ import { items, TItems } from '@/ts/includes/main-menu'
 const MainMenu = defineComponent({
   setup () {
     return {
-      items: items
+      items
     } as {items: TItems}
   }
 })

@@ -4,9 +4,9 @@ nav.navbar.fixed-top
   .container-fluid
     .navbar-left
       router-link(to="/")
-        img.navbar__logo(src="@/assets/logo-white.svg")
+        img.navbar__logo(src="@/assets/img/logo-white.svg")
 a.chat-button(href='#' @click.prevent="chatToggle")
-  img(:src="`/icons/chat-${chatIconStatus}.svg`")
+  img(:src="require(`@/assets/icons/chat-${chatIconStatus}.svg`)")
 
 </template>
 

@@ -1,7 +1,10 @@
 export type TItems = {
   uri: string,
   title: string,
-  children?: TItems[]
+  children?: {
+    uri: string,
+    title: string
+  }[]
 }[]
 
 export const items = [
