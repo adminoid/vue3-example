@@ -1,6 +1,6 @@
 <template lang="pug">
 ul.main-menu(v-if="items.length > 0")
-  li.main-menu__fi.mb-1(v-for="item in items" :key="item.id")
+  li.main-menu__fi.mb-0.mt-2(v-for="item in items" :key="item.id")
     a.main-menu__expand(
       v-if="item.children && item.children.length > 0"
       href='#'
@@ -15,7 +15,7 @@ ul.main-menu(v-if="items.length > 0")
     router-link(:to="item.uri") {{ item.title }}
     transition(name="expand")
       ul.main-menu__submenu.list-unstyled(v-if="isExpanded(item)")
-        li.main-menu__si.mb-1(v-for="subItem in item.children" :key="item.id")
+        li.main-menu__si.mb-1.mt-1(v-for="subItem in item.children" :key="item.id")
           router-link(:to="subItem.uri") {{ subItem.title }}
 </template>
 
@@ -68,6 +68,8 @@ export default MainMenu
   list-style: none
   .main-menu__fi // main menu first level item
     position: relative
+    max-width: 230px
+    line-height: 20px
     a
       transition: all $animation-speed ease-in-out
       color: black
@@ -82,6 +84,8 @@ export default MainMenu
       font-size: 15px
   .main-menu__submenu
     padding: 4px 0 1px 8px
+    li:last-child
+      margin-bottom: 0!important
   .main-menu__expand
     overflow: hidden
     display: block
