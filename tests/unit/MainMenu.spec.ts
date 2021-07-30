@@ -8,10 +8,10 @@ describe('MainMenu.vue', () => {
         stubs: ['router-link']
       }
     })
-    wrapper.vm.expand(3, true)
-    wrapper.vm.expand(7, true)
-    expect(wrapper.vm.expanded).toEqual([3, 7])
-    wrapper.vm.expand(3, false)
-    expect(wrapper.vm.expanded).toEqual([7])
+    wrapper.vm.expand(3)
+    wrapper.vm.expand(7)
+    expect(wrapper.vm.expandedRef).toEqual([3, 7])
+    wrapper.vm.expand(3)
+    expect(wrapper.vm.expandedRef).toEqual([7])
   })
 })
