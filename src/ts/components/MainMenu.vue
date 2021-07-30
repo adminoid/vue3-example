@@ -66,10 +66,8 @@ export default MainMenu
   .main-menu__fi // main menu first level item
     position: relative
     a
+      transition: all $animation-speed ease-in-out
       color: black
-      transition: color $animation-speed-fast ease
-      #expand
-        transition: fill $animation-speed-fast ease
       &:hover
         color: $bb-blue-darken
         #expand
@@ -85,4 +83,16 @@ export default MainMenu
     position: absolute
     left: -17px
     top: -1px
+    g#expand
+      transition: all $animation-speed ease-in-out
+      transform: rotate(0)
+      transform-origin: center
+      rect#horizontal
+        transition: all $animation-speed ease-in-out
+        opacity: 1
+      &.expanded
+        fill: $bb-blue-darken
+        transform: rotate(90deg)
+        rect#horizontal
+          opacity: 0
 </style>
