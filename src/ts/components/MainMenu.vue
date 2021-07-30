@@ -66,6 +66,7 @@ export default MainMenu
 .main-menu
   padding-left: 0
   list-style: none
+  direction: ltr
   .main-menu__fi // main menu first level item
     position: relative
     max-width: 230px
