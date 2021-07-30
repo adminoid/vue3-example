@@ -1,7 +1,11 @@
 <template lang="pug">
 ul.main-menu(v-if="items.length > 0")
   li.main-menu__fi.mb-1(v-for="item in items" :key="item.id")
-    a.main-menu__expand(href='#' @click.prevent="expand(item.id)")
+    a.main-menu__expand(
+      v-if="item.children && item.children.length > 0"
+      href='#'
+      @click.prevent="expand(item.id)"
+    )
       svg(width='12px' height='12px' xmlns='http://www.w3.org/2000/svg')
         g#expand(
           fill='#000'
