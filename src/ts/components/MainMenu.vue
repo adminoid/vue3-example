@@ -13,19 +13,28 @@ ul.main-menu(v-if="items.length > 0")
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { items, TItems } from '@/ts/includes/main-menu'
+import { defineComponent, ref } from 'vue'
+import { items } from '@/ts/includes/main-menu'
 
 const MainMenu = defineComponent({
   setup () {
-    // const
-    // const expand = () => {
-    //
-    // }
+    const expanded: number[] = []
+    const expandedRef = ref(expanded)
+    const expand = (id: number, status: boolean) => {
+      if (status) {
+        if (!expandedRef.value.includes(id)) expandedRef.value.push(id)
+      } else {
+        if (expandedRef.value.includes(id)) {
+          expandedRef.value.splice(expandedRef.value.indexOf(id), 1)
+        }
+      }
+    }
 
     return {
-      items
-    } as {items: TItems}
+      items,
+      expand,
+      expanded
+    }
   }
 })
 export default MainMenu
