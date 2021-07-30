@@ -8,7 +8,6 @@ ul.main-menu(v-if="items.length > 0")
     )
       svg(width='12px' height='12px' xmlns='http://www.w3.org/2000/svg')
         g#expand(
-          fill='#000'
           :class="{ expanded: isExpanded(item) }"
         )
           rect#horizontal(x='0' y='5' width='12' height='2' rx='1')
@@ -72,6 +71,8 @@ export default MainMenu
     a
       transition: all $animation-speed ease-in-out
       color: black
+      #expand
+        fill: $bb-black-gray
       &:hover
         color: $bb-blue-darken
         #expand
