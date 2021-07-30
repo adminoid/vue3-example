@@ -7,9 +7,10 @@ ul.main-menu(v-if="items.length > 0")
           rect#Rectangle(x='0' y='5' width='12' height='2' rx='1')
           rect#Rectangle(x='5' y='0' width='2' height='12' rx='1')
     router-link(:to="item.uri") {{ item.title }}
-    ul.main-menu__submenu.list-unstyled(v-if="item.children?.length > 0 && expandedRef.includes(item.id)")
-      li.main-menu__si.mb-1(v-for="subItem in item.children" :key="item.id")
-        router-link(:to="subItem.uri") {{ subItem.title }}
+    transition(name="expand")
+      ul.main-menu__submenu.list-unstyled(v-if="item.children?.length > 0 && expandedRef.includes(item.id)")
+        li.main-menu__si.mb-1(v-for="subItem in item.children" :key="item.id")
+          router-link(:to="subItem.uri") {{ subItem.title }}
 </template>
 
 <script lang="ts">
@@ -39,6 +40,19 @@ export default MainMenu
 
 <style lang="sass">
 @import "src/sass/variables"
+
+.expand-enter-active,
+.expand-leave-active
+  transition: all $animation-speed-fast ease
+.expand-enter-from,
+.expand-leave-to
+  max-height: 0
+  opacity: 0
+.expand-enter-to,
+.expand-leave-from
+  max-height: 5000px
+  opacity: 1
+
 .main-menu
   padding-left: 0
   list-style: none
@@ -59,6 +73,7 @@ export default MainMenu
   .main-menu__submenu
     padding: 4px 0 1px 8px
   .main-menu__expand
+    overflow: hidden
     display: block
     position: absolute
     left: -17px
