@@ -1,10 +1,13 @@
 <template lang="pug">
-.washer-preview
-  washer-preview-widget(
-    v-for="widget in widgets"
-    :key="widget.id"
-    :widget="widget"
-  )
+.washer-preview.container
+  h1 Мойка {{ washer.name }}
+  .washer-preview__list.row
+    washer-preview-widget(
+      v-for="widget in widgets"
+      :key="widget.id"
+      :widget="widget"
+      :total="widgets.length"
+    )
 </template>
 
 <script lang="ts">
@@ -39,12 +42,9 @@ export default WasherPreview
 <style lang="sass">
 @import "src/sass/variables"
 .washer-preview
-  display: flex
-  overflow-x: scroll
-  min-height: 250px
-  border: 2px solid lighten($bb-blue, 20%)
   border-radius: 5px
-  background: lighten($bb-blue, 30%)
-  margin-bottom: $vertical-margin
   padding: 20px
+  .washer-preview__list
+    display: flex
+
 </style>

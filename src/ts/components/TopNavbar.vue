@@ -49,6 +49,6 @@ export default TopNavbar
   display: block
   position: fixed
   top: 7px
-  right: 11px
+  right: 21px
   z-index: 1300
 </style>

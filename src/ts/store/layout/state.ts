@@ -3,7 +3,7 @@ export default () => ({
   // Animation works only after the first click.
   animationEnabled: false,
   sidebar: {
-    open: true,
+    open: false,
     pinned: true
   },
   chat: {
