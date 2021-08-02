@@ -1,6 +1,6 @@
 <template lang="pug">
 .washer-preview.container
-  h1 Мойка {{ washer.name }}
+  h1 {{ washer.name }}
   .washer-preview__list.row
     washer-preview-widget(
       v-for="widget in widgets"

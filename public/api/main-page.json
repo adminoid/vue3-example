@@ -2,93 +2,125 @@
   "washers": [
     {
       "id": 0,
-      "name": "washer 1",
+      "name": "Мойка на набережной старателей",
       "widgets": [
         {
           "id": 0,
-          "name": "widget 1"
+          "name": "Клиенты",
+          "component": "Clients",
+          "data": {
+            "summary": 12,
+            "growth": true
+          }
         },
         {
           "id": 1,
-          "name": "widget 2"
+          "name": "Клиенты",
+          "component": "Clients",
+          "data": {
+            "summary": 3,
+            "growth": false
+          }
         },
         {
           "id": 2,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 3,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 4,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 5,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         },
         {
           "id": 6,
-          "name": "widget 7"
+          "name": "widget 7",
+          "component": "Demo"
         },
         {
           "id": 7,
-          "name": "widget 8"
+          "name": "widget 8",
+          "component": "Demo"
         },
         {
           "id": 8,
-          "name": "widget 9"
+          "name": "widget 9",
+          "component": "Demo"
         },
         {
           "id": 9,
-          "name": "widget 10"
+          "name": "widget 10",
+          "component": "Demo"
         }
       ]
     },
     {
       "id": 1,
-      "name": "washer 2",
+      "name": "Мойка на бензоколонке, ул. Мойши Чистоганова, дом 2А",
       "widgets": [
         {
           "id": 10,
-          "name": "widget 1"
+          "name": "Клиенты",
+          "component": "Clients",
+          "data": {
+            "summary": 3,
+            "growth": false
+          }
         },
         {
           "id": 11,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 12,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 13,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 14,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 15,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         },
         {
           "id": 16,
-          "name": "widget 7"
+          "name": "widget 7",
+          "component": "Demo"
         },
         {
           "id": 17,
-          "name": "widget 8"
+          "name": "widget 8",
+          "component": "Demo"
         },
         {
           "id": 19,
-          "name": "widget 9"
+          "name": "widget 9",
+          "component": "Demo"
         },
         {
           "id": 19,
-          "name": "widget 10"
+          "name": "widget 10",
+          "component": "Demo"
         }
       ]
     },
@@ -98,7 +130,8 @@
       "widgets": [
         {
           "id": 20,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         }
       ]
     },
@@ -108,15 +141,18 @@
       "widgets": [
         {
           "id": 21,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         },
         {
           "id": 22,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 23,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         }
       ]
     },
@@ -126,27 +162,33 @@
       "widgets": [
         {
           "id": 24,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         },
         {
           "id": 25,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 26,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 27,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 28,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 29,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         }
       ]
     },
@@ -156,27 +198,33 @@
       "widgets": [
         {
           "id": 30,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         },
         {
           "id": 31,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 32,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 33,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 34,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 35,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         }
       ]
     },
@@ -186,27 +234,33 @@
       "widgets": [
         {
           "id": 36,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         },
         {
           "id": 37,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 38,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 39,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 40,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 41,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         }
       ]
     },
@@ -216,27 +270,33 @@
       "widgets": [
         {
           "id": 42,
-          "name": "widget 1"
+          "name": "widget 1",
+          "component": "Demo"
         },
         {
           "id": 43,
-          "name": "widget 2"
+          "name": "widget 2",
+          "component": "Demo"
         },
         {
           "id": 44,
-          "name": "widget 3"
+          "name": "widget 3",
+          "component": "Demo"
         },
         {
           "id": 45,
-          "name": "widget 4"
+          "name": "widget 4",
+          "component": "Demo"
         },
         {
           "id": 46,
-          "name": "widget 5"
+          "name": "widget 5",
+          "component": "Demo"
         },
         {
           "id": 47,
-          "name": "widget 6"
+          "name": "widget 6",
+          "component": "Demo"
         }
       ]
     }

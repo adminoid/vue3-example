@@ -1,12 +1,11 @@
 <template lang="pug">
 .preview-widget.col(ref="widgetEl" @click="windowOpen" :style="scaleStyle")
   .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-    h6 {{ widget.name }}
-    p.d-flex.mt-3.justify-content-center Id: {{ widget.id }}
+    component(:is="componentD" :data="widget")
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineAsyncComponent, defineComponent, ref } from 'vue'
 import { useStore } from 'vuex'
 
 const WasherPreview = defineComponent({
@@ -14,6 +13,7 @@ const WasherPreview = defineComponent({
     widget: Object,
     total: {
       type: Number,
+      required: true,
       default: 1
     }
   },
@@ -21,6 +21,8 @@ const WasherPreview = defineComponent({
   setup (props) {
     const widgetEl = ref()
     const store = useStore()
+
+    // css var for customizing style by number of siblings
     const scaleStyle = computed(() => ({
       '--scale': `scale(${1 + (props.total / 100)})`
     }))
@@ -30,11 +32,19 @@ const WasherPreview = defineComponent({
         data: props.widget
       })
     }
+    const componentName = computed(() => props.widget?.component)
+    const componentD = computed(
+      () => defineAsyncComponent(
+        () => import('./widgets/' + componentName.value + '.vue')
+      )
+    )
 
     return {
       widgetEl,
       windowOpen,
-      scaleStyle
+      scaleStyle,
+      componentName,
+      componentD // dynamic component
     }
   }
 })
