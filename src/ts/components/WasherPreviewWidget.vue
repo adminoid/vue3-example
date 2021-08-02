@@ -1,7 +1,7 @@
 <template lang="pug">
-.preview-widget.col(ref="widgetEl" @click="windowOpen")
+.preview-widget.col(ref="widgetEl" @click="windowOpen" :style="scaleStyle")
   .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-    h6 {{ widget.name }} => {{ total }} = {{ scaleStyle }}
+    h6 {{ widget.name }}
     p.d-flex.mt-3.justify-content-center Id: {{ widget.id }}
 </template>
 
@@ -22,7 +22,7 @@ const WasherPreview = defineComponent({
     const widgetEl = ref()
     const store = useStore()
     const scaleStyle = computed(() => ({
-      '--scale': `scale(${1 / props.total})`
+      '--scale': `scale(${1 + (props.total / 100)})`
     }))
     const windowOpen = () => {
       store.commit('layout/windowOpen', {
@@ -50,9 +50,9 @@ $border: 12px
   margin-right: 12px
   position: relative
   padding: $border
-  transition: transform $animation-speed-fast ease-in-out
+  transition: all $animation-speed ease-in-out
   &:hover
-    box-shadow: 0 0 5px $bb-dark-gray
+    box-shadow: 0 0 5px $bb-blue-darken
     transform: var(--scale)
   @include window
   &:last-child
