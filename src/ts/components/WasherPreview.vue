@@ -1,7 +1,7 @@
 <template lang="pug">
-.washer-preview.container
+.washer-preview.mb-5
   h1 {{ washer.name }}
-  .washer-preview__list.row
+  .washer-preview__list
     washer-preview-widget(
       v-for="widget in widgets"
       :key="widget.id"
@@ -43,7 +43,6 @@ export default WasherPreview
 @import "src/sass/variables"
 .washer-preview
   border-radius: 5px
-  padding: 20px
   .washer-preview__list
     display: flex
 

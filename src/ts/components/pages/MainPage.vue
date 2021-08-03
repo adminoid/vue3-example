@@ -1,4 +1,6 @@
 <template lang="pug">
+h1 Common information
+.common-info.mb-5 Some info
 washer-preview(
   v-for="washer in washers"
   :key="washer.id"
@@ -27,3 +29,11 @@ const MainPage = defineComponent({
 
 export default MainPage
 </script>
+
+<style lang="sass">
+@import "src/sass/variables"
+
+.common-info
+  min-height: 200px
+  @include window
+</style>
