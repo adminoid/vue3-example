@@ -1,6 +1,6 @@
 <template lang="pug">
-h6 {{ data.name }}
-p.d-flex.mt-3.justify-content-center Id: {{ data.id }}
+.demo
+  p.d-flex.mt-3.justify-content-center ...
 </template>
 
 <script lang="ts">

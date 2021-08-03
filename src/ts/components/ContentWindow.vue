@@ -86,7 +86,7 @@ export default ContentWindow
   .overlap__window
     @include window
     position: absolute
-    transition: all $animation-speed ease-in-out
+    transition: all $animation-speed * 2 ease-in-out
     padding: 20px 70px 20px 20px
   .overlap__close
     display: block
@@ -94,7 +94,7 @@ export default ContentWindow
     right: 20px
     top: 20px
     g#icons
-      transition: fill $animation-speed ease-in-out
+      transition: fill $animation-speed * 2 ease-in-out
     &:hover
       g#icons
         fill: $bb-blue

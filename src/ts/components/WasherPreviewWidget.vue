@@ -1,7 +1,7 @@
 <template lang="pug">
 .preview-widget.col(ref="widgetEl" @click="windowOpen" :style="scaleStyle")
-  .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-    component(:is="componentD" :data="widget")
+    h6.preview-widget__header {{ widget.name }}
+    component(:is="componentD" :data="widget.data")
 </template>
 
 <script lang="ts">
@@ -54,17 +54,23 @@ export default WasherPreview
 
 <style lang="sass">
 @import "src/sass/variables"
-$border: 12px
 
 .preview-widget
   margin-right: 12px
   position: relative
-  padding: $border
+  padding: 6px
   transition: all $animation-speed ease-in-out
+  cursor: pointer
+  min-width: 100px
+  @include window
   &:hover
     box-shadow: 0 0 5px $bb-blue-darken
     transform: var(--scale)
-  @include window
+  .preview-widget__header
+    color: $bb-blue
+    text-align: center
+    font-size: 18px
+    margin: 0
   &:last-child
     margin-right: 0
 </style>

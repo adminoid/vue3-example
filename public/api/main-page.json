@@ -9,8 +9,8 @@
           "name": "Клиенты",
           "component": "Clients",
           "data": {
-            "summary": 12,
-            "growth": true
+            "today": 35,
+            "yesterday": 11
           }
         },
         {
@@ -18,109 +18,126 @@
           "name": "Клиенты",
           "component": "Clients",
           "data": {
-            "summary": 3,
-            "growth": false
+            "today": 11,
+            "yesterday": 35
           }
         },
         {
           "id": 2,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 3,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 4,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 5,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 6,
           "name": "widget 7",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 7,
           "name": "widget 8",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 8,
           "name": "widget 9",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 9,
           "name": "widget 10",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
     {
       "id": 1,
-      "name": "Мойка на бензоколонке, ул. Мойши Чистоганова, дом 2А",
+      "name": "Мойка на бензоколонке, ул. Мойши Чистоганова, дом 2А (за третьим правым поворотом влево под углом 32º",
       "widgets": [
         {
           "id": 10,
           "name": "Клиенты",
           "component": "Clients",
           "data": {
-            "summary": 3,
-            "growth": false
+            "today": 35,
+            "yesterday": 11
           }
         },
         {
           "id": 11,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 12,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 13,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 14,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 15,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 16,
           "name": "widget 7",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 17,
           "name": "widget 8",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 19,
           "name": "widget 9",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 19,
           "name": "widget 10",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -131,7 +148,8 @@
         {
           "id": 20,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -142,17 +160,20 @@
         {
           "id": 21,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 22,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 23,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -163,32 +184,38 @@
         {
           "id": 24,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 25,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 26,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 27,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 28,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 29,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -199,32 +226,38 @@
         {
           "id": 30,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 31,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 32,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 33,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 34,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 35,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -235,32 +268,38 @@
         {
           "id": 36,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 37,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 38,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 39,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 40,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 41,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     },
@@ -271,32 +310,38 @@
         {
           "id": 42,
           "name": "widget 1",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 43,
           "name": "widget 2",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 44,
           "name": "widget 3",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 45,
           "name": "widget 4",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 46,
           "name": "widget 5",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         },
         {
           "id": 47,
           "name": "widget 6",
-          "component": "Demo"
+          "component": "Demo",
+          "data": {}
         }
       ]
     }
