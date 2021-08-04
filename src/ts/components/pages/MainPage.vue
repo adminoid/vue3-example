@@ -1,6 +1,7 @@
 <template lang="pug">
-h1 Common information
-.common-info.mb-5 Some info
+h2 Здравствуйте, {{ user.name }}!
+.common-info.mb-5
+  pre {{ summary }}
 washer-preview(
   v-for="washer in washers"
   :key="washer.id"
@@ -12,7 +13,7 @@ washer-preview(
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
-import { TWashers } from '@/ts/types/mainPage'
+import { TWashers, TUser, TSummary } from '@/ts/types/mainPage'
 
 const MainPage = defineComponent({
   components: { WasherPreview },
@@ -23,7 +24,9 @@ const MainPage = defineComponent({
       await store.dispatch('mainPage/getPageData')
     })
     return {
-      washers: computed<TWashers>(() => store.state.mainPage.washers)
+      washers: computed<TWashers>(() => store.state.mainPage.washers),
+      user: computed<TUser>(() => store.state.mainPage.user),
+      summary: computed<TSummary>(() => store.state.mainPage.summary)
     }
   }
 })

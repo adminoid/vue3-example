@@ -1,3 +1,5 @@
 export default () => ({
-  washers: {}
+  user: {},
+  summary: {},
+  washers: []
 })

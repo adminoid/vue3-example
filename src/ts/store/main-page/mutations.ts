@@ -2,7 +2,8 @@ import { TMainPage } from '@/ts/types/mainPage'
 
 export default {
   setPageData (state: any, data: TMainPage) {
-    console.log(data)
+    state.user = data.user
+    state.summary = data.summary
     state.washers = data.washers
   }
 }
