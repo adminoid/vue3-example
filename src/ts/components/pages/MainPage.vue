@@ -1,7 +1,10 @@
 <template lang="pug">
-h2 Здравствуйте, {{ user.name }}!
-.common-info.mb-5
-  pre {{ summary }}
+h4 Здравствуйте, {{ user.name }}!
+.common-info.mb-5.p-3.container-fluid
+  .col Всего моек: {{ summary.total }}
+  .col Клиенты: {{ summary.clients }}
+  .col Выручка: {{ summary.revenue }}
+  .col Касса: {{ summary.cash }}
 washer-preview(
   v-for="washer in washers"
   :key="washer.id"
@@ -36,8 +39,4 @@ export default MainPage
 
 <style lang="sass">
 @import "src/sass/variables"
-
-.common-info
-  min-height: 200px
-  @include window
 </style>

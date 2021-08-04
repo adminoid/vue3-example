@@ -3,7 +3,7 @@
     "name": "Вячеслав"
   },
   "summary": {
-    "mco": 5,
+    "total": 5,
     "clients": 6520,
     "revenue": 541,
     "cash": 982.60
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": 1,
+      "id": "134ADE45D",
       "name": "Мойка на набережной старателей",
       "widgets": [
         {
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "234ADE45D",
       "name": "washer 3",
       "widgets": [
         {
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "334ADE45D",
       "name": "washer 4",
       "widgets": [
         {
@@ -187,7 +187,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "434ADE45D",
       "name": "washer 5",
       "widgets": [
         {
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "534ADE45D",
       "name": "washer 6",
       "widgets": [
         {
@@ -271,7 +271,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "634ADE45D",
       "name": "washer 7",
       "widgets": [
         {
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "734ADE45D",
       "name": "washer 8",
       "widgets": [
         {

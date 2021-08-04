@@ -11,7 +11,7 @@ export type TWidget = {
 }
 
 export type TWasher = {
-  id: string | number,
+  id: string,
   name: string,
   widgets: TWidget[]
 }
@@ -28,7 +28,7 @@ export type TUser = {
 }
 
 export type TSummary = {
-  mco: number,
+  total: number,
   clients: number,
   revenue: number,
   cash: number
