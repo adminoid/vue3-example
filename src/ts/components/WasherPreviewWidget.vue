@@ -56,21 +56,21 @@ export default WasherPreview
 @import "src/sass/variables"
 
 .preview-widget
-  margin-right: 12px
+  margin: 0 12px 12px 0
   position: relative
   padding: 6px
   transition: all $animation-speed ease-in-out
   cursor: pointer
   min-width: 100px
+  flex: 0 1 10%
   @include window
   &:hover
     box-shadow: 0 0 5px $bb-blue-darken
     transform: var(--scale)
+    z-index: 100
   .preview-widget__header
     color: $bb-blue
     text-align: center
     font-size: 18px
     margin: 0
-  &:last-child
-    margin-right: 0
 </style>

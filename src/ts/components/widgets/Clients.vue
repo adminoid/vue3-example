@@ -1,17 +1,21 @@
 <template lang="pug">
 .clients
-  .clients__today(:class="direction") {{ data.today }}
+  .clients__today(:class="direction")
+    .clients__value {{ data.today }}
     img.clients__icon(:src="require(`@/assets/icons/widgets/arrow-${direction}.svg`)")
   .clients__yesterday Вчера: {{ data.yesterday }}
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, PropType } from 'vue'
 const Clients = defineComponent({
   props: {
     data: {
-      today: Number,
-      yesterday: Number
+      type: Object as PropType<{
+        today: number,
+        yesterday: number
+      }>,
+      required: true
     }
   },
 
@@ -35,7 +39,8 @@ export default Clients
     font-size: 35px
     font-weight: 500
     display: flex
-    justify-content: space-evenly
+    justify-content: center
+    align-items: center
     &.up
       color: $bb-green
       .clients__icon
