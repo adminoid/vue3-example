@@ -1,5 +1,5 @@
 <template lang="pug">
-.preview-widget.col(ref="widgetEl" @click="windowOpen" :style="scaleStyle")
+.preview-widget.col(ref="widgetEl" @click="windowOpen")
     h6.preview-widget__header {{ widget.name }}
     component(:is="componentD" :data="widget.data")
 </template>
@@ -22,10 +22,6 @@ const WasherPreview = defineComponent({
     const widgetEl = ref()
     const store = useStore()
 
-    // css var for customizing style by number of siblings
-    const scaleStyle = computed(() => ({
-      '--scale': `scale(${1 + (props.total / 100)})`
-    }))
     const windowOpen = () => {
       store.commit('layout/windowOpen', {
         el: widgetEl.value,
@@ -42,7 +38,6 @@ const WasherPreview = defineComponent({
     return {
       widgetEl,
       windowOpen,
-      scaleStyle,
       componentName,
       componentD // dynamic component
     }
@@ -65,8 +60,8 @@ export default WasherPreview
   flex: 0 1 10%
   @include window
   &:hover
-    box-shadow: 0 0 5px $bb-blue-darken
-    transform: var(--scale)
+    box-shadow: 0 0 3px $bb-blue-darken
+    transform: scale(1.03)
     z-index: 100
   .preview-widget__header
     color: $bb-blue
