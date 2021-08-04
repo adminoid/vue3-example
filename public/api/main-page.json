@@ -1,4 +1,13 @@
 {
+  "user": {
+    "name": "Вячеслав"
+  },
+  "summary": {
+    "mco": 5,
+    "clients": 6520,
+    "revenue": 541,
+    "cash": 982.60
+  },
   "washers": [
     {
       "id": "234ADE456",

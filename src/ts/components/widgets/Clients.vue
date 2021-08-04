@@ -8,13 +8,12 @@
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue'
+import { TWClients } from '@/ts/types/mainPage'
+
 const Clients = defineComponent({
   props: {
     data: {
-      type: Object as PropType<{
-        today: number,
-        yesterday: number
-      }>,
+      type: Object as PropType<TWClients>,
       required: true
     }
   },

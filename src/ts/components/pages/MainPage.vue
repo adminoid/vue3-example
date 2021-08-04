@@ -12,6 +12,7 @@ washer-preview(
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
+import { TWashers } from '@/ts/types/mainPage'
 
 const MainPage = defineComponent({
   components: { WasherPreview },
@@ -22,7 +23,7 @@ const MainPage = defineComponent({
       await store.dispatch('mainPage/getPageData')
     })
     return {
-      washers: computed(() => store.state.mainPage.washers.washers)
+      washers: computed<TWashers>(() => store.state.mainPage.washers)
     }
   }
 })

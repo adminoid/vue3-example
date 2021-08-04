@@ -19,19 +19,14 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import WasherPreviewWidget from 'c@/WasherPreviewWidget.vue'
-
-interface IWasher {
-  id: number | string,
-  name: string,
-  widgets: []
-}
+import { TWasher } from '@/ts/types/mainPage'
 
 const WasherPreview = defineComponent({
   components: { WasherPreviewWidget },
 
   props: {
     washer: {
-      type: Object as PropType<IWasher>
+      type: Object as PropType<TWasher>
     }
   },
 

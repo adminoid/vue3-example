@@ -1,9 +1,5 @@
 import { getAttrs } from '@/ts/helpers/dom'
-
-type TWindow = {
-  el: HTMLElement,
-  data: any
-}
+import { TWindow } from '@/ts/types/mainPage'
 
 export default {
   sidebarToggle (state: any) {
