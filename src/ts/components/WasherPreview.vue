@@ -46,6 +46,6 @@ export default WasherPreview
 .washer-preview
   border-radius: 5px
   .washer-preview__list
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(108px, 1fr))
 </style>

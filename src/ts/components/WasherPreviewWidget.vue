@@ -56,8 +56,6 @@ export default WasherPreview
   padding: 6px
   transition: all $animation-speed ease-in-out
   cursor: pointer
-  min-width: 100px
-  flex: 0 1 10%
   @include window
   &:hover
     box-shadow: 0 0 3px $bb-blue-darken
