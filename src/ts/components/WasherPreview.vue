@@ -2,10 +2,19 @@
 .washer-preview.mb-5
   h1 {{ washer.name }} &nbsp
     small.text-muted {{ washer.id }}
-  p - название (ALLES), идентификатор (234ADE456) — не значки
-  p - количество постов сухих (3) и мокрых (6)
-  p - номер версии по (4.6.10)
-  p - ~~ Адрес (O.Bergolts 35)
+
+  table.common.table-bordered.border-primary.my-3.p-3
+    tbody
+      tr
+        th(scope="row") Постов
+        td 3 сухих
+        td 6 мокрых
+      tr
+        th(scope="row") Версия ПО
+        td(colspan="2") 4.6.10
+      tr
+        th(scope="row") Адрес
+        td(colspan="2") O.Bergolts 35
 
   .washer-preview__list
     washer-preview-widget(
@@ -40,7 +49,7 @@ const WasherPreview = defineComponent({
 export default WasherPreview
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "src/sass/variables"
 
 .washer-preview
@@ -50,4 +59,7 @@ export default WasherPreview
     grid-template-columns: repeat(auto-fit, minmax(112px, 1fr))
     grid-auto-rows: 1fr
     row-gap: 5px
+
+table.common td
+  padding: 10px
 </style>

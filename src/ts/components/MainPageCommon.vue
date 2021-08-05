@@ -1,20 +1,20 @@
 <template lang="pug">
 .my-3
   .row.fw-bold.mb-2
-    .col-2 Всего моек
-    .col-2 {{ summary.total }}
+    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Всего моек
+    .col-4.col-lg-2 {{ summary.total }}
 
   .row.fw-bold.mb-2
-    .col-2 Клиенты
-    .col-2 {{ summary.clients }}
+    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Клиенты
+    .col-4.col-lg-2 {{ summary.clients }}
 
   .row.fw-bold.mb-2
-    .col-2 Выручка
-    .col-2 {{ summary.revenue }}
+    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Выручка
+    .col-4.col-lg-2 {{ summary.revenue }}
 
   .row.fw-bold.mb-2
-    .col-2 Касса
-    .col-2 {{ summary.cash }}
+    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Касса
+    .col-4.col-lg-2 {{ summary.cash }}
 
 </template>
 
