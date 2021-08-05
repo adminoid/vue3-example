@@ -3,18 +3,18 @@
   h1 {{ washer.name }} &nbsp
     small.text-muted {{ washer.id }}
 
-  table.common.table-bordered.border-primary.my-3.p-3
+  table.common.table-bordered.my-3.mb-4
     tbody
       tr
-        th(scope="row") Постов
+        th Постов
+        th Версия ПО
+        th Адрес
+      tr
         td 3 сухих
+        td(rowspan="2") 4.6.10
+        td(rowspan="2") O.Bergolts 35
+      tr
         td 6 мокрых
-      tr
-        th(scope="row") Версия ПО
-        td(colspan="2") 4.6.10
-      tr
-        th(scope="row") Адрес
-        td(colspan="2") O.Bergolts 35
 
   .washer-preview__list
     washer-preview-widget(
@@ -59,7 +59,9 @@ export default WasherPreview
     grid-template-columns: repeat(auto-fit, minmax(112px, 1fr))
     grid-auto-rows: 1fr
     row-gap: 5px
-
-table.common td
-  padding: 10px
+  table.common
+    border-color: lighten($bb-blue, 33%)
+    th, td
+      padding: .5rem
+      background: lighten($bb-soft-gray, 10%)
 </style>
