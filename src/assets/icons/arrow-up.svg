@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow-up</title>
+    <g id="widgets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="clients" transform="translate(-77.000000, -56.000000)">
+            <g id="growth" transform="translate(20.000000, 20.000000)">
+                <g id="arrow-up" transform="translate(75.000000, 51.500000) rotate(-60.000000) translate(-75.000000, -51.500000) translate(56.000000, 44.000000)">
+                    <polyline id="Path" stroke="#57D969" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="0 0 15 0 15 10 31 10"></polyline>
+                    <path d="M29.752136,5.43921403 L37.2223305,9.80147622 C37.4607918,9.94072707 37.5412178,10.2469233 37.401967,10.4853846 C37.3548383,10.5660906 37.2860334,10.6319721 37.2033585,10.6755546 L29.733164,14.6135086 C29.4888852,14.7422815 29.186467,14.6486455 29.0576941,14.4043666 C29.0198027,14.3324878 29,14.2524573 29,14.1712026 L29,5.87098649 C29,5.59484412 29.2238576,5.37098649 29.5,5.37098649 C29.588606,5.37098649 29.6756207,5.39453249 29.752136,5.43921403 Z" id="Path-3" fill="#57D969"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

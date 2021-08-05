@@ -58,6 +58,7 @@ export default WasherPreview
   cursor: pointer
   max-height: 100vh
   min-width: 100px
+  max-width: 150px
   @include window
   &:hover
     box-shadow: 0 0 3px $bb-blue-darken

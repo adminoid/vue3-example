@@ -1,10 +1,8 @@
 <template lang="pug">
 h4 Здравствуйте, {{ user.name }}!
-.common-info.mb-5.p-3.container-fluid
-  .col Всего моек: {{ summary.total }}
-  .col Клиенты: {{ summary.clients }}
-  .col Выручка: {{ summary.revenue }}
-  .col Касса: {{ summary.cash }}
+
+main-page-common(:summary="summary")
+
 washer-preview(
   v-for="washer in washers"
   :key="washer.id"
@@ -16,10 +14,11 @@ washer-preview(
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
+import MainPageCommon from 'c@/MainPageCommon.vue'
 import { TWashers, TUser, TSummary } from '@/ts/types/mainPage'
 
 const MainPage = defineComponent({
-  components: { WasherPreview },
+  components: { WasherPreview, MainPageCommon },
 
   setup () {
     const store = useStore()

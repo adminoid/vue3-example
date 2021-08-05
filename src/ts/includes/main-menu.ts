@@ -11,6 +11,11 @@ export type TItems = {
 
 export const items = [
   {
+    id: 1,
+    uri: '/',
+    title: 'Главная'
+  },
+  {
     id: 2,
     uri: '/metrics',
     title: 'Метрики'

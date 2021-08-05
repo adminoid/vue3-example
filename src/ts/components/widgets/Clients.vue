@@ -2,7 +2,7 @@
 .clients
   .clients__today(:class="direction")
     .clients__value {{ data.today }}
-    img.clients__icon(:src="require(`@/assets/icons/widgets/arrow-${direction}.svg`)")
+    img.clients__icon(:src="require(`@/assets/icons/arrow-${direction}.svg`)")
   .clients__yesterday Вчера: {{ data.yesterday }}
 </template>
 
@@ -41,15 +41,9 @@ export default Clients
     justify-content: center
     align-items: center
     &.up
-      color: $bb-green
-      .clients__icon
-        top: -2px
+      color: $green
     &.down
-      color: $bb-red
-      .clients__icon
-        top: 1px
-  .clients__icon
-    position: relative
+      color: $red
   .clients__yesterday
     align-items: baseline
     font-size: 16px
