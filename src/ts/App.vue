@@ -1,30 +1,36 @@
 <template lang="pug">
-dashboard-layout
+dashboard-layout(v-if="authorized")
+login(v-else)
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted } from 'vue'
+import { defineComponent, onBeforeUnmount, onMounted } from 'vue'
 import DashboardLayout from 'c@/DashboardLayout.vue'
 import { useStore } from 'vuex'
+import Login from 'c@/pages/Auth/Login.vue'
+import storage from '@/ts/modules/storage'
 
 export default defineComponent({
   name: 'App',
   components: {
-    DashboardLayout
+    DashboardLayout,
+    Login
   },
   setup () {
     const store = useStore()
     const updateViewportWidth = () => {
       store.commit('updateViewportWidth', window.innerWidth)
     }
-    const width = computed(() => store.state.viewport.width)
     onMounted(() => {
       updateViewportWidth()
       window.addEventListener('resize', updateViewportWidth)
     })
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', updateViewportWidth)
+    })
 
     return {
-      width
+      authorized: !!storage.token
     }
   }
 })
