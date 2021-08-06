@@ -3,7 +3,7 @@
   .left-sidebar__header(:class="{open: sidebarOpen}")
     router-link(to="/")
       img.left-sidebar__logo(src="@/assets/img/logo-black.svg")
-  a.left-sidebar__sticker(v-if="isMobile && sidebarOpen" @click.prevent="togglePin")
+  a.left-sidebar__sticker(v-if="!isMobile && sidebarOpen" @click.prevent="togglePin")
     svg(v-if="sidebarPinned" width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')
       g#pin(transform='translate(-302.000000, -174.000000)' fill='#A9A9A9')
         path(:d="pinnedIconD"
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, nextTick, onMounted, watch } from 'vue'
 import { useStore } from 'vuex'
 import { pinnedIconD, unpinnedIconD } from '@/ts/includes/svg'
 import MainMenu from 'c@/MainMenu.vue'
@@ -29,14 +29,41 @@ const LeftSidebar = defineComponent({
 
   setup () {
     const store = useStore()
+    const isMobile = computed(() => store.getters.isMobile)
+    const pinSidebar = () => store.commit('layout/sidebarPin')
+    const unpinSidebar = () => store.commit('layout/sidebarUnpin')
+    const sidebarClose = () => store.commit('layout/sidebarClose')
+    onMounted(async () => {
+      await nextTick()
+      if (isMobile.value) {
+        if (store.state.layout.chat.open) sidebarClose()
+        unpinSidebar()
+      } else {
+        pinSidebar()
+      }
+    })
+
+    watch(
+      () => store.getters.isMobile,
+      (value) => {
+        if (value) {
+          if (store.state.layout.chat.open) sidebarClose()
+          unpinSidebar()
+        } else {
+          pinSidebar()
+        }
+      }
+    )
+
     return {
       sidebarOpen: computed(() => store.state.layout.sidebar.open),
       sidebarPinned: computed(_ => store.state.layout.sidebar.pinned),
-      closeSidebar: () => store.commit('layout/sidebarToggle'),
       togglePin: () => store.commit('layout/sidebarTogglePin'),
+      pinSidebar,
+      unpinSidebar,
       pinnedIconD,
       unpinnedIconD,
-      isMobile: computed(() => store.getters.isMobile)
+      isMobile
     }
   }
 })
