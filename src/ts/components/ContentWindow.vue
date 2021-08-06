@@ -66,7 +66,7 @@ export default ContentWindow
 </script>
 
 <style lang="sass">
-@import "src/sass/variables"
+@import "src/sass/app"
 
 .delay-enter-active,
 .delay-leave-active

@@ -50,7 +50,7 @@ export default WasherPreview
 </script>
 
 <style lang="sass" scoped>
-@import "src/sass/variables"
+@import "src/sass/app"
 
 .washer-preview
   border-radius: 5px
@@ -60,8 +60,8 @@ export default WasherPreview
     grid-auto-rows: 1fr
     row-gap: 5px
   table.common
-    border-color: lighten($bb-blue, 33%)
     th, td
-      padding: .5rem
-      background: lighten($bb-soft-gray, 10%)
+      @include window
+      @extend .p-2
+      @extend .rounded-3
 </style>

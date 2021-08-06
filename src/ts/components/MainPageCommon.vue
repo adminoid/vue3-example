@@ -30,13 +30,11 @@ export default defineComponent({
 </script>
 
 <style lang="sass" scoped>
-@import "src/sass/variables"
+@import "src/sass/app"
 
 .main-page-common
-  background: lighten($bb-soft-gray, 10%)
+  @include window
   padding: .5rem
-  border-radius: .5rem
-  border: 2px solid lighten($bb-blue, 33%)
 .icon
   width: 20px
   height: 20px

@@ -48,7 +48,7 @@ export default WasherPreview
 </script>
 
 <style lang="sass">
-@import "src/sass/variables"
+@import "src/sass/app"
 
 .preview-widget
   margin: 0 12px 12px 0
