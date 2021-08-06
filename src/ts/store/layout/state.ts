@@ -4,7 +4,7 @@ export default () => ({
   animationEnabled: false,
   sidebar: {
     open: true,
-    pinned: true
+    pinned: false
   },
   chat: {
     open: false

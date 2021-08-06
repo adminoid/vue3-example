@@ -3,7 +3,7 @@
   .left-sidebar__header(:class="{open: sidebarOpen}")
     router-link(to="/")
       img.left-sidebar__logo(src="@/assets/img/logo-black.svg")
-  a.left-sidebar__sticker(v-if="sidebarOpen" @click.prevent="togglePin")
+  a.left-sidebar__sticker(v-if="isMobile && sidebarOpen" @click.prevent="togglePin")
     svg(v-if="sidebarPinned" width='17px' height='17px' xmlns='http://www.w3.org/2000/svg')
       g#pin(transform='translate(-302.000000, -174.000000)' fill='#A9A9A9')
         path(:d="pinnedIconD"
@@ -35,8 +35,8 @@ const LeftSidebar = defineComponent({
       closeSidebar: () => store.commit('layout/sidebarToggle'),
       togglePin: () => store.commit('layout/sidebarTogglePin'),
       pinnedIconD,
-      unpinnedIconD//,
-      // isMobile: computed(() => store.getters.)
+      unpinnedIconD,
+      isMobile: computed(() => store.getters.isMobile)
     }
   }
 })

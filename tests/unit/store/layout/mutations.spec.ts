@@ -1,6 +1,6 @@
 import mutations from 's@/layout/mutations'
 
-describe('sidebarToggle()', () => {
+describe.skip('sidebarToggle()', () => {
   it('if set sidebar.open = true, set also chat.open = false', () => {
     const state = {
       sidebar: { open: false },
@@ -24,7 +24,7 @@ describe('sidebarToggle()', () => {
   })
 })
 
-describe('chatToggle()', () => {
+describe.skip('chatToggle()', () => {
   it('if set chat.open = true, set also sidebar.open = false', () => {
     const state = {
       sidebar: { open: true },

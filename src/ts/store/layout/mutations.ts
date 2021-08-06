@@ -3,19 +3,17 @@ import { TWindow } from '@/ts/types/mainPage'
 
 export default {
   sidebarToggle (state: any) {
-    console.log(this.state.viewport.width)
-
     if (!state.animationEnabled) state.animationEnabled = true
     state.sidebar.open = !state.sidebar.open
-    if (state.sidebar.open) state.chat.open = false
+    if (this.getters.isMobile && state.sidebar.open) state.chat.open = false
   },
   sidebarTogglePin (state: any) {
-    state.sidebar.pinned = !state.sidebar.pinned
+    if (this.getters.isMobile) state.sidebar.pinned = !state.sidebar.pinned
   },
   chatToggle (state: any) {
     if (!state.animationEnabled) state.animationEnabled = true
     state.chat.open = !state.chat.open
-    if (state.chat.open) state.sidebar.open = false
+    if (this.getters.isMobile && state.chat.open) state.sidebar.open = false
   },
   windowOpen (state: any, { el, data } : TWindow) {
     state.window.element = el
