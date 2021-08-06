@@ -58,6 +58,7 @@ export default WasherPreview
   .washer-preview__list
     display: grid
     grid-template-columns: repeat(auto-fill, minmax(112px, 1fr))
+    grid-auto-rows: 1fr
     @extend .gap-3
   table.common
     th, td

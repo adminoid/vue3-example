@@ -3,6 +3,8 @@ import { TWindow } from '@/ts/types/mainPage'
 
 export default {
   sidebarToggle (state: any) {
+    console.log(this.state.viewport.width)
+
     if (!state.animationEnabled) state.animationEnabled = true
     state.sidebar.open = !state.sidebar.open
     if (state.sidebar.open) state.chat.open = false
@@ -27,4 +29,4 @@ export default {
     state.window.data = {}
     state.window.element = HTMLElement
   }
-}
+} as any

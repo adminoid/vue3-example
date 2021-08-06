@@ -16,7 +16,8 @@ const MainContent = defineComponent({
     const store = useStore()
     const hasPadding = computed(
       _ => store.state.layout.sidebar.open &&
-        store.state.layout.sidebar.pinned)
+        store.state.layout.sidebar.pinned
+    )
     return {
       hasPadding
     }

@@ -26,7 +26,7 @@ const MainPage = defineComponent({
     onMounted(async () => {
       await store.dispatch('mainPage/getPageData')
     })
-    const vpW = computed(() => store.state.viewport.width)
+    const vpW = computed(() => store.getters.isMobile)
     return {
       washers: computed<TWashers>(() => store.state.mainPage.washers),
       user: computed<TUser>(() => store.state.mainPage.user),

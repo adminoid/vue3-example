@@ -35,7 +35,8 @@ const LeftSidebar = defineComponent({
       closeSidebar: () => store.commit('layout/sidebarToggle'),
       togglePin: () => store.commit('layout/sidebarTogglePin'),
       pinnedIconD,
-      unpinnedIconD
+      unpinnedIconD//,
+      // isMobile: computed(() => store.getters.)
     }
   }
 })
