@@ -3,11 +3,16 @@ export type TWClients = {
   yesterday: number
 }
 
+export type TWAccidents = {
+  critical: number,
+  warnings: number
+}
+
 export type TWidget = {
   id: number,
   name: string,
   component: string,
-  data?: any | TWClients
+  data?: TWClients | TWAccidents
 }
 
 export type TWasher = {

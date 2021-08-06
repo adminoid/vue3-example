@@ -59,6 +59,8 @@ export default WasherPreview
   max-height: 100vh
   min-width: 100px
   max-width: 150px
+  display: flex
+  flex-direction: column
   @include window
   &:hover
     box-shadow: 0 0 3px $bb-blue-darken
