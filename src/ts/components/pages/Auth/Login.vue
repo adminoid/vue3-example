@@ -8,14 +8,26 @@
       .form-floating.mb-3
         input#floatingPassword.form-control(type='password' placeholder='Password')
         label(for='floatingPassword') Пароль
-      button.btn.btn-primary.btn-lg(type='submit') Войти
+      button.btn.btn-primary.btn-lg(@click="login") Войти
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import storage from '@/ts/modules/storage'
+import { useStore } from 'vuex'
 
 const Login = defineComponent({
+  setup () {
+    const store = useStore()
+    const login = () => {
+      storage.token = 'logged'
+      store.commit('login')
+    }
 
+    return {
+      login
+    }
+  }
 })
 
 export default Login

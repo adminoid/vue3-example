@@ -1,10 +1,10 @@
 <template lang="pug">
-dashboard-layout(v-if="authorized")
+dashboard-layout(v-if="logged || authorized")
 login(v-else)
 </template>
 
 <script lang="ts">
-import { defineComponent, onBeforeUnmount, onMounted } from 'vue'
+import { computed, defineComponent, onBeforeUnmount, onMounted } from 'vue'
 import DashboardLayout from 'c@/DashboardLayout.vue'
 import { useStore } from 'vuex'
 import Login from 'c@/pages/Auth/Login.vue'
@@ -30,7 +30,8 @@ export default defineComponent({
     })
 
     return {
-      authorized: !!storage.token
+      authorized: !!storage.token,
+      logged: computed(() => store.state.logged)
     }
   }
 })
