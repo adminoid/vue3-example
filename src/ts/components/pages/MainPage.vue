@@ -1,4 +1,5 @@
 <template lang="pug">
+h1 {{ vpW }}
 h4 Здравствуйте, {{ user.name }}!
 
 main-page-common(:summary="summary")
@@ -25,10 +26,12 @@ const MainPage = defineComponent({
     onMounted(async () => {
       await store.dispatch('mainPage/getPageData')
     })
+    const vpW = computed(() => store.state.viewport.width)
     return {
       washers: computed<TWashers>(() => store.state.mainPage.washers),
       user: computed<TUser>(() => store.state.mainPage.user),
-      summary: computed<TSummary>(() => store.state.mainPage.summary)
+      summary: computed<TSummary>(() => store.state.mainPage.summary),
+      vpW
     }
   }
 })
