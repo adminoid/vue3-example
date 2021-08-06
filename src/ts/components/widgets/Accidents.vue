@@ -39,12 +39,12 @@ export default Accidents
     @extend .bg-warning
   .accidents__critical-value
     position: absolute
-    top: 0
-    left: $spacer * .5
-    @extend .text-warning
+    top: -.5 * $spacer
+    left: $spacer * .25
+    color: white
   .accidents__warnings-value
     position: absolute
-    bottom: 0
-    right: $spacer * .5
-    @extend .text-danger
+    bottom: -.5 * $spacer
+    right: $spacer * .25
+    color: black
 </style>

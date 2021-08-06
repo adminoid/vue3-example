@@ -1,6 +1,6 @@
 <template lang="pug">
 .preview-widget.col(ref="widgetEl" @click="windowOpen")
-    h6.preview-widget__header {{ widget.name }}
+    h6.preview-widget__header.m-0.mb-2 {{ widget.name }}
     component(:is="componentD" :data="widget.data")
 </template>
 
@@ -51,7 +51,7 @@ export default WasherPreview
 @import "src/sass/app"
 
 .preview-widget
-  margin: 0 12px 12px 0
+  //margin: 0 12px 12px 0
   position: relative
   padding: 6px
   transition: all $animation-speed ease-in-out
@@ -70,5 +70,4 @@ export default WasherPreview
     color: $bb-blue
     text-align: center
     font-size: 18px
-    margin: 0
 </style>

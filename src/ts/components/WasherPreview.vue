@@ -1,9 +1,9 @@
 <template lang="pug">
-.washer-preview.mb-5
+.washer-preview.mb-5.p-2
   h1 {{ washer.name }} &nbsp
     small.text-muted {{ washer.id }}
 
-  table.common.table-bordered.my-3.mb-4
+  table.common.table-bordered.my-3.mb-4.align-middle.text-center
     tbody
       tr
         th Постов
@@ -54,11 +54,11 @@ export default WasherPreview
 
 .washer-preview
   border-radius: 5px
+  background-color: lighten($bb-blue, 37%)
   .washer-preview__list
     display: grid
-    grid-template-columns: repeat(auto-fit, minmax(112px, 1fr))
-    grid-auto-rows: 1fr
-    row-gap: 5px
+    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr))
+    @extend .gap-3
   table.common
     th, td
       @include window
