@@ -18,19 +18,36 @@
         td 6 мокрых
 
   h5.text-black-50 Вариант 2
-  .container.text-center.m-3.m-md-4
+  .container.text-center.my-3.my-md-4
     .row
-      .col-5
-        h4 Постов
+        .col-5
+          h6 Постов
+          .row
+            .col 3 сухих
+            .col 6 мокрых
+        .col
+          h6 Версия ПО
+          .row
+            .col 4.6.10
+        .col-3
+          h6 Адрес
+          .row
+            .col O.Bergolts 35
+
+  h5.text-black-50 Вариант 3
+  .container.text-center.my-3.my-md-4.third
+    .row
+      .third__col.col-5.p-1
+        h6 Постов
         .row
           .col 3 сухих
           .col 6 мокрых
-      .col
-        h4 Версия ПО
+      .third__col.col.p-1
+        h6 Версия ПО
         .row
           .col 4.6.10
-      .col-3
-        h4 Адрес
+      .third__col.col-3.p-1
+        h6 Адрес
         .row
           .col O.Bergolts 35
 
@@ -83,4 +100,11 @@ export default WasherPreview
       @include window
       @extend .p-2
       @extend .rounded-3
+
+.third
+  .third__col
+    @include window
+    margin-right: 16px
+    &:last-child
+      margin-right: 0
 </style>
