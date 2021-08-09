@@ -3,6 +3,7 @@
   h1 {{ washer.name }} &nbsp
     small.text-muted {{ washer.id }}
 
+  h5.text-black-50 Вариант 1
   table.common.table-bordered.my-3.mb-4.align-middle.text-center
     tbody
       tr
@@ -15,6 +16,23 @@
         td(rowspan="2") O.Bergolts 35
       tr
         td 6 мокрых
+
+  h5.text-black-50 Вариант 2
+  .container.text-center.m-3.m-md-4
+    .row
+      .col-5
+        h4 Постов
+        .row
+          .col 3 сухих
+          .col 6 мокрых
+      .col
+        h4 Версия ПО
+        .row
+          .col 4.6.10
+      .col-3
+        h4 Адрес
+        .row
+          .col O.Bergolts 35
 
   .washer-preview__list
     washer-preview-widget(
