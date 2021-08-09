@@ -16,9 +16,15 @@
       "jest"
     ],
     "paths": {
-      "c@/*": ["src/ts/components/*"],
-      "s@/*": ["src/ts/store/*"],
-      "@/*": ["src/*"]
+      "c@/*": [
+        "src/ts/components/*"
+      ],
+      "s@/*": [
+        "src/ts/store/*"
+      ],
+      "@/*": [
+        "src/*"
+      ]
     },
     "lib": [
       "esnext",
