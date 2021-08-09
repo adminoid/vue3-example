@@ -27,26 +27,26 @@ describe('sidebarToggle()', () => {
   })
 })
 
-describe.skip('chatToggle()', () => {
-  it('if set chat.open = true, set also sidebar.open = false', () => {
+describe('chatToggle()', () => {
+  it('if chat opens, close sidebar on mobile', () => {
     const state = {
-      sidebar: { open: true },
-      chat: { open: false }
+      chat: { open: false },
+      sidebar: { open: true }
     }
 
-    mutations.chatToggle(state)
+    mutationsMobile.chatOpen(state)
     expect(state.chat.open).toEqual(true)
     expect(state.sidebar.open).toEqual(false)
   })
 
-  it("if set chat.open = false, don't change sidebar.open", () => {
+  it('if chat opens, sidebar staying open on desktop', () => {
     const state = {
-      sidebar: { open: true },
-      chat: { open: true }
+      chat: { open: false },
+      sidebar: { open: true }
     }
 
-    mutations.chatToggle(state)
-    expect(state.chat.open).toEqual(false)
+    mutationsDesktop.chatToggle(state)
+    expect(state.chat.open).toEqual(true)
     expect(state.sidebar.open).toEqual(true)
   })
 })
