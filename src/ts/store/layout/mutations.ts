@@ -18,6 +18,7 @@ export default {
   sidebarToggle (state: any) {
     enableAnimation(state)
     state.sidebar.open = !state.sidebar.open
+    console.log(this.getters.isMobile)
     if (this.getters.isMobile && state.sidebar.open) state.chat.open = false
   },
   sidebarPin (state: any) {
