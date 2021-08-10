@@ -65,7 +65,7 @@ const ContentWindow = defineComponent({
 export default ContentWindow
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "src/sass/app"
 
 .delay-enter-active,

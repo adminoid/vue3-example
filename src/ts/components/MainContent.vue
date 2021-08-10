@@ -27,13 +27,14 @@ const MainContent = defineComponent({
 export default MainContent
 </script>
 
-<style lang="sass">
-@import "src/sass/variables"
+<style lang="sass" scoped>
+@import "src/sass/app"
+
 main
   float: right
   width: 100%
   transition: width $animation-speed ease-in-out
-  padding: 88px 20px 0
+  padding: $mc-padding
   &.padding
     width: calc(100% - #{$left-sidebar-width})
 </style>

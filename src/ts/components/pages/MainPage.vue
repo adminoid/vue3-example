@@ -1,13 +1,19 @@
 <template lang="pug">
-h4 Здравствуйте, {{ user.name }}!
+.main-page main page
+  h4 Здравствуйте, {{ user.name }}!
 
-main-page-common(:summary="summary")
+  main-page-common(:summary="summary")
 
-washer-preview(
-  v-for="washer in washers"
-  :key="washer.id"
-  :washer="washer"
-)
+  // todo: scrollable
+  .main-page__scrollable scrollable
+    .main-page__inside In side
+      br
+      | inside
+    //washer-preview(
+    //  v-for="washer in washers"
+    //  :key="washer.id"
+    //  :washer="washer"
+    //)
 </template>
 
 <script lang="ts">
@@ -36,6 +42,15 @@ const MainPage = defineComponent({
 export default MainPage
 </script>
 
-<style lang="sass">
-@import "src/sass/variables"
+<style lang="sass" scoped>
+@import "src/sass/app"
+
+.main-page
+  background: rgba(56, 206, 131, 0.75)
+  //height: $mc-height
+  .main-page__scrollable
+    background: rgba(168, 144, 46, 0.65)
+  .main-page__inside
+    //height: $spacer
+
 </style>

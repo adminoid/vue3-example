@@ -27,6 +27,12 @@
 @import "~bootstrap/scss/forms"
 @import "~bootstrap/scss/buttons"
 
+// main content offsets
+$mc-top-offset: 5.5 * $spacer
+$mc-side-offset: $spacer * 1.25
+$mc-padding: $mc-top-offset $mc-side-offset $mc-side-offset
+$mc-height: calc(100vh - (#{$mc-top-offset} + #{$mc-side-offset}))
+
 // Common global style rules
 html,body,#app
     min-height: 100%

@@ -47,7 +47,7 @@ const WasherPreview = defineComponent({
 export default WasherPreview
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 @import "src/sass/app"
 
 .preview-widget
