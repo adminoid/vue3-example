@@ -29,9 +29,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="sass" scoped>
-@import "src/sass/app"
-
+<style lang="sass">
 .main-page-common
   @include window
   padding: .5rem

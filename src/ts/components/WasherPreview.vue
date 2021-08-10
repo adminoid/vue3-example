@@ -84,9 +84,7 @@ const WasherPreview = defineComponent({
 export default WasherPreview
 </script>
 
-<style lang="sass" scoped>
-@import "src/sass/app"
-
+<style lang="sass">
 .washer-preview
   border-radius: 5px
   background-color: lighten($bb-blue, 37%)

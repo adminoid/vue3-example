@@ -18,5 +18,13 @@ module.exports = {
         '@': path.join(__dirname, 'src/')
       }
     }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        sourceMap: true,
+        additionalData: '@import "~@/sass/app.sass"'
+      }
+    }
   }
 }

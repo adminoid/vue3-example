@@ -29,9 +29,7 @@ const Clients = defineComponent({
 export default Clients
 </script>
 
-<style lang="sass" scoped>
-@import "src/sass/variables"
-
+<style lang="sass">
 .clients
   width: 100%
   .clients__today

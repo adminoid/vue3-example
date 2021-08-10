@@ -27,9 +27,7 @@ const MainContent = defineComponent({
 export default MainContent
 </script>
 
-<style lang="sass" scoped>
-@import "src/sass/app"
-
+<style lang="sass">
 main
   float: right
   width: 100%

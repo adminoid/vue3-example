@@ -7,7 +7,6 @@ nav.navbar.fixed-top
         img.navbar__logo(src="@/assets/img/logo-white.svg")
 a.chat-button(href='#' @click.prevent="chatToggle")
   img(:src="require(`@/assets/icons/chat-${chatIconStatus}.svg`)")
-
 </template>
 
 <script lang="ts">

@@ -43,7 +43,7 @@
     "express": "^4.17.1",
     "nodemon": "^2.0.12",
     "sass": "^1.35.2",
-    "sass-loader": "^10.1.1",
+    "sass-loader": "^10.2.0",
     "typescript": "^3.9.9",
     "vue-cli-plugin-pug": "~2.0.0",
     "vue-jest": "^5.0.0-0"

@@ -33,6 +33,6 @@ const BurgerButton = defineComponent({
 export default BurgerButton
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import "BurgerButton"
 </style>

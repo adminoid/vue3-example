@@ -21,9 +21,7 @@ const Accidents = defineComponent({
 export default Accidents
 </script>
 
-<style lang="sass" scoped>
-@import "src/sass/app"
-
+<style lang="sass">
 .accidents
   display: flex
   flex: 1

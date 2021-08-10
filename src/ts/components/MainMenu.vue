@@ -49,8 +49,6 @@ export default MainMenu
 </script>
 
 <style lang="sass">
-@import "src/sass/variables"
-
 .expand-enter-active,
 .expand-leave-active
   transition: all $animation-speed-fast ease
