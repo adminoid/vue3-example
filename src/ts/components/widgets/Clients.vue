@@ -28,26 +28,3 @@ const Clients = defineComponent({
 })
 export default Clients
 </script>
-
-<style lang="sass">
-.clients
-  width: 100%
-  .clients__today
-    font-size: 35px
-    font-weight: 500
-    display: flex
-    justify-content: center
-    align-items: center
-    &.up
-      color: $green
-    &.down
-      color: $red
-  .clients__yesterday
-    align-items: baseline
-    font-size: 16px
-    color: darken($bb-dark-gray, 10%)
-    font-weight: 500
-    display: flex
-    justify-content: space-around
-    flex-direction: row
-</style>

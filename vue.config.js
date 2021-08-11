@@ -14,9 +14,22 @@ module.exports = {
       extensions: ['.ts', '.vue'],
       alias: {
         'c@': path.join(__dirname, 'src/ts/components/'),
-        's@': path.join(__dirname, 'src/ts/store/'),
+        't@': path.join(__dirname, 'src/ts/'),
         '@': path.join(__dirname, 'src/')
       }
     }
   }
+  // css: {
+  //   loaderOptions: {
+  //     sass: {
+  //       additionalData: '@import "@/sass/app.sass";',
+  //       implementation: require('node-sass')
+  //     }
+  //   }
+  // }
+  // chainWebpack: config => {
+  //   config.entry('style')
+  //     .add('./src/sass/app.sass')
+  //     .end()
+  // }
 }

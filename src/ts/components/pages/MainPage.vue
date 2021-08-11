@@ -41,14 +41,3 @@ const MainPage = defineComponent({
 
 export default MainPage
 </script>
-
-<style lang="sass">
-.main-page
-  background: rgba(56, 206, 131, 0.75)
-  height: $mc-height
-  .main-page__scrollable
-    background: rgba(168, 144, 46, 0.65)
-  //.main-page__inside
-    //height: $spacer
-
-</style>

@@ -32,9 +32,3 @@ const Login = defineComponent({
 
 export default Login
 </script>
-
-<style lang="sass">
-.login
-  background: #fff
-  min-height: $spacer * 23
-</style>

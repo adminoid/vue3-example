@@ -32,7 +32,3 @@ const BurgerButton = defineComponent({
 
 export default BurgerButton
 </script>
-
-<style lang="sass">
-@import "BurgerButton"
-</style>

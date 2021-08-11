@@ -64,36 +64,3 @@ const ContentWindow = defineComponent({
 
 export default ContentWindow
 </script>
-
-<style lang="sass">
-.delay-enter-active,
-.delay-leave-active
-  transition: all $animation-speed ease-in-out
-.delay-enter-from,
-.delay-leave-to
-  opacity: 0
-
-.overlap
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 1400
-  background: $overlap-bg
-  .overlap__window
-    @include window
-    position: absolute
-    transition: all $animation-speed * 2 ease-in-out
-    padding: 20px 70px 20px 20px
-  .overlap__close
-    display: block
-    position: absolute
-    right: 20px
-    top: 20px
-    g#icons
-      transition: fill $animation-speed * 2 ease-in-out
-    &:hover
-      g#icons
-        fill: $bb-blue
-</style>

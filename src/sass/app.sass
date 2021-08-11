@@ -27,15 +27,24 @@
 @import "~bootstrap/scss/forms"
 @import "~bootstrap/scss/buttons"
 
-// main content offsets
-$mc-top-offset: 5.5 * $spacer
-$mc-side-offset: $spacer * 1.25
-$mc-padding: $mc-top-offset $mc-side-offset $mc-side-offset
-$mc-height: calc(100vh - (#{$mc-top-offset} + #{$mc-side-offset}))
-
 // Common global style rules
 html,body,#app
     min-height: 100%
     height: 100%
 body
     background: whitesmoke
+
+// Component style files
+@import "~c@/MainPageCommon.sass"
+@import "~c@/pages/Auth/Login.sass"
+@import "~c@/widgets/Accidents.sass"
+@import "~c@/pages/MainPage.sass"
+@import "~c@/widgets/Clients.sass"
+@import "~c@/RightChat.sass"
+@import "~c@/LeftSidebar.sass"
+@import "~c@/WasherPreview.sass"
+@import "~c@/MainMenu.sass"
+@import "~c@/WasherPreviewWidget.sass"
+@import "~c@/MainContent.sass"
+@import "~c@/ContentWindow.sass"
+@import "~c@/BurgerButton.sass"

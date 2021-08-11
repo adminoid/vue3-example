@@ -26,13 +26,3 @@ const MainContent = defineComponent({
 
 export default MainContent
 </script>
-
-<style lang="sass">
-main
-  float: right
-  width: 100%
-  transition: width $animation-speed ease-in-out
-  padding: $mc-padding
-  &.padding
-    width: calc(100% - #{$left-sidebar-width})
-</style>

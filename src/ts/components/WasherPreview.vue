@@ -83,26 +83,3 @@ const WasherPreview = defineComponent({
 
 export default WasherPreview
 </script>
-
-<style lang="sass">
-.washer-preview
-  border-radius: 5px
-  background-color: lighten($bb-blue, 37%)
-  .washer-preview__list
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(112px, 1fr))
-    grid-auto-rows: 1fr
-    @extend .gap-3
-  table.common
-    th, td
-      @include window
-      @extend .p-2
-      @extend .rounded-3
-
-.third
-  .third__col
-    @include window
-    margin-right: 16px
-    &:last-child
-      margin-right: 0
-</style>

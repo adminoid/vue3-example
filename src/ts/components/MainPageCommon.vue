@@ -28,12 +28,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="sass">
-.main-page-common
-  @include window
-  padding: .5rem
-.icon
-  width: 20px
-  height: 20px
-</style>

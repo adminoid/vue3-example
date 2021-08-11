@@ -1,0 +1,54 @@
+.expand-enter-active,
+.expand-leave-active
+  transition: all $animation-speed-fast ease
+.expand-enter-from,
+.expand-leave-to
+  max-height: 0
+  opacity: 0
+.expand-enter-to,
+.expand-leave-from
+  max-height: 5000px
+  opacity: 1
+
+.main-menu
+  padding-left: 0
+  list-style: none
+  direction: ltr
+  .main-menu__fi // main menu first level item
+    position: relative
+    max-width: 230px
+    line-height: 20px
+    a
+      transition: all $animation-speed ease-in-out
+      color: black
+      #expand
+        fill: $bb-black-gray
+      &:hover
+        color: $bb-blue-darken
+        #expand
+          fill: $bb-blue-darken
+  .main-menu__si // main menu second level item
+    a
+      font-size: 15px
+  .main-menu__submenu
+    padding: 4px 0 1px 8px
+    li:last-child
+      margin-bottom: 0!important
+  .main-menu__expand
+    overflow: hidden
+    display: block
+    position: absolute
+    left: -17px
+    top: -1px
+    g#expand
+      transition: all $animation-speed ease-in-out
+      transform: rotate(0)
+      transform-origin: center
+      rect#horizontal
+        transition: all $animation-speed ease-in-out
+        opacity: 1
+      &.expanded
+        fill: $bb-blue-darken
+        transform: rotate(90deg)
+        rect#horizontal
+          opacity: 0

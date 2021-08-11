@@ -46,26 +46,3 @@ const WasherPreview = defineComponent({
 
 export default WasherPreview
 </script>
-
-<style lang="sass">
-.preview-widget
-  //margin: 0 12px 12px 0
-  position: relative
-  padding: 6px
-  transition: all $animation-speed ease-in-out
-  cursor: pointer
-  max-height: 100vh
-  min-width: 100px
-  max-width: 150px
-  display: flex
-  flex-direction: column
-  @include window
-  &:hover
-    box-shadow: 0 0 3px $bb-blue-darken
-    transform: scale(1.03)
-    z-index: 100
-  .preview-widget__header
-    color: $bb-blue
-    text-align: center
-    font-size: 18px
-</style>

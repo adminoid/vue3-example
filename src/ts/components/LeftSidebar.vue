@@ -70,7 +70,3 @@ const LeftSidebar = defineComponent({
 
 export default LeftSidebar
 </script>
-
-<style lang="sass">
-@import "LeftSidebar"
-</style>

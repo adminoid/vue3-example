@@ -1,5 +1,9 @@
+// Overrides
 $font-family-sans-serif: var(--bs-font-sans-serif) !default
 $font-family-monospace: var(--bs-font-monospace) !default
+$navbar-padding-y: .4 !default
+$vertical-margin: 2 * $spacer
+$body-color: #000 !default
 
 // Brand book
 $bb-blue: #57B2D9
@@ -18,11 +22,8 @@ $left-sidebar-width: 309px
 $right-chat-width: 270px
 $overlap-bg: fade-out($bb-blue, .2)
 
-// Main page
-//$mp-light-blue-bg: lighten($bb-blue, 30%)
-//$mp-blue-border: lighten($bb-blue, 20%)
-
-// Overrides
-$navbar-padding-y: .4 !default
-$vertical-margin: 32px
-$body-color: #000 !default
+// main content offsets
+$mc-top-offset: 5.5 * $spacer
+$mc-side-offset: $spacer * 1.25
+$mc-padding: $mc-top-offset $mc-side-offset $mc-side-offset
+$mc-height: calc(100vh - (#{$mc-top-offset} + #{$mc-side-offset}))

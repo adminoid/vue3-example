@@ -19,8 +19,8 @@
       "c@/*": [
         "src/ts/components/*"
       ],
-      "s@/*": [
-        "src/ts/store/*"
+      "t@/*": [
+        "src/ts/*"
       ],
       "@/*": [
         "src/*"
