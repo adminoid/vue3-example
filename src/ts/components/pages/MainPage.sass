@@ -1,7 +1,14 @@
 .main-page
   background: rgba(56, 206, 131, 0.75)
   height: $mc-height
+  display: flex
+  flex-flow: column
+  .main-page__fixed
+    flex: 0 1 auto
   .main-page__scrollable
+    flex: 1 1 auto
+    overflow: scroll
+    height: 100%
     background: rgba(168, 144, 46, 0.65)
-//.main-page__inside
-  //height: $spacer
+.scroll-area__inside
+  height: 500px

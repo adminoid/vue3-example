@@ -9,13 +9,16 @@ $red: #D95757
 $green: #57D969
 
 // ++ Custom ++
+// common
 $animation-speed: 170ms
 $animation-speed-fast: 85ms
+// layout
 $left-sidebar-width: 309px
 $right-chat-width: 270px
 $overlap-bg: fade-out($bb-blue, .2)
 // main content offsets
 $mc-top-offset: 5.5 * $spacer
+$mc-bottom-offset: $spacer * 2
 $mc-side-offset: $spacer * 1.25
-$mc-padding: $mc-top-offset $mc-side-offset $mc-side-offset
-$mc-height: calc(100vh - (#{$mc-top-offset} + #{$mc-side-offset}))
+$mc-padding: $mc-top-offset $mc-side-offset $mc-bottom-offset $mc-side-offset
+$mc-height: calc(100vh - (#{$mc-top-offset} + #{$mc-bottom-offset}))

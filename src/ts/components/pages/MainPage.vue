@@ -1,12 +1,13 @@
 <template lang="pug">
 .main-page main page
-  h4 Здравствуйте, {{ user.name }}!
+  .main-page__fixed
+    h4 Здравствуйте, {{ user.name }}!
 
-  main-page-common(:summary="summary")
+    main-page-common(:summary="summary")
 
   // todo: scrollable
   .main-page__scrollable scrollable
-    .main-page__inside In side
+    .scroll-area__inside In side
       br
       | inside
     //washer-preview(
