@@ -21,7 +21,7 @@ import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
 import MainPageCommon from 'c@/MainPageCommon.vue'
-import { TWashers, TUser, TSummary } from '@/ts/types/mainPage'
+import { TWashers, TUser, TSummary } from 't@/types/mainPage'
 
 const MainPage = defineComponent({
   components: { WasherPreview, MainPageCommon },

@@ -21,7 +21,7 @@ ul.main-menu(v-if="items.length > 0")
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { items } from '@/ts/includes/main-menu'
+import { items } from 't@/includes/main-menu'
 
 const MainMenu = defineComponent({
   setup () {

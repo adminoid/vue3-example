@@ -1,4 +1,4 @@
-import { TMainPage } from '@/ts/types/mainPage'
+import { TMainPage } from 't@/types/mainPage'
 
 export default {
   setPageData (state: any, data: TMainPage) {

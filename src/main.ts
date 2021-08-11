@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
-import App from '@/ts/App.vue'
-import store from '@/ts/store'
-import router from '@/ts/router'
+import App from 't@/App.vue'
+import store from 't@/store'
+import router from 't@/router'
 
 import '@/sass/app.sass'
 

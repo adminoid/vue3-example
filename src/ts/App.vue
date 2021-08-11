@@ -8,7 +8,7 @@ import { computed, defineComponent, onBeforeUnmount, onMounted } from 'vue'
 import DashboardLayout from 'c@/DashboardLayout.vue'
 import { useStore } from 'vuex'
 import Login from 'c@/pages/Auth/Login.vue'
-import storage from '@/ts/modules/storage'
+import storage from 't@/modules/storage'
 
 export default defineComponent({
   name: 'App',

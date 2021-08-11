@@ -13,7 +13,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import storage from '@/ts/modules/storage'
+import storage from 't@/modules/storage'
 import { useStore } from 'vuex'
 
 const Login = defineComponent({

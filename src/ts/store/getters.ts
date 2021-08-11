@@ -1,4 +1,4 @@
-import { mobileWidth } from '@/ts/config'
+import { mobileWidth } from 't@/config'
 
 export default {
   isMobile (state: any) {

@@ -63,7 +63,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import WasherPreviewWidget from 'c@/WasherPreviewWidget.vue'
-import { TWasher } from '@/ts/types/mainPage'
+import { TWasher } from 't@/types/mainPage'
 
 const WasherPreview = defineComponent({
   components: { WasherPreviewWidget },

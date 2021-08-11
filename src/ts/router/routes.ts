@@ -5,23 +5,23 @@ import Bonus from 'c@/pages/Bonus.vue'
 
 // Settings pages
 import Settings from 'c@/pages/Settings.vue'
-import sectionSettings from '@/ts/router/sections/settings'
+import sectionSettings from 't@/router/sections/settings'
 
 // Statistic pages
 import Statistic from 'c@/pages/Statistic.vue'
-import sectionStatistic from '@/ts/router/sections/statistic'
+import sectionStatistic from 't@/router/sections/statistic'
 
 // Finance pages
 import Finance from 'c@/pages/Finance.vue'
-import sectionFinance from '@/ts/router/sections/finance'
+import sectionFinance from 't@/router/sections/finance'
 
 // Accounting pages
 import Accounting from 'c@/pages/Accounting.vue'
-import sectionAccounting from '@/ts/router/sections/accounting'
+import sectionAccounting from 't@/router/sections/accounting'
 
 // Economics pages
 import Economics from 'c@/pages/Economics.vue'
-import sectionEconomics from '@/ts/router/sections/economics'
+import sectionEconomics from 't@/router/sections/economics'
 
 import Analytics from 'c@/pages/Analytics.vue'
 

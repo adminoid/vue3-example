@@ -31,7 +31,7 @@ const WasherPreview = defineComponent({
     const componentName = computed(() => props.widget?.component)
     const componentD = computed(
       () => defineAsyncComponent(
-        () => import('./widgets/' + componentName.value + '.vue')
+        () => import('c@/widgets/' + componentName.value + '.vue')
       )
     )
 

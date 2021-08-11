@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { TWAccidents } from '@/ts/types/mainPage'
+import { TWAccidents } from 't@/types/mainPage'
 
 const Accidents = defineComponent({
   props: {

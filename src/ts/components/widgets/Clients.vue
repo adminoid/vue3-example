@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue'
-import { TWClients } from '@/ts/types/mainPage'
+import { TWClients } from 't@/types/mainPage'
 
 const Clients = defineComponent({
   props: {
