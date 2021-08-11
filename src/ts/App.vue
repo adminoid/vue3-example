@@ -36,7 +36,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<!--<style lang="sass">-->
-<!--//@import '~@/sass/app.sass'-->
-<!--</style>-->

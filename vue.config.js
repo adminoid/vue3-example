@@ -19,17 +19,4 @@ module.exports = {
       }
     }
   }
-  // css: {
-  //   loaderOptions: {
-  //     sass: {
-  //       additionalData: '@import "@/sass/app.sass";',
-  //       implementation: require('node-sass')
-  //     }
-  //   }
-  // }
-  // chainWebpack: config => {
-  //   config.entry('style')
-  //     .add('./src/sass/app.sass')
-  //     .end()
-  // }
 }

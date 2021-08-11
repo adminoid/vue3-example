@@ -34,20 +34,3 @@ const TopNavbar = defineComponent({
 
 export default TopNavbar
 </script>
-
-<style lang="sass">
-.navbar
-  background: #000
-  color: #fff
-  line-height: 2.5
-  height: 56px
-  user-select: none
-  .navbar__logo
-    margin-left: 83px
-.chat-button
-  display: block
-  position: fixed
-  top: 7px
-  right: 21px
-  z-index: 1300
-</style>
