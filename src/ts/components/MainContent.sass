@@ -1,7 +1,9 @@
-main
+.main-content
   float: right
   width: 100%
   transition: width $animation-speed ease-in-out
   padding: $mc-padding
-  &.padding
+  &.main-content_padding
     width: calc(100% - #{$left-sidebar-width})
+  &.main-content_with-pin
+    padding-left: $mc-pin-left-padding
