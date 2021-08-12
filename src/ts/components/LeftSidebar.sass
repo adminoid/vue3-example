@@ -6,8 +6,19 @@
   width: $left-sidebar-width
   left: -$left-sidebar-width
   transition: left $animation-speed ease-in-out
-  &.open
+  .left-sidebar__header
+    position: fixed
     left: 0
+    top: 0
+    height: 56px
+    background: #C8C8C8
+    overflow: hidden
+    transition: width $animation-speed ease-in-out
+    width: 0
+  &.left-sidebar_open
+    left: 0
+    .left-sidebar__header
+      width: $left-sidebar-width
   .left-sidebar__sticker
     position: absolute
     right: -15px
@@ -23,17 +34,6 @@
     &:hover
       g#pin
         fill: #57B2D9
-  .left-sidebar__header
-    position: fixed
-    left: 0
-    top: 0
-    height: 56px
-    background: #C8C8C8
-    overflow: hidden
-    transition: width $animation-speed ease-in-out
-    width: 0
-    &.open
-      width: $left-sidebar-width
   .left-sidebar__logo
     position: absolute
     left: 95px

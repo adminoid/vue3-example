@@ -1,7 +1,6 @@
 <template lang="pug">
-main.main-content(:class="classes")
-  .container-fluid
-    router-view
+main.main-content(:class="{'main-content_padding': hasPadding}")
+  router-view
 </template>
 
 <script lang="ts">
@@ -14,13 +13,12 @@ import { useStore } from 'vuex'
 const MainContent = defineComponent({
   setup: function () {
     const store = useStore()
-    const classes = computed(() => ({
-      'main-content_padding': store.state.layout.sidebar.open &&
-        store.state.layout.sidebar.pinned,
-      'main-content_with-pin': store.state.layout.sidebar.pinned
-    }))
+    const hasPadding = computed(() => {
+      return store.state.layout.sidebar.open &&
+        store.state.layout.sidebar.pinned
+    })
     return {
-      classes
+      hasPadding
     }
   }
 })

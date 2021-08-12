@@ -1,15 +1,3 @@
-.expand-enter-active,
-.expand-leave-active
-  transition: all $animation-speed-fast ease
-.expand-enter-from,
-.expand-leave-to
-  max-height: 0
-  opacity: 0
-.expand-enter-to,
-.expand-leave-from
-  max-height: 5000px
-  opacity: 1
-
 .main-menu
   padding-left: 0
   list-style: none
@@ -52,3 +40,16 @@
         transform: rotate(90deg)
         rect#horizontal
           opacity: 0
+
+// animations
+.expand-enter-active,
+.expand-leave-active
+  transition: all $animation-speed-fast ease
+.expand-enter-from,
+.expand-leave-to
+  max-height: 0
+  opacity: 0
+.expand-enter-to,
+.expand-leave-from
+  max-height: 5000px
+  opacity: 1

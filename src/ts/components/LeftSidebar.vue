@@ -1,6 +1,6 @@
 <template lang="pug">
-.left-sidebar(:class="{open: sidebarOpen}")
-  .left-sidebar__header(:class="{open: sidebarOpen}")
+.left-sidebar(:class="{'left-sidebar_open': sidebarOpen}")
+  .left-sidebar__header
     router-link(to="/")
       img.left-sidebar__logo(src="@/assets/img/logo-black.svg")
   a.left-sidebar__sticker(v-if="!isMobile && sidebarOpen" @click.prevent="togglePin")

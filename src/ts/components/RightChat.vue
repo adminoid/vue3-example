@@ -1,6 +1,6 @@
 <template lang="pug">
-.right-chat(:class="{open: chatOpen}")
-  .right-chat__header(:class="{open: chatOpen}")
+.right-chat(:class="{'right-chat_open': chatOpen}")
+  .right-chat__header(:class="{'right-chat_open': chatOpen}")
     a.right-chat__toggle-chat(href='#' @click.prevent="closeChat")
   .right-chat__body(v-if="chatOpen")
 </template>
