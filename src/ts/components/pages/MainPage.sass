@@ -10,6 +10,12 @@ $mp-height: 3.5 * $spacer
   &.main-page_with-sidebar
     margin-right: -$spacer
     margin-left: -$mp-base-left-padding
+    .main-page__fixed,
+    .main-page__scrollable
+      padding-left: 2 * $spacer
+  .main-page__fixed,
+  .main-page__scrollable
+    padding: $spacer
   .main-page__fixed
     flex: 0 1 auto
   .main-page__scrollable
