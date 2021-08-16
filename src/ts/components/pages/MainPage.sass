@@ -7,21 +7,22 @@ $mp-height: 3.5 * $spacer
   display: flex
   flex-flow: column
   margin: 0 -$spacer 0 -$spacer
+  .main-page__fixed,
+  .main-page__scrollable
+    padding: $spacer
+  .main-page__fixed
+    flex: 0 1 auto
+    padding-bottom: 0
+  .main-page__scrollable
+    flex: 1 1 auto
+    overflow: scroll
+    height: 100%
+    background: rgba(168, 144, 46, 0.65)
   &.main-page_with-sidebar
     margin-right: -$spacer
     margin-left: -$mp-base-left-padding
     .main-page__fixed,
     .main-page__scrollable
       padding-left: 2 * $spacer
-  .main-page__fixed,
-  .main-page__scrollable
-    padding: $spacer
-  .main-page__fixed
-    flex: 0 1 auto
-  .main-page__scrollable
-    flex: 1 1 auto
-    overflow: scroll
-    height: 100%
-    background: rgba(168, 144, 46, 0.65)
 .scroll-area__inside
   height: 500px

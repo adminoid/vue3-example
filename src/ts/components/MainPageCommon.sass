@@ -1,6 +1,7 @@
 .main-page-common
   @include window
   padding: .5rem
-.icon
-  width: 20px
-  height: 20px
+.main-page-common__widgets
+  @include row-cols(5)
+  @include media-breakpoint-up(md)
+    @include row-cols(10)

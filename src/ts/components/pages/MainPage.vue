@@ -1,8 +1,6 @@
 <template lang="pug">
 .main-page(:class="{'main-page_with-sidebar': hasPin}")
   .main-page__fixed
-    h4 Здравствуйте, {{ user.name }} -======= {{ hasPin }}!
-
     main-page-common(:summary="summary")
 
   // todo: scrollable

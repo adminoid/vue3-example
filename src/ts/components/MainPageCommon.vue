@@ -1,21 +1,31 @@
 <template lang="pug">
-.my-3.main-page-common
-  .row.fw-bold.mb-2
-    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Всего моек
-    .col-4.col-lg-2 {{ summary.total }}
-
-  .row.fw-bold.mb-2
-    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Клиенты
-    .col-4.col-lg-2 {{ summary.clients }}
-
-  .row.fw-bold.mb-2
-    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Выручка
-    .col-4.col-lg-2 {{ summary.revenue }}
-
-  .row.fw-bold.mb-2
-    .col-8.col-sm-6.col-md-4.col-lg-3.col-xl-2 Касса
-    .col-4.col-lg-2 {{ summary.cash }}
-
+.main-page-common
+  .main-page-common__info.row.p-1.text-center
+    .col Моек: {{ summary.total }}
+    .col Клиентов: {{ summary.clients }}
+    .col Выручка: {{ summary.revenue }}
+    .col Касса: {{ summary.cash }}
+  .main-page-common__widgets.row.d-flex.flex-md-nowrap
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
+    .col.p-2
+      .widget.mx-auto
 </template>
 
 <script lang="ts">
@@ -28,3 +38,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+// temporary debug styles
+.widget
+  min-width: 3vw
+  min-height: 3vw
+  max-width: 5vw
+  background: #000
+  opacity: .6
+</style>
