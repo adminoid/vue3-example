@@ -1,7 +1,7 @@
 <template lang="pug">
-.main-page(:class="{'main-page_with-sidebar': sidebarOpen}")
+.main-page(:class="{'main-page_with-sidebar': hasPin}")
   .main-page__fixed
-    h4 Здравствуйте, {{ user.name }} -======= {{ sidebarOpen }}!
+    h4 Здравствуйте, {{ user.name }} -======= {{ hasPin }}!
 
     main-page-common(:summary="summary")
 
@@ -32,12 +32,12 @@ const MainPage = defineComponent({
     onMounted(async () => {
       await store.dispatch('mainPage/getPageData')
     })
-    const sidebarOpen = computed(() => store.state.layout.sidebar.open && store.state.layout.sidebar.pinned)
+    const hasPin = computed(() => store.getters['layout/hasPin'])
     return {
       washers: computed<TWashers>(() => store.state.mainPage.washers),
       user: computed<TUser>(() => store.state.mainPage.user),
       summary: computed<TSummary>(() => store.state.mainPage.summary),
-      sidebarOpen
+      hasPin
     }
   }
 })

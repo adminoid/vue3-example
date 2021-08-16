@@ -13,10 +13,7 @@ import { useStore } from 'vuex'
 const MainContent = defineComponent({
   setup: function () {
     const store = useStore()
-    const hasPadding = computed(() => {
-      return store.state.layout.sidebar.open &&
-        store.state.layout.sidebar.pinned
-    })
+    const hasPadding = computed(() => store.getters['layout/hasPin'])
     return {
       hasPadding
     }
