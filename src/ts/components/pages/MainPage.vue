@@ -1,5 +1,5 @@
 <template lang="pug">
-.main-page(:class="{'main-page_with-sidebar': sidebarOpen}") main page
+.main-page(:class="{'main-page_with-sidebar': sidebarOpen}")
   .main-page__fixed
     h4 Здравствуйте, {{ user.name }} -======= {{ sidebarOpen }}!
 
