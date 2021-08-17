@@ -1,5 +1,7 @@
 <template lang="pug">
-.main-page(:class="{'main-page_with-sidebar': hasPin}")
+.main-page.d-flex.flex-column(
+  :class="{'main-page_with-sidebar': hasPin}"
+)
   .main-page__fixed
     main-page-common(:summary="summary")
 
@@ -19,7 +21,7 @@
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
-import MainPageCommon from 'c@/MainPageCommon.vue'
+import MainPageCommon from 'c@/pages/MainPageCommon.vue'
 import { TWashers, TUser, TSummary } from 't@/types/mainPage'
 
 const MainPage = defineComponent({
