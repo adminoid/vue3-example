@@ -2,10 +2,10 @@
 .main-page.d-flex.flex-column(
   :class="{'main-page_with-sidebar': hasPin}"
 )
+
   .main-page__fixed
     main-page-common(:summary="summary")
 
-  // todo: scrollable
   .main-page__scrollable scrollable
     .scroll-area__inside In side
       br
@@ -20,12 +20,13 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
-import WasherPreview from 'c@/WasherPreview.vue'
+// import WasherPreview from 'c@/WasherPreview.vue'
 import MainPageCommon from 'c@/pages/MainPageCommon.vue'
 import { TWashers, TUser, TSummary } from 't@/types/mainPage'
 
 const MainPage = defineComponent({
-  components: { WasherPreview, MainPageCommon },
+  // components: { WasherPreview, MainPageCommon },
+  components: { MainPageCommon },
 
   setup () {
     const store = useStore()

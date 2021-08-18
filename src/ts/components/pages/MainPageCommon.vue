@@ -6,7 +6,13 @@
     .col Выручка: {{ summary.revenue }}
     .col Касса: {{ summary.cash }}
   .main-page-common__widgets
-    .wg-col.p-2
+  washer-preview(
+    v-for="washer in washers"
+    :key="washer.id"
+    :washer="washer"
+  )
+
+  .wg-col.p-2
       .widget.mx-auto asdfasd
         br
         | asdfasd

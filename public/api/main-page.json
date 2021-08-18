@@ -6,7 +6,75 @@
     "total": 5,
     "clients": 6520,
     "revenue": 541,
-    "cash": 982.60
+    "cash": 982.60,
+    "washers": [
+      {
+        "id": 0,
+        "name": "Клиенты",
+        "component": "Clients",
+        "data": {
+          "today": 35,
+          "yesterday": 11
+        }
+      },
+      {
+        "id": 1,
+        "name": "Аварии",
+        "component": "Accidents",
+        "data": {
+          "critical": 2,
+          "warnings": 4
+        }
+      },
+      {
+        "id": 2,
+        "name": "widget 3",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 3,
+        "name": "widget 4",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 4,
+        "name": "widget 5",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 5,
+        "name": "widget 6",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 6,
+        "name": "widget 7",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 7,
+        "name": "widget 8",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 8,
+        "name": "widget 9",
+        "component": "Demo",
+        "data": {}
+      },
+      {
+        "id": 9,
+        "name": "widget 10",
+        "component": "Demo",
+        "data": {}
+      }
+    ]
   },
   "washers": [
     {
@@ -17,7 +85,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Berger st. 35",
       "widgets": [
         {
           "id": 0,
@@ -98,7 +166,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 10,
@@ -173,7 +241,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 20,
@@ -191,7 +259,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 21,
@@ -221,7 +289,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 24,
@@ -269,7 +337,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 30,
@@ -317,7 +385,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 36,
@@ -365,7 +433,7 @@
         "dry": 3
       },
       "version": "4.6.10",
-      "address": "O.Bergolts 35",
+      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 42,
