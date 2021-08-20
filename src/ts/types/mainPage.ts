@@ -22,6 +22,12 @@ export type TWidget = {
 export type TWasher = {
   id: string,
   name: string,
+  version: string,
+  address: string,
+  posts: {
+    wet: number,
+    dry: number
+  },
   widgets: TWidget[]
 }
 

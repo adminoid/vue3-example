@@ -96,12 +96,12 @@
     {
       "id": "234ADE456",
       "name": "ALLES",
+      "version": "4.6.10",
+      "address": "Berger st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Berger st. 35",
       "widgets": [
         {
           "id": 0,
@@ -190,12 +190,12 @@
     {
       "id": "134ADE45D",
       "name": "Мойка на набережной старателей",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -284,12 +284,12 @@
     {
       "id": "234ADE45D",
       "name": "washer 3",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -378,12 +378,12 @@
     {
       "id": "334ADE45D",
       "name": "washer 4",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -472,12 +472,12 @@
     {
       "id": "434ADE45D",
       "name": "washer 5",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -566,12 +566,12 @@
     {
       "id": "534ADE45D",
       "name": "washer 6",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -660,12 +660,12 @@
     {
       "id": "634ADE45D",
       "name": "washer 7",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
@@ -754,12 +754,12 @@
     {
       "id": "734ADE45D",
       "name": "washer 8",
+      "version": "4.6.10",
+      "address": "Jonny st. 35",
       "posts": {
         "wet": 6,
         "dry": 3
       },
-      "version": "4.6.10",
-      "address": "Jonny st. 35",
       "widgets": [
         {
           "id": 0,
