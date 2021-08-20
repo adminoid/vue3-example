@@ -7,7 +7,7 @@
     "clients": 6520,
     "revenue": 541,
     "cash": 982.60,
-    "washers": [
+    "widgets": [
       {
         "id": 0,
         "name": "Клиенты",
@@ -28,51 +28,67 @@
       },
       {
         "id": 2,
-        "name": "widget 3",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 3,
-        "name": "widget 4",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 4,
-        "name": "widget 5",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 5,
-        "name": "widget 6",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 6,
-        "name": "widget 7",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 7,
-        "name": "widget 8",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 8,
-        "name": "widget 9",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       },
       {
         "id": 9,
-        "name": "widget 10",
+        "name": "Demo",
         "component": "Demo",
-        "data": {}
+        "data": {
+          "demo": 12
+        }
       }
     ]
   },
@@ -116,45 +132,59 @@
         },
         {
           "id": 3,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 4,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 5,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 6,
-          "name": "widget 7",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 7,
-          "name": "widget 8",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 8,
-          "name": "widget 9",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 9,
-          "name": "widget 10",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -179,57 +209,75 @@
         },
         {
           "id": 11,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 12,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 13,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 14,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 15,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 16,
-          "name": "widget 7",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 17,
-          "name": "widget 8",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 19,
-          "name": "widget 9",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 19,
-          "name": "widget 10",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -245,9 +293,11 @@
       "widgets": [
         {
           "id": 20,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -263,21 +313,27 @@
       "widgets": [
         {
           "id": 21,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 22,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 23,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -293,39 +349,51 @@
       "widgets": [
         {
           "id": 24,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 25,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 26,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 27,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 28,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 29,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -341,39 +409,51 @@
       "widgets": [
         {
           "id": 30,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 31,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 32,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 33,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 34,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 35,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -389,39 +469,51 @@
       "widgets": [
         {
           "id": 36,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 37,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 38,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 39,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 40,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 41,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     },
@@ -437,39 +529,51 @@
       "widgets": [
         {
           "id": 42,
-          "name": "widget 1",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 43,
-          "name": "widget 2",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 44,
-          "name": "widget 3",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 45,
-          "name": "widget 4",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 46,
-          "name": "widget 5",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         },
         {
           "id": 47,
-          "name": "widget 6",
+          "name": "Demo",
           "component": "Demo",
-          "data": {}
+          "data": {
+          "demo": 12
+        }
         }
       ]
     }

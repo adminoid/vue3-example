@@ -8,9 +8,10 @@ $mp-height: 3.5 * $spacer
   .main-page__fixed,
   .main-page__scrollable
     padding: $spacer
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.7)
   .main-page__fixed
     flex: 0 1 auto
-    padding-bottom: 0
+    //padding-bottom: $spacer
   .main-page__scrollable
     flex: 1 1 auto
     overflow: scroll
@@ -22,5 +23,5 @@ $mp-height: 3.5 * $spacer
     .main-page__fixed,
     .main-page__scrollable
       padding-left: 2 * $spacer
-.scroll-area__inside
-  height: 500px
+.scroll-area
+  height: 500px // debug

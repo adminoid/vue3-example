@@ -8,11 +8,15 @@ export type TWAccidents = {
   warnings: number
 }
 
+export type TWDemo = {
+  demo: number
+}
+
 export type TWidget = {
   id: number,
   name: string,
   component: string,
-  data?: TWClients | TWAccidents
+  data?: TWClients | TWAccidents | TWDemo
 }
 
 export type TWasher = {
@@ -36,7 +40,8 @@ export type TSummary = {
   total: number,
   clients: number,
   revenue: number,
-  cash: number
+  cash: number,
+  widgets: TWidget[]
 }
 
 export type TMainPage = {

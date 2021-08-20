@@ -7,7 +7,7 @@
     main-page-common(:summary="summary")
 
   .main-page__scrollable scrollable
-    .scroll-area__inside In side
+    .scroll-area In side
       br
       | inside
     //washer-preview(
