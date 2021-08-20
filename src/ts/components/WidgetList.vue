@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import WidgetItem from 'c@/WidgetItem.vue'
 import { defineComponent, PropType } from 'vue'
 import { TWidget } from 't@/types/mainPage'
+import WidgetItem from 'c@/WidgetItem.vue'
 
 export default defineComponent({
   components: { WidgetItem },

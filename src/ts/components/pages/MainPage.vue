@@ -2,31 +2,25 @@
 .main-page.d-flex.flex-column(
   :class="{'main-page_with-sidebar': hasPin}"
 )
-
   .main-page__fixed
     main-page-common(:summary="summary")
-
-  .main-page__scrollable scrollable
-    .scroll-area In side
-      br
-      | inside
-    //washer-preview(
-    //  v-for="washer in washers"
-    //  :key="washer.id"
-    //  :washer="washer"
-    //)
+  .main-page__scrollable
+    washer-preview(
+      v-for="washer in washers"
+      :key="washer.id"
+      :washer="washer"
+    )
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
-// import WasherPreview from 'c@/WasherPreview.vue'
+import WasherPreview from 'c@/WasherPreview.vue'
 import MainPageCommon from 'c@/pages/MainPageCommon.vue'
 import { TWashers, TUser, TSummary } from 't@/types/mainPage'
 
 const MainPage = defineComponent({
-  // components: { WasherPreview, MainPageCommon },
-  components: { MainPageCommon },
+  components: { WasherPreview, MainPageCommon },
 
   setup () {
     const store = useStore()

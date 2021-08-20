@@ -114,15 +114,6 @@
         },
         {
           "id": 1,
-          "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 11,
-            "yesterday": 35
-          }
-        },
-        {
-          "id": 2,
           "name": "Аварии",
           "component": "Accidents",
           "data": {
@@ -131,67 +122,75 @@
           }
         },
         {
+          "id": 2,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
           "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 6,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 7,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 8,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
           "id": 9,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "134ADE45D",
       "name": "Мойка на набережной старателей",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -199,7 +198,7 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 10,
+          "id": 0,
           "name": "Клиенты",
           "component": "Clients",
           "data": {
@@ -208,83 +207,84 @@
           }
         },
         {
-          "id": 11,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 12,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 13,
+          "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 14,
+          "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 15,
+          "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 16,
+          "id": 6,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 17,
+          "id": 7,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 19,
+          "id": 8,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 19,
+          "id": 9,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "234ADE45D",
       "name": "washer 3",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -292,19 +292,93 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 20,
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
+          "data": {
+            "today": 35,
+            "yesterday": 11
+          }
+        },
+        {
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
+          "data": {
+            "critical": 2,
+            "warnings": 4
+          }
+        },
+        {
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 3,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 4,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 5,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "334ADE45D",
       "name": "washer 4",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -312,35 +386,93 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 21,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
           "data": {
-          "demo": 12
-        }
+            "today": 35,
+            "yesterday": 11
+          }
         },
         {
-          "id": 22,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 23,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 3,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 4,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 5,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "434ADE45D",
       "name": "washer 5",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -348,59 +480,93 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 24,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
           "data": {
-          "demo": 12
-        }
+            "today": 35,
+            "yesterday": 11
+          }
         },
         {
-          "id": 25,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 26,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 27,
+          "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 28,
+          "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 29,
+          "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "534ADE45D",
       "name": "washer 6",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -408,59 +574,93 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 30,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
           "data": {
-          "demo": 12
-        }
+            "today": 35,
+            "yesterday": 11
+          }
         },
         {
-          "id": 31,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 32,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 33,
+          "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 34,
+          "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 35,
+          "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "634ADE45D",
       "name": "washer 7",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -468,59 +668,93 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 36,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
           "data": {
-          "demo": 12
-        }
+            "today": 35,
+            "yesterday": 11
+          }
         },
         {
-          "id": 37,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 38,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 39,
+          "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 40,
+          "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 41,
+          "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     },
     {
       "id": "734ADE45D",
       "name": "washer 8",
-            "posts": {
+      "posts": {
         "wet": 6,
         "dry": 3
       },
@@ -528,52 +762,86 @@
       "address": "Jonny st. 35",
       "widgets": [
         {
-          "id": 42,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 0,
+          "name": "Клиенты",
+          "component": "Clients",
           "data": {
-          "demo": 12
-        }
+            "today": 35,
+            "yesterday": 11
+          }
         },
         {
-          "id": 43,
-          "name": "Demo",
-          "component": "Demo",
+          "id": 1,
+          "name": "Аварии",
+          "component": "Accidents",
           "data": {
-          "demo": 12
-        }
+            "critical": 2,
+            "warnings": 4
+          }
         },
         {
-          "id": 44,
+          "id": 2,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 45,
+          "id": 3,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 46,
+          "id": 4,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
         },
         {
-          "id": 47,
+          "id": 5,
           "name": "Demo",
           "component": "Demo",
           "data": {
-          "demo": 12
-        }
+            "demo": 12
+          }
+        },
+        {
+          "id": 6,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 7,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 8,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
+        },
+        {
+          "id": 9,
+          "name": "Demo",
+          "component": "Demo",
+          "data": {
+            "demo": 12
+          }
         }
       ]
     }
