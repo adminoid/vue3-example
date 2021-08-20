@@ -6,15 +6,17 @@
     .col Выручка: {{ summary.revenue }}
     .col Касса: {{ summary.cash }}
   widget-list(:widgets="summary.widgets" is-common="true")
+  widget-filters
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { TSummary } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
+import WidgetFilters from 'c@/WidgetFilters.vue'
 
 export default defineComponent({
-  components: { WidgetList },
+  components: { WidgetList, WidgetFilters },
 
   props: {
     summary: Object as PropType<TSummary>

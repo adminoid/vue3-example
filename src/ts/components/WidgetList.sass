@@ -1,8 +1,7 @@
 .widget-list
   display: grid
   grid-template-columns: repeat(5, 2fr)
-  row-gap: .5 * $spacer
-  column-gap: .5 * $spacer
+  gap: .5 * $spacer
   grid-auto-columns: minmax(1fr, auto)
   @include media-breakpoint-up(md)
     grid-template-columns: repeat(10, 1fr)
