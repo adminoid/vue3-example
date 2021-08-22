@@ -49,13 +49,13 @@ export default {
   windowOpen (state: any, { el, data } : TWindow) {
     state.window.element = el
     state.window.start = getAttrs(el)
-    state.window.data = data
     state.window.open = true
+    state.window.data = data
   },
   windowClose (state: any) {
     state.window.start = getAttrs(state.window.element)
-    state.window.open = false
     state.window.data = {}
-    state.window.element = HTMLElement
+    state.window.open = false
+    state.window.element = false
   }
 } as any

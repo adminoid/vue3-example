@@ -9,3 +9,16 @@ createApp(App)
   .use(store)
   .use(router)
   .mount('#app')
+
+if (
+  process.env.VUE_APP_NOT_SECRET_CODE === 'development' &&
+  module.hot
+) {
+  module.hot.accept()
+  module.hot.addStatusHandler(status => {
+    if (status === 'prepare') {
+      console.clear()
+      console.info('reloaded...')
+    }
+  })
+}

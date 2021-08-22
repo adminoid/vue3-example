@@ -2,9 +2,6 @@
 transition(name="delay")
   .overlap(v-show="isWindowOpen" @click.self="windowClose")
     .overlap__window(:style="wStyle")
-      .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-        h1 {{ data.name }}
-        h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
       a.overlap__close(href='#' @click.prevent="windowClose")
         svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
           g#icons(stroke='none' stroke-width='1' fill='#000')
@@ -18,7 +15,10 @@ transition(name="delay")
               x='13.9099026' y='-4.59009742'
               width='4' height='41' rx='2'
             )
-
+      .overlap__content(v-if="data.id")
+        .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
+          h1 {{ data.name }}
+          h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
 </template>
 
 <script lang="ts">
@@ -33,8 +33,7 @@ const wOpenStyle = {
   right: '50px',
   bottom: '50px'
 }
-
-const ContentWindow = defineComponent({
+export default defineComponent({
   setup () {
     const store = useStore()
     const wStyle = ref({})
@@ -45,9 +44,7 @@ const ContentWindow = defineComponent({
           wStyle.value = wOpenStyle
         }, 0)
       } else {
-        setTimeout(() => {
-          wStyle.value = store.state.layout.window.start
-        }, 0)
+        wStyle.value = store.state.layout.window.start
       }
     })
 
@@ -61,6 +58,4 @@ const ContentWindow = defineComponent({
     }
   }
 })
-
-export default ContentWindow
 </script>

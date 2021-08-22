@@ -12,12 +12,12 @@ export default () => ({
   window: {
     open: false,
     start: {
-      x: 0,
-      y: 0,
+      left: 0,
+      top: 0,
       width: 0,
       height: 0
     },
-    element: HTMLElement,
+    element: false,
     data: {}
   }
 })
