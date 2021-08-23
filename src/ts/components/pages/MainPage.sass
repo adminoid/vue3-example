@@ -2,6 +2,8 @@ $mp-base-left-padding: 2 * $spacer
 $mp-height: 3.5 * $spacer
 
 .main-page
+  display: grid
+  grid-auto-columns: auto 1fr
   height: calc(100vh - #{$mp-height})
   margin: 0 -$spacer 0 -$spacer
   .main-page__fixed,
@@ -9,11 +11,10 @@ $mp-height: 3.5 * $spacer
     @extend .pt-4
     padding: $spacer
     box-shadow: 0 5px 5px 0 #afafaf
+    overflow-x: hidden
   .main-page__fixed
-    flex: 0 1 auto
     background: #eaeaea
   .main-page__scrollable
-    flex: 1 1 auto
     overflow: scroll
     height: 100%
   &.main-page_with-sidebar

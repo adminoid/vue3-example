@@ -1,5 +1,5 @@
 <template lang="pug">
-.main-page.d-flex.flex-column(
+.main-page(
   :class="{'main-page_with-sidebar': hasPin}"
 )
   .main-page__fixed

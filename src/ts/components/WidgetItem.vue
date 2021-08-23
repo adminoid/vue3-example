@@ -1,7 +1,6 @@
 <template lang="pug">
 .widget-item.mx-auto.text-center(ref="widgetEl" @click="windowOpen")
-  span {{ widget.name }}
-  p {{ widget.data.demo }}
+  span {{ isCommon }} / {{ widget.name }}
 </template>
 
 <script lang="ts">

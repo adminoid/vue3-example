@@ -5,7 +5,7 @@
     .col Клиентов: {{ summary.clients }}
     .col Выручка: {{ summary.revenue }}
     .col Касса: {{ summary.cash }}
-  widget-list(:widgets="summary.widgets" is-common="true")
+  widget-list(:widgets="summary.widgets" :is-common="true")
   widget-filters
 </template>
 
@@ -19,7 +19,11 @@ export default defineComponent({
   components: { WidgetList, WidgetFilters },
 
   props: {
-    summary: Object as PropType<TSummary>
+    summary: Object as PropType<TSummary>,
+    isCommon: {
+      type: Boolean,
+      required: false
+    }
   }
 })
 </script>

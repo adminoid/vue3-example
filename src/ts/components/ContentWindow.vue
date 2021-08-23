@@ -17,10 +17,10 @@
                 width='4' height='41' rx='2'
               )
         transition(name="appear")
-          .content-window__content(v-if="data.id")
+          .content-window__content(v-if="data")
             .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
               h1 {{ data.name }}
-              h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
+              h2.d-flex.mt-3.justify-content-center {{ data }}
 </template>
 
 <script lang="ts">

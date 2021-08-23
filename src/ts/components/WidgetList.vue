@@ -3,6 +3,7 @@
   widget-item(
     v-for="widget of widgets"
     :widget="widget"
+    :is-common="isCommon"
   )
 </template>
 
@@ -15,7 +16,11 @@ export default defineComponent({
   components: { WidgetItem },
 
   props: {
-    widgets: Array as PropType<TWidget[]>
+    widgets: Array as PropType<TWidget[]>,
+    isCommon: {
+      type: Boolean,
+      required: false
+    }
   }
 })
 </script>
