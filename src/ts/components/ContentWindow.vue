@@ -3,7 +3,7 @@
   transition(name="delay")
     .content-window__overlap(v-show="isWindowOpen" @click.self="windowClose")
       .content-window__modal(:style="wStyle")
-        a.window__close(href='#' @click.prevent="windowClose")
+        a.content-window__close(href='#' @click.prevent="windowClose")
           svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
             g#icons(stroke='none' stroke-width='1' fill='#000')
               rect#rect(
