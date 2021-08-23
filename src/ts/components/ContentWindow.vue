@@ -1,24 +1,26 @@
 <template lang="pug">
-transition(name="delay")
-  .overlap(v-show="isWindowOpen" @click.self="windowClose")
-    .overlap__window(:style="wStyle")
-      a.overlap__close(href='#' @click.prevent="windowClose")
-        svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
-          g#icons(stroke='none' stroke-width='1' fill='#000')
-            rect#rect(
-              transform='translate(15.909903, 15.909903) rotate(-315.000000) translate(-15.909903, -15.909903)'
-              x='13.9099026' y='-4.59009742'
-              width='4' height='41' rx='2'
-            )
-            rect#rect(
-              transform='translate(15.909903, 15.909903) scale(-1, 1) rotate(-315.000000) translate(-15.909903, -15.909903)'
-              x='13.9099026' y='-4.59009742'
-              width='4' height='41' rx='2'
-            )
-      .overlap__content(v-if="data.id")
-        .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-          h1 {{ data.name }}
-          h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
+.content-window
+  transition(name="delay")
+    .content-window__overlap(v-show="isWindowOpen" @click.self="windowClose")
+      .content-window__modal(:style="wStyle")
+        a.window__close(href='#' @click.prevent="windowClose")
+          svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
+            g#icons(stroke='none' stroke-width='1' fill='#000')
+              rect#rect(
+                transform='translate(15.909903, 15.909903) rotate(-315.000000) translate(-15.909903, -15.909903)'
+                x='13.9099026' y='-4.59009742'
+                width='4' height='41' rx='2'
+              )
+              rect#rect(
+                transform='translate(15.909903, 15.909903) scale(-1, 1) rotate(-315.000000) translate(-15.909903, -15.909903)'
+                x='13.9099026' y='-4.59009742'
+                width='4' height='41' rx='2'
+              )
+        transition(name="appear")
+          .content-window__content(v-if="data.id")
+            .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
+              h1 {{ data.name }}
+              h2.d-flex.mt-3.justify-content-center Id: {{ data.id }}
 </template>
 
 <script lang="ts">

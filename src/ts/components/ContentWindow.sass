@@ -1,11 +1,4 @@
-.delay-enter-active,
-.delay-leave-active
-  transition: all $animation-speed ease
-.delay-enter-from,
-.delay-leave-to
-  opacity: .4
-
-.overlap
+.content-window__overlap
   position: fixed
   top: 0
   right: 0
@@ -13,12 +6,12 @@
   left: 0
   z-index: 1400
   background: $overlap-bg
-  .overlap__window
+  .content-window__modal
     @include window
     position: absolute
     transition: all $animation-speed * 2 ease-in-out
     padding: 20px 70px 20px 20px
-  .overlap__close
+  .content-window__close
     display: block
     position: absolute
     right: 20px
@@ -28,3 +21,15 @@
     &:hover
       g#icons
         fill: $bb-blue
+
+.delay-enter-active,
+.delay-leave-active
+  transition: all $animation-speed ease
+.delay-enter-from,
+.delay-leave-to
+  opacity: .4
+
+.appear-enter-active
+  transition: all 1s ease
+.appear-enter-from
+  opacity: 0

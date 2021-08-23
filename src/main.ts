@@ -11,7 +11,7 @@ createApp(App)
   .mount('#app')
 
 if (
-  process.env.VUE_APP_NOT_SECRET_CODE === 'development' &&
+  process.env.NODE_ENV === 'development' &&
   module.hot
 ) {
   module.hot.accept()
