@@ -47,3 +47,17 @@ const MainMenu = defineComponent({
 })
 export default MainMenu
 </script>
+
+<style lang="sass" scoped>
+.expand-enter-active,
+.expand-leave-active
+  transition: all calc(var(--al-duration) / 2) ease
+.expand-enter-from,
+.expand-leave-to
+  max-height: 0
+  opacity: 0
+.expand-enter-to,
+.expand-leave-from
+  max-height: 5000px
+  opacity: 1
+</style>

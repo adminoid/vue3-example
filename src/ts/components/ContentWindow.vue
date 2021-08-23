@@ -61,3 +61,17 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+.delay-enter-active,
+.delay-leave-active
+  transition: all var(--al-duration) ease
+.delay-enter-from,
+.delay-leave-to
+  opacity: .8
+
+.appear-enter-active
+  transition: all 1s ease
+.appear-enter-from
+  opacity: 0
+</style>

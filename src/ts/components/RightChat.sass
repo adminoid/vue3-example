@@ -5,7 +5,7 @@
   min-height: 100%
   width: $right-chat-width
   right: -$right-chat-width
-  transition: right $animation-speed ease-in-out
+  transition: right var(--al-duration) ease-in-out
   &.right-chat_open
     right: 0
     top: 0
@@ -16,7 +16,7 @@
     height: 56px
     background: #C8C8C8
     overflow: hidden
-    transition: width $animation-speed ease-in-out
+    transition: width var(--al-duration) ease-in-out
     width: 0
     &.right-chat_open
       width: $right-chat-width

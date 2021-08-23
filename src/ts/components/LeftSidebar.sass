@@ -5,7 +5,7 @@
   min-height: 100%
   width: $left-sidebar-width
   left: -$left-sidebar-width
-  transition: left $animation-speed ease-in-out
+  transition: left var(--al-duration) ease-in-out
   .left-sidebar__header
     position: fixed
     left: 0
@@ -13,7 +13,7 @@
     height: 56px
     background: #C8C8C8
     overflow: hidden
-    transition: width $animation-speed ease-in-out
+    transition: width var(--al-duration) ease-in-out
     width: 0
   &.left-sidebar_open
     left: 0

@@ -5,11 +5,11 @@
   bottom: 0
   left: 0
   z-index: 1400
-  background: $overlap-bg
+  background: fade-out($bb-blue, .2)
   .content-window__modal
     @include window
     position: absolute
-    transition: all $animation-speed * 2 ease-in-out
+    transition: all calc(var(--al-duration) * 2) ease-in-out
     padding: 20px 70px 20px 20px
   .content-window__close
     display: block
@@ -17,19 +17,7 @@
     right: 20px
     top: 20px
     g#icons
-      transition: fill $animation-speed * 2 ease-in-out
+      transition: fill calc(var(--al-duration) * 2) ease-in-out
     &:hover
       g#icons
         fill: $bb-blue
-
-.delay-enter-active,
-.delay-leave-active
-  transition: all $animation-speed ease
-.delay-enter-from,
-.delay-leave-to
-  opacity: .4
-
-.appear-enter-active
-  transition: all 1s ease
-.appear-enter-from
-  opacity: 0

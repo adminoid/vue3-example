@@ -18,7 +18,7 @@ if (
   module.hot.addStatusHandler(status => {
     if (status === 'prepare') {
       console.clear()
-      console.info('reloaded...')
+      console.info(`reloaded: ${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`)
     }
   })
 }

@@ -1,8 +1,8 @@
 .main-content
   float: right
   width: 100%
-  transition: width $animation-speed ease-in-out
-  padding: $mc-padding
+  transition: width var(--al-duration) ease-in-out
+  padding: 4.5 * $spacer $spacer $spacer
   &.main-content_padding
     width: calc(100% - #{$left-sidebar-width})
     padding-left: $spacer * 2

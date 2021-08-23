@@ -7,7 +7,7 @@
     max-width: 230px
     line-height: 20px
     a
-      transition: all $animation-speed ease-in-out
+      transition: all var(--al-duration) ease-in-out
       color: black
       #expand
         fill: $bb-black-gray
@@ -29,27 +29,14 @@
     left: -17px
     top: -1px
     g#expand
-      transition: all $animation-speed ease-in-out
+      transition: all var(--al-duration) ease-in-out
       transform: rotate(0)
       transform-origin: center
       rect#horizontal
-        transition: all $animation-speed ease-in-out
+        transition: all var(--al-duration) ease-in-out
         opacity: 1
       &.expanded
         fill: $bb-blue-darken
         transform: rotate(90deg)
         rect#horizontal
           opacity: 0
-
-// animations
-.expand-enter-active,
-.expand-leave-active
-  transition: all $animation-speed-fast ease
-.expand-enter-from,
-.expand-leave-to
-  max-height: 0
-  opacity: 0
-.expand-enter-to,
-.expand-leave-from
-  max-height: 5000px
-  opacity: 1
