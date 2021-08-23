@@ -1,6 +1,8 @@
 <template lang="pug">
-.widget-item.mx-auto.text-center(ref="widgetEl" @click="windowOpen")
-  span {{ isCommon }} / {{ widget.name }}
+.widget-item.mx-auto.text-center
+  h6(v-if="isCommon") {{ widget.name }}
+  a.widget-item__body.mt-2.p-2.d-block(href="#" ref="widgetEl" @click="windowOpen")
+    span {{ isCommon }}
 </template>
 
 <script lang="ts">
