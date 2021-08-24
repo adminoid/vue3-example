@@ -10,9 +10,10 @@ $mp-height: 3.5 * $spacer
   .main-page__scrollable
     padding: $spacer $spacer 0 $spacer
     @extend .pt-4
-    box-shadow: 0 5px 5px 0 rgba(175, 175, 175, 0.46)
     overflow-x: hidden
   .main-page__fixed
+    z-index: 500
+    box-shadow: 0 5px 5px 0 rgba(175, 175, 175, 0.46)
     background: $gray-200
     border-bottom: 1px solid $gray-400
     padding-bottom: $spacer
