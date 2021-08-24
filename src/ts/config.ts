@@ -1,1 +1,2 @@
-export const mobileWidth: number = 992 // mobile < mobileWidth || desktop >= mobileWidth
+// mobile < mobileWidth || desktop >= mobileWidth
+export const mobileWidth: number = 1080

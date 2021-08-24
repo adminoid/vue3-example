@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-list
+.widget-list(:class="{'widget-list_common': isCommon}")
   widget-item(
     v-for="widget of widgets"
     :widget="widget"
