@@ -1,7 +1,8 @@
 <template lang="pug">
-.content-window
-  transition(name="delay")
-    .content-window__overlap(v-show="isWindowOpen" @click.self="windowClose")
+transition(name="fade")
+  .content-window(v-show="isWindowOpen")
+    .content-window__overlap(@click.self="windowClose")
+    transition(name="delay")
       .content-window__modal(:style="wStyle")
         .content-window__entire(v-if="data && Object.keys(data).length > 0")
           a.content-window__close(href='#' @click.prevent="windowClose")
@@ -70,10 +71,10 @@ export default defineComponent({
   animation-fill-mode: forwards
   visibility: hidden
 
-//.fade-enter-active
-//  animation: fade calc(var(--al-duration) * 2)
-//.fade-leave-active
-//  animation: fade calc(var(--al-duration) * 2) reverse
+.fade-enter-active
+  animation: fade calc(var(--al-duration) * 2)
+.fade-leave-active
+  animation: fade calc(var(--al-duration) * 2) reverse
 
 @keyframes delayed
   99%
@@ -81,10 +82,10 @@ export default defineComponent({
   100%
     visibility: visible
 
-//@keyframes fade
-//  0%
-//    opacity: 0
-//  100%
-//    opacity: 1
+@keyframes fade
+  0%
+    opacity: 0
+  100%
+    opacity: 1
 
 </style>

@@ -11,14 +11,11 @@ createApp(App)
   .mount('#app')
 
 if (
-  process.env.NODE_ENV === 'development' &&
-  module.hot
+  process.env.NODE_ENV === 'development'
 ) {
-  module.hot.accept()
-  module.hot.addStatusHandler(status => {
-    if (status === 'prepare') {
-      console.clear()
-      console.info(`reloaded: ${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`)
-    }
-  })
+  console.clear()
+  const h = (new Date()).getHours()
+  const m = (new Date()).getMinutes()
+  const s = (new Date()).getSeconds()
+  console.info(`reloaded: ${h}:${m}:${s}`)
 }
