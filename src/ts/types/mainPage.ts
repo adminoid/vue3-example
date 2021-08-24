@@ -1,22 +1,9 @@
-export type TWClients = {
-  today: number,
-  yesterday: number
-}
-
-export type TWAccidents = {
-  critical: number,
-  warnings: number
-}
-
-export type TWDemo = {
-  demo: number
-}
-
 export type TWidget = {
   id: number,
   name: string,
   component: string,
-  data?: TWClients | TWAccidents | TWDemo
+  icon: string,
+  data?: any
 }
 
 export type TWasher = {

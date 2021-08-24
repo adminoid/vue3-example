@@ -11,84 +11,62 @@
       {
         "id": 0,
         "name": "Клиенты",
-        "component": "Clients",
-        "data": {
-          "today": 35,
-          "yesterday": 11
-        }
+        "icon": "bi-person-fill",
+        "data": {}
       },
       {
         "id": 1,
         "name": "Аварии",
-        "component": "Accidents",
-        "data": {
-          "critical": 2,
-          "warnings": 4
-        }
+        "icon": "bi-exclamation-triangle-fill",
+        "data": {}
       },
       {
         "id": 2,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Доход",
+        "icon": "bi-cash-coin",
+        "data": {}
       },
       {
         "id": 3,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Инкассация",
+        "icon": "bi-wallet2",
+        "data": {}
       },
       {
         "id": 4,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Метрики",
+        "icon": "bi-bar-chart-line-fill",
+        "data": {}
       },
       {
         "id": 5,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Расходники",
+        "icon": "bi-droplet-half",
+        "data": {}
       },
       {
         "id": 6,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Диагностика",
+        "icon": "bi-gear-wide-connected",
+        "data": {}
       },
       {
         "id": 7,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Обслуживание",
+        "icon": "bi-nut-fill",
+        "data": {}
       },
       {
         "id": 8,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Химия",
+        "icon": "bi-moisture",
+        "data": {}
       },
       {
         "id": 9,
-        "name": "Demo",
-        "component": "Demo",
-        "data": {
-          "demo": 12
-        }
+        "name": "Настройка",
+        "icon": "bi-tools",
+        "data": {}
       }
     ]
   },
@@ -106,84 +84,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -200,84 +156,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -294,84 +228,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -388,84 +300,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -482,84 +372,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -576,84 +444,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -670,84 +516,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     },
@@ -764,84 +588,62 @@
         {
           "id": 0,
           "name": "Клиенты",
-          "component": "Clients",
-          "data": {
-            "today": 35,
-            "yesterday": 11
-          }
+          "icon": "bi-person-fill",
+          "data": {}
         },
         {
           "id": 1,
           "name": "Аварии",
-          "component": "Accidents",
-          "data": {
-            "critical": 2,
-            "warnings": 4
-          }
+          "icon": "bi-exclamation-triangle-fill",
+          "data": {}
         },
         {
           "id": 2,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Доход",
+          "icon": "bi-cash-coin",
+          "data": {}
         },
         {
           "id": 3,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Инкассация",
+          "icon": "bi-wallet2",
+          "data": {}
         },
         {
           "id": 4,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Метрики",
+          "icon": "bi-bar-chart-line-fill",
+          "data": {}
         },
         {
           "id": 5,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Расходники",
+          "icon": "bi-droplet-half",
+          "data": {}
         },
         {
           "id": 6,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Диагностика",
+          "icon": "bi-gear-wide-connected",
+          "data": {}
         },
         {
           "id": 7,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Обслуживание",
+          "icon": "bi-nut-fill",
+          "data": {}
         },
         {
           "id": 8,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Химия",
+          "icon": "bi-moisture",
+          "data": {}
         },
         {
           "id": 9,
-          "name": "Demo",
-          "component": "Demo",
-          "data": {
-            "demo": 12
-          }
+          "name": "Настройка",
+          "icon": "bi-tools",
+          "data": {}
         }
       ]
     }

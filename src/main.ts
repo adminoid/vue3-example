@@ -4,6 +4,7 @@ import store from 't@/store'
 import router from 't@/router'
 
 import '@/sass/app.sass'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 createApp(App)
   .use(store)
