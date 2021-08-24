@@ -1,7 +1,7 @@
 <template lang="pug">
 .widget-item.mx-auto.text-center
   h6(v-if="isCommon") {{ widget.name }}
-  a.widget-item__body.mt-2.p-2.d-block(href="#" ref="widgetEl" @click="windowOpen")
+  a.widget-item__body.mx-auto.mt-2.p-2.d-block(href="#" ref="widgetEl" @click="windowOpen")
     i.bi(:class="widget.icon")
 </template>
 

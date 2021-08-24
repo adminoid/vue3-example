@@ -1,2 +1,2 @@
 // mobile < mobileWidth || desktop >= mobileWidth
-export const mobileWidth: number = 1080
+export const mobileWidth: number = 1420

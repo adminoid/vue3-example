@@ -2,7 +2,7 @@
   display: grid
   grid-template-columns: repeat(5, 2fr)
   gap: .5 * $spacer
-  @include media-breakpoint-up(md)
+  @media (min-width: 1150px) // todo: find bootstrap native way for custom media breakpoint
     grid-template-columns: repeat(10, 1fr)
   &.widget-list_common
     padding: 0 $spacer
