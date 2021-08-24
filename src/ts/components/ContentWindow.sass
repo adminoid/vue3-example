@@ -1,4 +1,6 @@
 .content-window
+  $sp: 1.25 * $spacer // side padding
+  $rp: 4.5 * $spacer // right padding
   .content-window__overlap
     position: fixed
     top: 0
@@ -14,7 +16,7 @@
     transition: all calc(var(--al-duration) * 2) ease-in-out
     overflow: hidden
   .content-window__entire
-    padding: 20px 70px 20px 20px
+    padding: $sp $rp $sp $sp
   .content-window__close
     display: block
     position: absolute

@@ -1,7 +1,8 @@
 <template lang="pug">
-transition(name="fade")
+transition(name="delay")
   .content-window(v-show="isWindowOpen")
-    .content-window__overlap(@click.self="windowClose")
+    transition(name="fade")
+      .content-window__overlap(@click.self="windowClose" v-show="isWindowOpen")
     transition(name="delay")
       .content-window__modal(:style="wStyle")
         .content-window__entire(v-if="data && Object.keys(data).length > 0")
