@@ -3,7 +3,7 @@
   transition(name="delay")
     .content-window__overlap(v-show="isWindowOpen" @click.self="windowClose")
       .content-window__modal(:style="wStyle")
-        .content-window__entire
+        .content-window__entire(v-if="data && Object.keys(data).length > 0")
           a.content-window__close(href='#' @click.prevent="windowClose")
             svg(width='32px' height='33px' xmlns='http://www.w3.org/2000/svg')
               g#icons(stroke='none' stroke-width='1' fill='#000')
@@ -17,10 +17,9 @@
                   x='13.9099026' y='-4.59009742'
                   width='4' height='41' rx='2'
                 )
-          .content-window__content(v-if="data && Object.keys(data).length > 0")
-            .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
-              h1 {{ data.name }}
-              h2.d-flex.mt-3.justify-content-center {{ data }}
+          .d-flex.flex-column.align-content-center.flex-wrap.justify-content-center
+            h1 {{ data.name }}
+            h2.d-flex.mt-3.justify-content-center {{ data }}
 </template>
 
 <script lang="ts">
@@ -64,17 +63,28 @@ export default defineComponent({
 <style lang="sass" scoped>
 .delay-enter-active,
 .delay-leave-active
-  transition: all var(--al-duration) ease
+  transition: all calc(var(--al-duration) * 2) ease
 
 .content-window__entire
-  animation: calc(var(--al-duration) * 2) fadeIn
+  animation: calc(var(--al-duration) * 2) delayed
   animation-fill-mode: forwards
   visibility: hidden
 
-@keyframes fadeIn
+//.fade-enter-active
+//  animation: fade calc(var(--al-duration) * 2)
+//.fade-leave-active
+//  animation: fade calc(var(--al-duration) * 2) reverse
+
+@keyframes delayed
   99%
     visibility: hidden
   100%
     visibility: visible
+
+//@keyframes fade
+//  0%
+//    opacity: 0
+//  100%
+//    opacity: 1
 
 </style>

@@ -1,15 +1,18 @@
-.content-window__overlap
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  z-index: 1400
-  background: fade-out($bb-blue, .2)
+.content-window
+  .content-window__overlap
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1400
+    background: fade-out($bb-blue, .2)
   .content-window__modal
     @include window
     position: absolute
     transition: all calc(var(--al-duration) * 2) ease-in-out
+    overflow: hidden
+  .content-window__entire
     padding: 20px 70px 20px 20px
   .content-window__close
     display: block
