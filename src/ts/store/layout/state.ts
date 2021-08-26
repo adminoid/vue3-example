@@ -1,9 +1,9 @@
 export default () => ({
-  // The variable animationEnabled prevented animation when the page is loaded.
-  // Animation works only after the first click.
+  // The variable animationEnabled prevented animation when
+  // the page is loaded. Animation works only after the first click.
   animationEnabled: false,
   sidebar: {
-    open: true,
+    open: false,
     pinned: false
   },
   chat: {

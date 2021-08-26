@@ -1,24 +1,29 @@
 export type TWidget = {
   id: number,
   name: string,
-  component: string,
   icon: string,
   data?: any
 }
 
 export type TWasher = {
   id: string,
-  name: string,
   version: string,
-  address: string,
   posts: {
     wet: number,
     dry: number
   },
+  address: string,
+  contact: {
+    name: string,
+    phone: string
+  },
+  geo: {
+    latitude: string,
+    longitude: string
+  },
+  ip: string,
   widgets: TWidget[]
 }
-
-export type TWashers = TWasher[]
 
 export type TWindow = {
   el: HTMLElement,
@@ -30,15 +35,15 @@ export type TUser = {
 }
 
 export type TSummary = {
+  company: string,
+  owner: string,
   total: number,
-  clients: number,
-  revenue: number,
-  cash: number,
+  tariff: string,
   widgets: TWidget[]
 }
 
 export type TMainPage = {
   user: TUser,
   summary: TSummary,
-  washers: TWashers
+  washers: TWasher[]
 }

@@ -17,7 +17,7 @@ import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
 import MainPageCommon from 'c@/pages/MainPageCommon.vue'
-import { TWashers, TUser, TSummary } from 't@/types/mainPage'
+import { TWasher, TUser, TSummary } from 't@/types/mainPage'
 
 const MainPage = defineComponent({
   components: { WasherPreview, MainPageCommon },
@@ -29,7 +29,7 @@ const MainPage = defineComponent({
     })
     const hasPin = computed(() => store.getters['layout/hasPin'])
     return {
-      washers: computed<TWashers>(() => store.state.mainPage.washers),
+      washers: computed<TWasher[]>(() => store.state.mainPage.washers),
       user: computed<TUser>(() => store.state.mainPage.user),
       summary: computed<TSummary>(() => store.state.mainPage.summary),
       hasPin
