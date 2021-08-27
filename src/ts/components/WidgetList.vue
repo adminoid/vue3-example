@@ -1,5 +1,7 @@
 <template lang="pug">
-.widget-list.d-flex(:class="{'widget-list_common': isCommon}")
+.widget-list.d-flex.justify-content-between.flex-wrap(
+  :class="{'widget-list_common': isCommon}"
+)
   widget-item(
     v-for="widget of widgets"
     :widget="widget"

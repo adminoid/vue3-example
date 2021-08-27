@@ -1,6 +1,6 @@
 <template lang="pug">
-.widget-item.mx-auto.text-center
-  h6 {{ widget.name }}
+.widget-item.text-center.mb-3.mx-1
+  h6(v-if="isCommon") {{ widget.name }}
   a.widget-item__body.mx-auto.mt-2.p-2.d-block(href="#" ref="widgetEl" @click="windowOpen")
     i.bi(:class="widget.icon")
 </template>

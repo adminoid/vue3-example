@@ -1,7 +1,7 @@
-import { mobileWidth } from 't@/config'
+import root from '@/sass/_root.sass'
 
 export default {
   isMobile (state: any) {
-    return state.viewport.width < mobileWidth
+    return state.viewport.width < root.mobileWidth
   }
 }
