@@ -1,7 +1,7 @@
 import { TMainPage, TWidget } from 't@/types/mainPage'
 
 export class MainPageData {
-  _totalWashers: number
+  readonly #totalWashers: number
   data: TMainPage
 
   #widgetsTemplate = [
@@ -33,10 +33,14 @@ export class MainPageData {
       name: 'Связь',
       icon: 'bi-droplet-half'
     }
+    // {
+    //   name: 'Сообщения',
+    //   icon: 'bi-droplet-half'
+    // }
   ]
 
   constructor (totalWashers: number) {
-    this._totalWashers = totalWashers
+    this.#totalWashers = totalWashers
     const widgets = this.makeWidgets()
     const washers = this.makeWashers()
     this.data = {
@@ -69,7 +73,7 @@ export class MainPageData {
     const washers = []
     const widgets = this.makeWidgets()
     let i = 0
-    while (i < this._totalWashers) {
+    while (i < this.#totalWashers) {
       washers.push({
         id: 'SW01022020',
         version: '4.6.9/4.7.3',

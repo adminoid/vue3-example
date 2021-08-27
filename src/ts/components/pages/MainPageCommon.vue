@@ -1,12 +1,12 @@
 <template lang="pug">
 .main-page-common
-  .main-page-common__info.row.pb-3.text-center
-    .col Моек: {{ summary.total }}
-    .col Клиентов: {{ summary.clients }}
-    .col Выручка: {{ summary.revenue }}
-    .col Касса: {{ summary.cash }}
-  widget-list(:widgets="summary.widgets" :is-common="true")
-  widget-filters
+  .row
+    .col-3
+      .main-page-common__info COMMON
+    .col-9
+      widget-list(:widgets="summary.widgets" :is-common="true")
+  .row
+    widget-filters
 </template>
 
 <script lang="ts">

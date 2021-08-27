@@ -10,7 +10,6 @@ import { MainPageData } from 't@/dev'
 export default {
   async getPageData ({ commit }: { commit: Function }) {
     const response = (new MainPageData(2))
-    console.log(response.data)
     commit('setPageData', response.data)
   }
 }
