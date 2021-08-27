@@ -1,10 +1,12 @@
+@import "~@/sass/common.sass"
+
 .left-sidebar
   z-index: 1200
   position: fixed
   background: $bb-gray
   min-height: 100%
-  width: $left-sidebar-width
-  left: -$left-sidebar-width
+  width: #{$left-sidebar-width}px
+  left: -#{$left-sidebar-width}px
   transition: left var(--al-duration) ease-in-out
   .left-sidebar__header
     position: fixed
@@ -18,7 +20,7 @@
   &.left-sidebar_open
     left: 0
     .left-sidebar__header
-      width: $left-sidebar-width
+      width: #{$left-sidebar-width}px
   .left-sidebar__sticker
     position: absolute
     right: -15px
@@ -46,9 +48,9 @@
     opacity: .5
   .left-sidebar__body
     direction: rtl
-    padding-top: 91px
-    padding-left: 50px
-    padding-bottom: 26px
+    padding-top: 6 * $spacer
+    padding-left: 3 * $spacer
+    padding-bottom: 2 * $spacer
     position: absolute
     width: 100%
     top: 0

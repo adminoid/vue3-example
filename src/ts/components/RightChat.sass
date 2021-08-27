@@ -3,8 +3,8 @@
   position: fixed
   background: $bb-gray
   min-height: 100%
-  width: $right-chat-width
-  right: -$right-chat-width
+  width: #{$right-chat-width}px
+  right: -#{$right-chat-width}px
   transition: right var(--al-duration) ease-in-out
   &.right-chat_open
     right: 0
@@ -19,7 +19,7 @@
     transition: width var(--al-duration) ease-in-out
     width: 0
     &.right-chat_open
-      width: $right-chat-width
+      width: #{$right-chat-width}px
   .right-chat__logo
     position: absolute
     right: 95px
