@@ -1,7 +1,5 @@
 <template lang="pug">
-.main-page(
-  :class="{'main-page_with-sidebar': hasPin}"
-)
+.main-page(:class="classes")
   .main-page__fixed
     main-page-common(:summary="summary")
   .main-page__scrollable
@@ -27,12 +25,15 @@ const MainPage = defineComponent({
     onMounted(async () => {
       await store.dispatch('mainPage/getPageData')
     })
-    const hasPin = computed(() => store.getters['layout/hasPin'])
+    const classes = computed(() => ({
+      'main-page_with-sidebar': store.getters['layout/hasPin'],
+      'main-page_is-mobile': store.getters.isMobileContent
+    }))
     return {
       washers: computed<TWasher[]>(() => store.state.mainPage.washers),
       user: computed<TUser>(() => store.state.mainPage.user),
       summary: computed<TSummary>(() => store.state.mainPage.summary),
-      hasPin
+      classes
     }
   }
 })

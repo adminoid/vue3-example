@@ -5,6 +5,7 @@ import state from './state'
 import mutations from './mutations'
 import getters from './getters'
 
+// todo: Should be making a decision about vuex modules structure
 export default createStore({
   state,
   mutations,
