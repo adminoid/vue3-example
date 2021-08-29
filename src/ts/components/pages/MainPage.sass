@@ -6,6 +6,17 @@ $mp-height: 3.5 * $spacer
   grid-auto-rows: auto 1fr
   height: calc(100vh - #{$mp-height})
   margin: 0 -$spacer 0 -$spacer
+  .widget-list
+    @extend .justify-content-between
+  &.main-page_is-mobile
+    .widget-list
+      @extend .justify-content-start
+  &.main-page_with-sidebar
+    margin-right: -$spacer
+    margin-left: -$mp-base-left-padding
+  .main-page__fixed,
+  .main-page__scrollable
+    padding: $spacer
   .main-page__fixed,
   .main-page__scrollable
     padding: $spacer $spacer 0 $spacer
@@ -16,13 +27,6 @@ $mp-height: 3.5 * $spacer
     box-shadow: 0 5px 5px 0 rgba(175, 175, 175, 0.46)
     background: $gray-200
     border-bottom: 1px solid $gray-400
-    padding-bottom: $spacer
   .main-page__scrollable
     overflow: scroll
     height: 100%
-  &.main-page_with-sidebar
-    margin-right: -$spacer
-    margin-left: -$mp-base-left-padding
-    .main-page__fixed,
-    .main-page__scrollable
-      padding: $spacer

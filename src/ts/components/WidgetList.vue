@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-list.d-flex.justify-content-between.flex-wrap(
+.widget-list.d-flex.flex-wrap(
   :class="{'widget-list_common': isCommon}"
 )
   widget-item(
