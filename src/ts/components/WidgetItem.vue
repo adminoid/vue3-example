@@ -1,12 +1,15 @@
 <template lang="pug">
-.widget-item.text-center.mb-3.mx-1(@mouseover="onMouseover")
-  h6(v-if="isCommon") {{ widget.name }}
+.widget-item.text-center.mb-3.mx-1(
+  @mouseover="onMouseover"
+  @mouseleave="onMouseleave"
+)
+  h6(v-if="isCommon") {{ highlight }}
   a.widget-item__body.mx-auto.mt-2.p-2.d-block
     pre {{ position }}
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType } from 'vue'
+import { computed, defineComponent, PropType, ref, watchEffect } from 'vue'
 import { TWidget, TOver } from 't@/types/mainPage'
 import { useStore } from 'vuex'
 import { isEqual } from 'lodash'
@@ -41,15 +44,27 @@ export default defineComponent({
     // )
 
     const over = computed(() => store.state.mainPage.over)
-
     const onMouseover = () => {
       if (!props.isCommon && !isEqual(props.position, over.value)) {
         store.commit('mainPage/setOver', props.position)
       }
     }
+    const highlight = ref(false)
+    const onMouseleave = () => {
+      if (isEqual(props.position, over.value)) {
+        store.commit('mainPage/unsetOver')
+      }
+    }
+    if (props.isCommon) {
+      watchEffect(() => {
+        highlight.value = isEqual(over.value.widget, props.position?.widget)
+      })
+    }
 
     return {
-      onMouseover
+      onMouseover,
+      onMouseleave,
+      highlight
     }
   }
 })

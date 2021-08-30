@@ -10,5 +10,12 @@ export default {
   setOver (state: any, over: TOver) {
     state.over.washer = over.washer
     state.over.widget = over.widget
+  },
+
+  unsetOver (state: any) {
+    state.over = {
+      washer: false,
+      widget: false
+    }
   }
 }
