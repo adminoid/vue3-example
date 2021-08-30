@@ -2,10 +2,11 @@
 .washer-preview.mb-3
   .row
     .col-3
-      .washer-preview__common Common
+      .washer-preview__common Common {{ washerIndex }}
     .col-9
       widget-list(
         :widgets="widgets"
+        :washerIndex="washerIndex"
       )
 </template>
 
@@ -20,7 +21,8 @@ export default defineComponent({
   props: {
     washer: {
       type: Object as PropType<TWasher>
-    }
+    },
+    washerIndex: Number
   },
 
   setup (props) {

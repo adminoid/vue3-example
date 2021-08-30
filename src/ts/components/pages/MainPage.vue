@@ -4,9 +4,10 @@
     main-page-common(:summary="summary")
   .main-page__scrollable
     washer-preview(
-      v-for="washer in washers"
+      v-for="(washer, index) in washers"
       :key="washer.id"
       :washer="washer"
+      :washerIndex="index"
     )
 </template>
 

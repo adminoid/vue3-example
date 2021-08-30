@@ -3,9 +3,10 @@
   :class="{'widget-list_common': isCommon}"
 )
   widget-item(
-    v-for="widget of widgets"
+    v-for="(widget, index) in widgets"
     :widget="widget"
     :is-common="isCommon"
+    :position="{washer: washerIndex, widget: index}"
   )
 </template>
 
@@ -21,6 +22,10 @@ export default defineComponent({
     widgets: Array as PropType<TWidget[]>,
     isCommon: {
       type: Boolean,
+      required: false
+    },
+    washerIndex: {
+      type: Number,
       required: false
     }
   }

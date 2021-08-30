@@ -47,3 +47,8 @@ export type TMainPage = {
   summary: TSummary,
   washers: TWasher[]
 }
+
+export type TOver = {
+  washer: number | boolean,
+  widget: number | boolean
+}
