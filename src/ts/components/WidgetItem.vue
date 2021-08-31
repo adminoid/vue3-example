@@ -2,10 +2,11 @@
 .widget-item.text-center.mb-3.mx-1(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
+  :class="classes"
 )
-  h6(v-if="isCommon") {{ highlight }}
+  h6.widget-item__common-header(v-if="isCommon") {{ widget.name }}
   a.widget-item__body.mx-auto.mt-2.p-2.d-block
-    pre {{ position }}
+    i.bi(:class="widget.icon")
 </template>
 
 <script lang="ts">
@@ -26,45 +27,29 @@ export default defineComponent({
 
   setup (props) {
     const store = useStore()
-
-    // const widgetEl = ref()
-    // const windowOpen = () => {
-    //   store.commit('layout/windowOpen', {
-    //     el: widgetEl.value,
-    //     data: props.widget
-    //   })
-    // }
-
-    // in template: component(:is="componentD" :data="widget.data")
-    // const componentName = computed(() => props.widget?.component)
-    // const componentD = computed(
-    //   () => defineAsyncComponent(
-    //     () => import('./widgets/' + componentName.value + '.vue')
-    //   )
-    // )
-
     const over = computed(() => store.state.mainPage.over)
     const onMouseover = () => {
       if (!props.isCommon && !isEqual(props.position, over.value)) {
         store.commit('mainPage/setOver', props.position)
       }
     }
-    const highlight = ref(false)
     const onMouseleave = () => {
       if (isEqual(props.position, over.value)) {
         store.commit('mainPage/unsetOver')
       }
     }
-    if (props.isCommon) {
-      watchEffect(() => {
-        highlight.value = isEqual(over.value.widget, props.position?.widget)
-      })
-    }
+    const isOver = ref(false)
+    watchEffect(() => {
+      isOver.value = isEqual(over.value.widget, props.position?.widget)
+    })
+    const classes = computed(() => ({
+      'widget-item_over': isOver.value
+    }))
 
     return {
       onMouseover,
       onMouseleave,
-      highlight
+      classes
     }
   }
 })
