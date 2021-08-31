@@ -1,5 +1,5 @@
 <template lang="pug">
-.main-page-common
+.main-page-common.p-2
   .row
     .col-3
       .main-page-common__info COMMON

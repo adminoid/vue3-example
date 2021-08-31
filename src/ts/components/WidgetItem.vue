@@ -1,11 +1,11 @@
 <template lang="pug">
-.widget-item.text-center.mb-3.mx-1(
+.widget-item.text-center.mx-1(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
   :class="classes"
 )
-  h6.widget-item__common-header(v-if="isCommon") {{ widget.name }}
-  a.widget-item__body.mx-auto.mt-2.p-2.d-block
+  h6.widget-item__common-header {{ widget.name }}
+  a.widget-item__body.mx-auto.p-2.d-block
     i.bi(:class="widget.icon")
 </template>
 

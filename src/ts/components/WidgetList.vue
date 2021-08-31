@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-list.d-flex.flex-wrap(
+.widget-list.d-flex.align-items-stretch(
   :class="{'widget-list_common': isCommon}"
 )
   widget-item(

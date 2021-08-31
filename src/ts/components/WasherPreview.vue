@@ -1,5 +1,5 @@
 <template lang="pug">
-.washer-preview.mb-3
+.washer-preview.mb-3.p-2
   .row
     .col-3
       .washer-preview__common Common {{ washerIndex }}
