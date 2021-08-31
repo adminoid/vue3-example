@@ -2,32 +2,25 @@
 .washer-preview.mb-3.p-2
   .row
     .col-3
-      .washer-preview__common Common {{ washerIndex }}
+      .washer-preview__common Common
     .col-9
-      widget-list(
-        :widgets="widgets"
-        :washerIndex="washerIndex"
-      )
+      widget-list(:widgets="widgets" :is-common="isCommon")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { TWasher } from 't@/types/mainPage'
+import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 
 export default defineComponent({
   components: { WidgetList },
-
   props: {
-    washer: {
-      type: Object as PropType<TWasher>
-    },
-    washerIndex: Number
-  },
-
-  setup (props) {
-    return {
-      widgets: props.washer?.widgets
+    info: Object as PropType<TInfoSummary | TInfoWasher>,
+    widgets: Array as PropType<TWidget[]>,
+    isCommon: {
+      type: Boolean,
+      default: false,
+      required: false
     }
   }
 })

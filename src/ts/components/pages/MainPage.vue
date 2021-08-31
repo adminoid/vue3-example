@@ -1,13 +1,19 @@
 <template lang="pug">
 .main-page(:class="classes")
   .main-page__fixed
-    main-page-common(:summary="summary")
+    washer-preview(
+      :info="summary.info"
+      :widgets="summary.widgets"
+      :is-common="true"
+    )
+    .row
+      widget-filters
   .main-page__scrollable
     washer-preview(
-      v-for="(washer, index) in washers"
-      :key="washer.id"
-      :washer="washer"
-      :washerIndex="index"
+      v-for="washer in washers"
+      :key="washer.info.id"
+      :info="washer.info"
+      :widgets="washer.widgets"
     )
 </template>
 
@@ -15,11 +21,11 @@
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import WasherPreview from 'c@/WasherPreview.vue'
-import MainPageCommon from 'c@/pages/MainPageCommon.vue'
 import { TWasher, TUser, TSummary } from 't@/types/mainPage'
+import WidgetFilters from 'c@/WidgetFilters.vue'
 
 const MainPage = defineComponent({
-  components: { WasherPreview, MainPageCommon },
+  components: { WasherPreview, WidgetFilters },
 
   setup () {
     const store = useStore()

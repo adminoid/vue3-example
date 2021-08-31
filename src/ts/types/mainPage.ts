@@ -5,25 +5,27 @@ export type TWidget = {
   data?: any
 }
 
-export type TWasher = {
-  info: {
-    id: string,
-    version: string,
-    posts: {
-      wet: number,
-      dry: number
-    },
-    address: string,
-    contact: {
-      name: string,
-      phone: string
-    },
-    geo: {
-      latitude: string,
-      longitude: string
-    },
-    ip: string
+export type TInfoWasher = {
+  id: string,
+  version: string,
+  posts: {
+    wet: number,
+    dry: number
   },
+  address: string,
+  contact: {
+    name: string,
+    phone: string
+  },
+  geo: {
+    latitude: string,
+    longitude: string
+  },
+  ip: string
+}
+
+export type TWasher = {
+  info: TInfoWasher,
   widgets: TWidget[]
 }
 
@@ -36,13 +38,15 @@ export type TUser = {
   name: string
 }
 
+export type TInfoSummary = {
+  company: string,
+  owner: string,
+  total: number,
+  tariff: string
+}
+
 export type TSummary = {
-  info: {
-    company: string,
-    owner: string,
-    total: number,
-    tariff: string
-  },
+  info: TInfoSummary,
   widgets: TWidget[]
 }
 
