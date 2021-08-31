@@ -1,8 +1,10 @@
 .washer-preview
   background: $gray-200
   @include border-radius($spacer)
+  .washer-preview__common
+    background: $gray-300
+    @include border-start-radius($spacer)
   &:hover
     background: $gray-300
-  .washer-preview__common
-    background: $gray-400
-    @include border-start-radius($spacer)
+    .washer-preview__common
+      background: $gray-400
