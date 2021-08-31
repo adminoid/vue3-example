@@ -17,5 +17,9 @@ export default {
       washer: false,
       widget: false
     }
+  },
+
+  setScrollLeft (state: any, x: number) {
+    state.scrollLeft = x
   }
 }

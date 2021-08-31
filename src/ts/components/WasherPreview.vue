@@ -2,14 +2,15 @@
 .washer-preview.mb-3.container-fluid
   .row
     .washer-preview__common.col-3.align-self-stretch.p-2 Common
-    .col-9.overflow-scroll.p-0.pe-2
+    .col-9.overflow-scroll.p-0.pe-2(ref="scrollableEl" @scroll="onScroll")
       widget-list(:widgets="widgets" :is-common="isCommon")
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType, ref, watchEffect } from 'vue'
 import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   components: { WidgetList },
@@ -20,6 +21,23 @@ export default defineComponent({
       type: Boolean,
       default: false,
       required: false
+    }
+  },
+  setup () {
+    const store = useStore()
+    const onScroll = (evt: Event) => {
+      const target = evt.target as HTMLElement
+      store.commit('mainPage/setScrollLeft', target.scrollLeft)
+    }
+    const scrollableEl = ref(null)
+    watchEffect(() => {
+      const el = scrollableEl.value as null | HTMLElement
+      if (el) el.scrollLeft = store.state.mainPage.scrollLeft
+    })
+
+    return {
+      onScroll,
+      scrollableEl
     }
   }
 })

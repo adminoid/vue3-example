@@ -5,5 +5,6 @@ export default () => ({
   over: {
     washer: false,
     widget: false
-  }
+  },
+  scrollLeft: false
 })
