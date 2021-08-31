@@ -6,12 +6,8 @@ $mp-height: 3.5 * $spacer
   grid-auto-rows: auto 1fr
   height: calc(100vh - #{$mp-height})
   margin: 0 -$spacer 0 -$spacer
-  // todo: make grid layout for scrolling mobile
   .widget-list
     @extend .justify-content-between
-  &.main-page_is-mobile
-    .widget-list
-      @extend .justify-content-start
   &.main-page_with-sidebar
     margin-right: -$spacer
     margin-left: -$mp-base-left-padding

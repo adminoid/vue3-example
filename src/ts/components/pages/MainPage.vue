@@ -27,8 +27,8 @@ const MainPage = defineComponent({
       await store.dispatch('mainPage/getPageData')
     })
     const classes = computed(() => ({
-      'main-page_with-sidebar': store.getters['layout/hasPin'],
-      'main-page_is-mobile': store.getters.isMobileContent
+      'main-page_with-sidebar': store.getters['layout/hasPin']
+      // 'main-page_is-mobile': store.getters.isMobileContent
     }))
     return {
       washers: computed<TWasher[]>(() => store.state.mainPage.washers),
