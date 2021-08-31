@@ -6,22 +6,24 @@ export type TWidget = {
 }
 
 export type TWasher = {
-  id: string,
-  version: string,
-  posts: {
-    wet: number,
-    dry: number
+  info: {
+    id: string,
+    version: string,
+    posts: {
+      wet: number,
+      dry: number
+    },
+    address: string,
+    contact: {
+      name: string,
+      phone: string
+    },
+    geo: {
+      latitude: string,
+      longitude: string
+    },
+    ip: string
   },
-  address: string,
-  contact: {
-    name: string,
-    phone: string
-  },
-  geo: {
-    latitude: string,
-    longitude: string
-  },
-  ip: string,
   widgets: TWidget[]
 }
 
@@ -35,10 +37,12 @@ export type TUser = {
 }
 
 export type TSummary = {
-  company: string,
-  owner: string,
-  total: number,
-  tariff: string,
+  info: {
+    company: string,
+    owner: string,
+    total: number,
+    tariff: string
+  },
   widgets: TWidget[]
 }
 

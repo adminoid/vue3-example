@@ -48,10 +48,12 @@ export class MainPageData {
         name: 'Вячеслав'
       },
       summary: {
-        company: 'ООО "Мойка"',
-        owner: 'Иванов И.П.',
-        total: 12,
-        tariff: 'БОНУС ПЛЮС',
+        info: {
+          company: 'ООО "Мойка"',
+          owner: 'Иванов И.П.',
+          total: 12,
+          tariff: 'БОНУС ПЛЮС'
+        },
         widgets
       },
       washers
@@ -75,22 +77,24 @@ export class MainPageData {
     let i = 0
     while (i < this.#totalWashers) {
       washers.push({
-        id: 'SW01022020',
-        version: '4.6.9/4.7.3',
-        posts: {
-          dry: 6,
-          wet: 3
+        info: {
+          id: 'SW01022020',
+          version: '4.6.9/4.7.3',
+          posts: {
+            dry: 6,
+            wet: 3
+          },
+          address: 'Москва, ул. Радищева, д. 28',
+          contact: {
+            name: 'Сидоров А.А.',
+            phone: '+7(926)340-21-12'
+          },
+          geo: {
+            latitude: '123123.123123',
+            longitude: '123123.123123'
+          },
+          ip: '192.168.0.1'
         },
-        address: 'Москва, ул. Радищева, д. 28',
-        contact: {
-          name: 'Сидоров А.А.',
-          phone: '+7(926)340-21-12'
-        },
-        geo: {
-          latitude: '123123.123123',
-          longitude: '123123.123123'
-        },
-        ip: '192.168.0.1',
         widgets
       })
       i++
