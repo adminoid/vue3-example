@@ -6,9 +6,12 @@
     @include border-start-radius($spacer)
   .washer-preview__scrollable
     overflow: hidden
+    @media (max-width: 823px)
+      padding-right: .5 * $spacer !important
   &:hover
     background: $gray-300
     .washer-preview__common
       background: $gray-400
     .washer-preview__scrollable
       overflow: scroll
+// todo: i can add right box shadow for common block
