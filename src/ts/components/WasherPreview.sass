@@ -4,7 +4,11 @@
   .washer-preview__common
     background: $gray-300
     @include border-start-radius($spacer)
+  .washer-preview__scrollable
+    overflow: hidden
   &:hover
     background: $gray-300
     .washer-preview__common
       background: $gray-400
+    .washer-preview__scrollable
+      overflow: scroll

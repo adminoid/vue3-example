@@ -2,7 +2,7 @@
 .washer-preview.mb-3.container-fluid
   .row
     .washer-preview__common.col-3.align-self-stretch.p-2 Common
-    .col-9.overflow-scroll.p-0.pe-2(ref="scrollableEl" @scroll="onScroll")
+    .washer-preview__scrollable.col-9.p-0.pe-2(ref="scrollableEl" @scroll="onScroll")
       widget-list(:widgets="widgets" :is-common="isCommon")
 </template>
 
