@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-filters.mt-3 Filters
+.widget-filters.mb-3 Filters
 </template>
 
 <style lang="sass">

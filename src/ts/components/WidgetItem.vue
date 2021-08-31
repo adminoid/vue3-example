@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-item.text-center.p-1.rounded-3(
+.widget-item.text-center.p-2.rounded-3(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
   :class="classes"

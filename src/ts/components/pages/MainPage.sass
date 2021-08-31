@@ -1,5 +1,6 @@
 $mp-base-left-padding: 2 * $spacer
 $mp-height: 3.5 * $spacer
+$mp-fixed-padding: 1.7 * $spacer
 
 .main-page
   display: grid
@@ -13,13 +14,11 @@ $mp-height: 3.5 * $spacer
     margin-left: -$mp-base-left-padding
   .main-page__fixed,
   .main-page__scrollable
-    padding: $spacer
-  .main-page__fixed,
-  .main-page__scrollable
     padding: $spacer $spacer 0 $spacer
     @extend .pt-4
     overflow-x: hidden
   .main-page__fixed
+    padding: $mp-fixed-padding $mp-fixed-padding 0 $mp-fixed-padding
     z-index: 500
     box-shadow: 0 5px 5px 0 rgba(175, 175, 175, 0.46)
     background: $gray-200

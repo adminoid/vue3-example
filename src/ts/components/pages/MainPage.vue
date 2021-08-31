@@ -1,11 +1,12 @@
 <template lang="pug">
 .main-page(:class="classes")
-  .main-page__fixed
-    washer-preview(
-      :info="summary.info"
-      :widgets="summary.widgets"
-      :is-common="true"
-    )
+  .main-page__fixed.container-fluid
+    .row
+      washer-preview(
+        :info="summary.info"
+        :widgets="summary.widgets"
+        :is-common="true"
+      )
     .row
       widget-filters
   .main-page__scrollable

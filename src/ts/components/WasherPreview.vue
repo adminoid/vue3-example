@@ -1,9 +1,8 @@
 <template lang="pug">
-.washer-preview.mb-3.p-2
+.washer-preview.mb-3.container-fluid
   .row
-    .col-3
-      .washer-preview__common Common
-    .col-9
+    .washer-preview__common.col-3.align-self-stretch.p-2 Common
+    .col-9.overflow-scroll.p-0.pe-2
       widget-list(:widgets="widgets" :is-common="isCommon")
 </template>
 

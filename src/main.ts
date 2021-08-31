@@ -11,15 +11,15 @@ createApp(App)
   .use(router)
   .mount('#app')
 
-if (
-  process.env.NODE_ENV === 'development' &&
-  module.hot
-) {
-  module.hot.accept()
-  module.hot.addStatusHandler(status => {
-    if (status === 'prepare') {
-      console.clear()
-      console.info(`reloaded: ${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`)
-    }
-  })
-}
+// if (
+//   process.env.NODE_ENV === 'development' &&
+//   module.hot
+// ) {
+//   module.hot.accept()
+//   module.hot.addStatusHandler(status => {
+//     if (status === 'prepare') {
+//       console.clear()
+//       console.info(`reloaded: ${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()}`)
+//     }
+//   })
+// }
