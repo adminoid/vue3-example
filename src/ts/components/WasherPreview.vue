@@ -3,7 +3,7 @@
   .row
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
       | Common
-      .washer-preview__expander.position-absolute
+      washer-preview-expander
     .washer-preview__scrollable.col-9.p-0(ref="scrollableEl" @scroll="onScroll")
       widget-list(
         :widgets="widgets"
@@ -16,11 +16,12 @@
 import { defineComponent, PropType, ref, watchEffect } from 'vue'
 import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
+import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
 import { useStore } from 'vuex'
 
 // todo: i can add right box shadow for common block
 export default defineComponent({
-  components: { WidgetList },
+  components: { WidgetList, WasherPreviewExpander },
   props: {
     info: Object as PropType<TInfoSummary | TInfoWasher>,
     widgets: Array as PropType<TWidget[]>,
