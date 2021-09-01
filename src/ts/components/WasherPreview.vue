@@ -1,9 +1,15 @@
 <template lang="pug">
 .washer-preview.mb-3.container-fluid
   .row
-    .washer-preview__common.col-3.align-self-stretch.p-2 Common
+    .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
+      | Common
+      .washer-preview__expander.position-absolute
     .washer-preview__scrollable.col-9.p-0(ref="scrollableEl" @scroll="onScroll")
-      widget-list(:widgets="widgets" :is-common="isCommon")
+      widget-list(
+        :widgets="widgets"
+        :is-common="isCommon"
+        :washerIndex="washerIndex"
+      )
 </template>
 
 <script lang="ts">
@@ -12,6 +18,7 @@ import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 import { useStore } from 'vuex'
 
+// todo: i can add right box shadow for common block
 export default defineComponent({
   components: { WidgetList },
   props: {
@@ -20,6 +27,10 @@ export default defineComponent({
     isCommon: {
       type: Boolean,
       default: false,
+      required: false
+    },
+    washerIndex: {
+      type: Number,
       required: false
     }
   },

@@ -11,10 +11,11 @@
       widget-filters
   .main-page__scrollable
     washer-preview(
-      v-for="washer in washers"
+      v-for="(washer, index) in washers"
       :key="washer.info.id"
       :info="washer.info"
       :widgets="washer.widgets"
+      :washerIndex="index"
     )
 </template>
 

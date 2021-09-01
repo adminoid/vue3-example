@@ -6,12 +6,21 @@
     @include border-start-radius($spacer)
   .washer-preview__scrollable
     overflow: hidden
-    @media (max-width: 823px)
+    @media (max-width: 823px) // todo: bind to common.sass
       padding-right: .5 * $spacer !important
   &:hover
-    background: $gray-300
+    background: #d0dae5
     .washer-preview__common
       background: $gray-400
     .washer-preview__scrollable
       overflow: scroll
-// todo: i can add right box shadow for common block
+    .washer-preview__expander
+      background: $gray-500
+  .washer-preview__expander
+    background: $gray-400
+    height: 100%
+    width: 30px
+    top: 0
+    right: 0
+    &:hover
+      background: rgba(87, 162, 224, 0.62)
