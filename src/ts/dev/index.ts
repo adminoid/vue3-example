@@ -78,7 +78,7 @@ export class MainPageData {
     while (i < this.#totalWashers) {
       washers.push({
         info: {
-          id: 'SW01022020',
+          id: `SW01022020${i}`,
           version: '4.6.9/4.7.3',
           posts: {
             dry: 6,
