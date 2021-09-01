@@ -4,11 +4,13 @@
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
       | Common
       washer-preview-expander
-    .washer-preview__scrollable.col-9.p-0(ref="scrollableEl" @scroll="onScroll")
+    .washer-preview__scrollable.col-9.p-0(
+      ref="scrollableEl"
+      @scroll="onScroll"
+    )
       widget-list(
         :widgets="widgets"
         :is-common="isCommon"
-        :washerIndex="washerIndex"
       )
 </template>
 
@@ -28,10 +30,6 @@ export default defineComponent({
     isCommon: {
       type: Boolean,
       default: false,
-      required: false
-    },
-    washerIndex: {
-      type: Number,
       required: false
     }
   },

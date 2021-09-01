@@ -6,7 +6,7 @@
     v-for="(widget, index) in widgets"
     :widget="widget"
     :is-common="isCommon"
-    :position="{washer: washerIndex, widget: index}"
+    :widgetIndex="index"
   )
 </template>
 
