@@ -1,49 +1,52 @@
 <template lang="pug">
-a.washer-preview-expander(
-  href="#"
+.washer-preview-expander(
   @click.prevent="toggle"
   class="position-absolute align-items-center d-flex"
-  :class="{'washer-preview-expander__over': over}"
+  :class="classes"
 )
   i.bi.bi-box-arrow-down-right.m-auto
-  .window-expand.position-absolute(v-if="open")
+  .washer-preview-expander__window.position-absolute(v-if="open")
     .window-expand__body
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { computed, defineComponent, PropType, ref, watchEffect } from 'vue'
+import { useStore } from 'vuex'
+import { TWasher } from 't@/types/mainPage'
 
 export default defineComponent({
   props: {
     over: {
       type: Boolean,
       default: false
+    },
+    washer: {
+      type: Object as PropType<TWasher>
     }
   },
-  setup () {
+  setup (props) {
     const open = ref(false)
+    const store = useStore()
+    watchEffect(() => {
+      open.value = store.state.mainPage.expanded === props.washer?.info.id
+    })
     const toggle = () => {
-      open.value = !open.value
+      if (open.value) {
+        store.commit('mainPage/toggleExpanded')
+      } else {
+        store.commit('mainPage/toggleExpanded', props.washer?.info.id)
+      }
     }
+    const classes = computed(() => ({
+      'washer-preview-expander_over': props.over,
+      'washer-preview-expander_open': open.value
+    }))
 
     return {
       open,
-      toggle
+      toggle,
+      classes
     }
   }
 })
 </script>
-
-<style lang="sass">
-.window-expand
-  z-index: 1000
-  left: 0
-  top: 0
-  width: 500px
-  height: 400px
-  padding-left: 30px
-  .window-expand__body
-    background: rgba(164, 7, 225, 0.56)
-    width: 100%
-    height: 100%
-</style>

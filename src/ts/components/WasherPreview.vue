@@ -7,7 +7,11 @@
   .row
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
       | Common info
-      washer-preview-expander(:over="isOver")
+      washer-preview-expander(
+        v-if="!isCommon"
+        :over="isOver"
+        :washer="washer"
+      )
     .washer-preview__scrollable.col-9.p-0(
       ref="scrollableEl"
       @scroll="onScroll"
@@ -20,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref, watchEffect } from 'vue'
-import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
+import { TWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
 import { useStore } from 'vuex'
@@ -31,7 +35,7 @@ import { isEqual } from 'lodash'
 export default defineComponent({
   components: { WidgetList, WasherPreviewExpander },
   props: {
-    info: Object as PropType<TInfoSummary | TInfoWasher>,
+    washer: Object as PropType<TWasher>,
     widgets: Array as PropType<TWidget[]>,
     isCommon: {
       type: Boolean,
@@ -60,9 +64,6 @@ export default defineComponent({
     watchEffect(() => {
       isOver.value = isEqual(store.state.mainPage.over.washer, props.washerIndex)
     })
-    // const classes = computed(() => ({
-    //   '': isOver.value
-    // }))
 
     return {
       onScroll,

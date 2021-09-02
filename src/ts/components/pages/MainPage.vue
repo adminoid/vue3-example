@@ -13,7 +13,7 @@
     washer-preview(
       v-for="(washer, index) in washers"
       :key="washer.info.id"
-      :info="washer.info"
+      :washer="washer"
       :widgets="washer.widgets"
       :washerIndex="index"
     )

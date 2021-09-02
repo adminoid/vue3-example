@@ -9,5 +9,5 @@ export default () => ({
     widget: false
   },
   // washer id in opened expand window
-  expanded: false
+  expanded: ''
 })

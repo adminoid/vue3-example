@@ -21,5 +21,13 @@ export default {
       washer: undefined,
       widget: undefined
     }
+  },
+
+  toggleExpanded (state: any, washerId: string = '') {
+    if (washerId) {
+      state.expanded = washerId
+    } else {
+      state.expanded = false
+    }
   }
 }
