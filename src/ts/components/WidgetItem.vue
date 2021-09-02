@@ -15,8 +15,6 @@ import { TWidget } from 't@/types/mainPage'
 import useOver from 't@/use/main-page/useOver'
 import { isEqual } from 'lodash'
 import { useStore } from 'vuex'
-// import { useStore } from 'vuex'
-// import { isEqual } from 'lodash'
 
 export default defineComponent({
   props: {
@@ -30,6 +28,7 @@ export default defineComponent({
 
   setup (props) {
     const { onMouseover, onMouseleave } = useOver('widget', props.widgetIndex)
+    // todo: think about refactor isOver for useOver using (2)
     const isOver = ref(false)
     const store = useStore()
     watchEffect(() => {

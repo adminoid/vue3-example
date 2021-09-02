@@ -2,10 +2,11 @@
 .washer-preview.mb-3.container-fluid(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
+  :class="classes"
 )
   .row
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
-      | {{ over }}
+      | Common info
       washer-preview-expander
     .washer-preview__scrollable.col-9.p-0(
       ref="scrollableEl"
@@ -24,6 +25,7 @@ import WidgetList from 'c@/WidgetList.vue'
 import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
 import { useStore } from 'vuex'
 import useOver from 't@/use/main-page/useOver.ts'
+import { isEqual } from 'lodash'
 
 // todo: i can add right box shadow for common block
 export default defineComponent({
@@ -53,13 +55,21 @@ export default defineComponent({
       if (el) el.scrollLeft = store.state.mainPage.scrollLeft
     })
     const { onMouseover, onMouseleave } = useOver('washer', props.washerIndex)
+    // todo: think about refactor isOver for useOver using (1)
+    const isOver = ref(false)
+    watchEffect(() => {
+      isOver.value = isEqual(store.state.mainPage.over.washer, props.washerIndex)
+    })
+    const classes = computed(() => ({
+      'washer-preview_over': isOver.value
+    }))
 
     return {
       onScroll,
       scrollableEl,
       onMouseover,
       onMouseleave,
-      over: computed(() => store.state.mainPage.over)
+      classes
     }
   }
 })
