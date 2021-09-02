@@ -17,7 +17,6 @@ export default {
   },
 
   unsetOver (state: any) {
-    console.info('unset')
     state.over = {
       washer: undefined,
       widget: undefined
