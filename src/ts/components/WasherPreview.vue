@@ -2,12 +2,12 @@
 .washer-preview.mb-3.container-fluid(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
-  :class="classes"
+  :class="{'washer-preview_over': isOver}"
 )
   .row
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
       | Common info
-      washer-preview-expander
+      washer-preview-expander(:over="isOver")
     .washer-preview__scrollable.col-9.p-0(
       ref="scrollableEl"
       @scroll="onScroll"
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref, watchEffect } from 'vue'
+import { defineComponent, PropType, ref, watchEffect } from 'vue'
 import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
@@ -60,16 +60,16 @@ export default defineComponent({
     watchEffect(() => {
       isOver.value = isEqual(store.state.mainPage.over.washer, props.washerIndex)
     })
-    const classes = computed(() => ({
-      'washer-preview_over': isOver.value
-    }))
+    // const classes = computed(() => ({
+    //   '': isOver.value
+    // }))
 
     return {
       onScroll,
       scrollableEl,
       onMouseover,
       onMouseleave,
-      classes
+      isOver
     }
   }
 })

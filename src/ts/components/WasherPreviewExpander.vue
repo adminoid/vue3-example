@@ -3,6 +3,7 @@ a.washer-preview-expander(
   href="#"
   @click.prevent="toggle"
   class="position-absolute align-items-center d-flex"
+  :class="{'washer-preview-expander__over': over}"
 )
   i.bi.bi-box-arrow-down-right.m-auto
   .window-expand.position-absolute(v-if="open")
@@ -13,6 +14,12 @@ a.washer-preview-expander(
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
+  props: {
+    over: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup () {
     const open = ref(false)
     const toggle = () => {

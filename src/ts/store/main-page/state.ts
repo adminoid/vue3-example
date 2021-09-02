@@ -3,8 +3,11 @@ export default () => ({
   summary: {},
   washers: [],
   scrollLeft: false,
+  // indexes of washer and widget of mouse over widget or washer
   over: {
-    washer: undefined,
-    widget: undefined
-  }
+    washer: false,
+    widget: false
+  },
+  // washer id in opened expand window
+  expanded: false
 })
