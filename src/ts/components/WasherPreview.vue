@@ -40,7 +40,7 @@ export default defineComponent({
     },
     washerIndex: {
       type: Number as PropType<number>,
-      required: false
+      default: -1
     }
   },
   setup (props) {

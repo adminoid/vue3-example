@@ -8,9 +8,8 @@ export default function useOver (is: string, index: number | undefined) {
   const store = useStore()
   const overComputed = computed(() => store.state.mainPage.over) as ComputedRef<{ [key: string]: any }>
 
-  index = (is === 'washer' && index === undefined) ? -1 : index
-
   const onMouseover = () => {
+    index = (is === 'washer' && index === undefined) ? -1 : index
     if (!isEqual(index, overComputed.value[is])) {
       store.commit('mainPage/setOver', { is, index })
     }
