@@ -23,7 +23,7 @@ import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
 import { useStore } from 'vuex'
-import useOver from 't@/modules/main-page/over.ts'
+import useOver from 't@/use/main-page/useOver.ts'
 
 // todo: i can add right box shadow for common block
 export default defineComponent({

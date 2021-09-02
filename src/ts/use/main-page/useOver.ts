@@ -1,18 +1,23 @@
+// todo: think about refactoring it
+
 import { isEqual } from 'lodash'
 import { useStore } from 'vuex'
+import { computed, ComputedRef } from 'vue'
 
 export default function useOver (is: string, index: number | undefined) {
   const store = useStore()
-  const over = store.state.mainPage.over
+  const overComputed = computed(() => store.state.mainPage.over) as ComputedRef<{ [key: string]: any }>
+
+  index = (is === 'washer' && index === undefined) ? -1 : index
 
   const onMouseover = () => {
-    if (!isEqual(index, over[is])) {
+    if (!isEqual(index, overComputed.value[is])) {
       store.commit('mainPage/setOver', { is, index })
     }
   }
 
   const onMouseleave = () => {
-    if (isEqual(index, over[is])) {
+    if (isEqual(index, overComputed.value[is])) {
       store.commit('mainPage/unsetOver')
     }
   }
