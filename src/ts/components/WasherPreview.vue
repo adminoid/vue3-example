@@ -5,7 +5,7 @@
 )
   .row
     .washer-preview__common.col-3.position-relative.align-self-stretch.p-2
-      | Common
+      | {{ over }}
       washer-preview-expander
     .washer-preview__scrollable.col-9.p-0(
       ref="scrollableEl"
@@ -18,14 +18,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref, watchEffect } from 'vue'
+import { computed, defineComponent, PropType, ref, watchEffect } from 'vue'
 import { TInfoSummary, TInfoWasher, TWidget } from 't@/types/mainPage'
 import WidgetList from 'c@/WidgetList.vue'
 import WasherPreviewExpander from 'c@/WasherPreviewExpander.vue'
 import { useStore } from 'vuex'
 import useOver from 't@/modules/main-page/over.ts'
 
-// todo: will think about refactor useOver in the future
 // todo: i can add right box shadow for common block
 export default defineComponent({
   components: { WidgetList, WasherPreviewExpander },
@@ -59,7 +58,8 @@ export default defineComponent({
       onScroll,
       scrollableEl,
       onMouseover,
-      onMouseleave
+      onMouseleave,
+      over: computed(() => store.state.mainPage.over)
     }
   }
 })

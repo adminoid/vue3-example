@@ -2,5 +2,9 @@ export default () => ({
   user: {},
   summary: {},
   washers: [],
-  scrollLeft: false
+  scrollLeft: false,
+  over: {
+    washer: undefined,
+    widget: undefined
+  }
 })

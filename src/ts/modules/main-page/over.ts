@@ -1,29 +1,19 @@
-import { reactive } from 'vue'
 import { isEqual } from 'lodash'
-
-type TOver = {
-  washer: number | boolean,
-  widget: number | boolean
-}
-const overDefault: {[index: string]:any} = {
-  washer: false,
-  widget: false
-} as TOver
-
-let over = reactive(overDefault)
+import { useStore } from 'vuex'
 
 export default function useOver (is: string, index: number | undefined) {
+  const store = useStore()
+  const over = store.state.mainPage.over
+
   const onMouseover = () => {
     if (!isEqual(index, over[is])) {
-      over[is] = index
-      console.log(over)
+      store.commit('mainPage/setOver', { is, index })
     }
   }
 
   const onMouseleave = () => {
     if (isEqual(index, over[is])) {
-      over = overDefault
-      console.log(over)
+      store.commit('mainPage/unsetOver')
     }
   }
 

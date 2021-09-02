@@ -9,5 +9,17 @@ export default {
 
   setScrollLeft (state: any, x: number) {
     state.scrollLeft = x
+  },
+
+  setOver (state: any, payload: { is: string, index: number | undefined }) {
+    const { is, index } = payload
+    state.over[is] = index
+  },
+
+  unsetOver (state: any) {
+    state.over = {
+      washer: undefined,
+      widget: undefined
+    }
   }
 }
