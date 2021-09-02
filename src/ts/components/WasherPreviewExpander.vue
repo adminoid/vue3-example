@@ -1,5 +1,6 @@
 <template lang="pug">
-.washer-preview-expander.position-absolute
+a(href="#" @click.prevent).washer-preview-expander.position-absolute.align-items-center.d-flex
+  i.bi.bi-box-arrow-down-right.m-auto
 </template>
 
 <script lang="ts">
