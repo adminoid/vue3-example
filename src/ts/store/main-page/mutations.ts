@@ -24,9 +24,11 @@ export default {
   },
 
   toggleExpanded (state: any, washerId: string = '') {
+    console.log(washerId)
     if (washerId) {
       state.expanded = washerId
     } else {
+      console.info('here')
       state.expanded = false
     }
   }

@@ -1,12 +1,20 @@
 <template lang="pug">
-.washer-preview-expander(
-  @click.prevent="toggle"
+a.washer-preview-expander(
+  href="#"
+  @click.stop="toggle"
   class="position-absolute align-items-center d-flex"
   :class="classes"
 )
-  i.bi.bi-box-arrow-down-right.m-auto
+  i.bi.m-auto(
+    :class="iconClass"
+  )
   .washer-preview-expander__window.position-absolute(v-if="open")
-    .window-expand__body
+    a.window-preview-expander__close.h2.float-end.link-danger(
+      href="#"
+      @click.prevent.stop="closeWindow"
+    )
+      i.bi.bi-x
+    .window-preview-expander__body
 </template>
 
 <script lang="ts">
@@ -28,24 +36,37 @@ export default defineComponent({
     const open = ref(false)
     const store = useStore()
     watchEffect(() => {
-      open.value = store.state.mainPage.expanded === props.washer?.info.id
+      console.log(store.state.mainPage.expanded)
+      open.value =
+        store.state.mainPage.expanded &&
+        store.state.mainPage.expanded === props.washer?.info.id
     })
     const toggle = () => {
+      console.info('toggle', open.value)
       if (open.value) {
         store.commit('mainPage/toggleExpanded')
       } else {
         store.commit('mainPage/toggleExpanded', props.washer?.info.id)
       }
     }
+    const closeWindow = () => {
+      console.info('closeWindow')
+      if (open.value) store.commit('mainPage/toggleExpanded', false)
+    }
     const classes = computed(() => ({
       'washer-preview-expander_over': props.over,
       'washer-preview-expander_open': open.value
     }))
+    const iconClass = computed(() => {
+      return open.value ? 'bi-box-arrow-up-left' : 'bi-box-arrow-down-right'
+    })
 
     return {
       open,
       toggle,
-      classes
+      closeWindow,
+      classes,
+      iconClass
     }
   }
 })
