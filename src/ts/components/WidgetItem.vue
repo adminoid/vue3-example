@@ -1,5 +1,5 @@
 <template lang="pug">
-.widget-item.text-center.px-2.py-3.rounded-3(
+.widget-item.text-center.px-2.py-3(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
   :class="classes"

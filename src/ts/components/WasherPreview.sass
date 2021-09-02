@@ -6,9 +6,12 @@
     @include border-start-radius($spacer)
   .washer-preview__scrollable
     overflow: hidden
+    box-shadow: inset -3px 0 3px 0 rgba(175, 175, 175, 0.4)
+    @include border-end-radius($spacer)
     @media (max-width: 823px) // todo: bind to common.sass
       padding-right: .5 * $spacer !important
   &.washer-preview_over
+    @include border-radius($spacer)
     .washer-preview__scrollable
       overflow: scroll
       background: #d2e1f5
