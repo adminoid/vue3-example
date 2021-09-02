@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { TWidget } from 't@/types/mainPage'
+import useOver from 't@/use/main-page/useOver'
 // import { useStore } from 'vuex'
 // import { isEqual } from 'lodash'
 
@@ -25,6 +26,7 @@ export default defineComponent({
   },
 
   setup (props) {
+    const { onMouseover, onMouseleave } = useOver('widget', props.widgetIndex)
     // const isOver = ref(false)
     // watchEffect(() => {
     //   isOver.value = isEqual(over.value.widget, props.position?.widget)
@@ -33,11 +35,11 @@ export default defineComponent({
     //   'widget-item_over': isOver.value
     // }))
 
-    // return {
-    //   onMouseover,
-    //   onMouseleave,
-    //   classes
-    // }
+    return {
+      onMouseover,
+      onMouseleave
+      // classes
+    }
   }
 })
 </script>

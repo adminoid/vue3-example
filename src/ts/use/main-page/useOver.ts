@@ -1,4 +1,4 @@
-// todo: think about refactoring it
+// todo: think about refactoring and improving it
 
 import { isEqual } from 'lodash'
 import { useStore } from 'vuex'
