@@ -1,4 +1,4 @@
-import mutations from 's@/layout/mutations'
+import mutations from 't@/store/layout/mutations'
 
 const mutationsMobile = { ...mutations, getters: { isMobile: true } }
 const mutationsDesktop = { ...mutations, getters: { isMobile: false } }
@@ -12,7 +12,7 @@ describe('sidebarToggle()', () => {
 
     mutationsMobile.sidebarOpen(state)
     expect(state.sidebar.open).toEqual(true)
-    expect(state.chat.open).toEqual(false)
+    expect(state.chat.open).toEqual(true)
   })
 
   it('if set sidebar opens, chat staying open, with desktop screen', () => {
@@ -36,7 +36,7 @@ describe('chatToggle()', () => {
 
     mutationsMobile.chatOpen(state)
     expect(state.chat.open).toEqual(true)
-    expect(state.sidebar.open).toEqual(false)
+    expect(state.sidebar.open).toEqual(true)
   })
 
   it('if chat opens, sidebar staying open on desktop', () => {

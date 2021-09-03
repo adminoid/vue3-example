@@ -71,6 +71,10 @@ export class MainPageData {
     )
   }
 
+  public makeJumpsData (from: number, to: number, threshold: number) {
+    console.log(from, to, threshold)
+  }
+
   makeWashers () {
     const washers = []
     const widgets = this.makeWidgets()
