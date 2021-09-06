@@ -82,8 +82,8 @@ export class MainPageData {
 
   makeDangerWarning () {
     return {
-      warn: this.random(0, 3),
-      dang: this.random(0, 3)
+      warn: this.randomProbability(1, 3, 0.3),
+      dang: this.randomProbability(1, 3, 0.3)
     }
   }
 
