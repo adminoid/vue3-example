@@ -71,13 +71,34 @@ export class MainPageData {
     )
   }
 
-  public makeJumpsData (from: number, to: number, threshold: number) {
-    const value = Math.round(from + Math.random() * (to - from))
+  makeJumpsData (from: number, to: number, threshold: number) {
+    const value = this.random(from, to)
     const changed = value - threshold
 
     return {
       value, changed, threshold
     }
+  }
+
+  makeDangerWarning () {
+    return {
+      warn: this.random(0, 3),
+      dang: this.random(0, 3)
+    }
+  }
+
+  random (from: number, to: number) {
+    return this.randomProbability(from, to, 1)
+  }
+
+  /**
+   * probability of return random value, otherwise - returns 0
+   */
+  randomProbability (from: number, to: number, probability: number) {
+    const rand = Math.random()
+    return (rand <= probability)
+      ? Math.round(from + rand * (to - from))
+      : 0
   }
 
   makeWashers () {
