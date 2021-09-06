@@ -72,7 +72,12 @@ export class MainPageData {
   }
 
   public makeJumpsData (from: number, to: number, threshold: number) {
-    console.log(from, to, threshold)
+    const value = Math.round(from + Math.random() * (to - from))
+    const changed = value - threshold
+
+    return {
+      value, changed, threshold
+    }
   }
 
   makeWashers () {
