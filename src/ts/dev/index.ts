@@ -63,9 +63,44 @@ export class MainPageData {
   makeWidgets () {
     return this.#widgetsTemplate.map(
       (widget, index) : TWidget => {
+        let type, data
+        switch (index) {
+          case 0:
+            type = 'clients'
+            data = this.makeJumpsData(0, 20, 10)
+            break
+          case 1:
+            type = 'cash'
+            data = this.makeJumpsData(0, 50000, 25000)
+            break
+          case 2:
+            type = 'proceeds'
+            data = this.makeJumpsData(0, 10000, 5000)
+            break
+          case 3:
+            type = 'accidents'
+            data = this.makeDangerWarning()
+            break
+          case 4:
+            type = 'chemicals'
+            data = this.makeDangerWarning(0, 1)
+            break
+          case 5:
+            type = 'water'
+            data = this.random(0, 1000)
+            break
+          case 6:
+            type = 'messages'
+            data = this.random(0, 7)
+            break
+          default:
+            type = ''
+        }
         return {
           id: index,
-          ...widget
+          ...widget,
+          type,
+          data
         }
       }
     )
@@ -80,10 +115,10 @@ export class MainPageData {
     }
   }
 
-  makeDangerWarning () {
+  makeDangerWarning (from: number = 1, to: number = 3) {
     return {
-      warn: this.randomProbability(1, 3, 0.3),
-      dang: this.randomProbability(1, 3, 0.3)
+      warning: this.randomProbability(from, to, 0.3),
+      danger: this.randomProbability(from, to, 0.3)
     }
   }
 

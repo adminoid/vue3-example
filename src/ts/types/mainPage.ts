@@ -2,6 +2,7 @@ export type TWidget = {
   id: number,
   name: string,
   icon: string,
+  type: string,
   data?: any
 }
 
