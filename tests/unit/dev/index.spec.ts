@@ -13,6 +13,9 @@ describe('dev class MainPageData', () => {
 
   it('randomProbability method', () => {
     const instance = new MainPageData(1)
+
+    // console.log(instance.data.summary.widgets)
+
     const data100 = instance.randomProbability(10, 20, 1)
 
     expect(typeof data100).toBe('number')
@@ -21,5 +24,13 @@ describe('dev class MainPageData', () => {
     const data0 = instance.randomProbability(10, 20, 0)
 
     expect(data0).toBe(0)
+  })
+})
+
+describe('debugging', () => {
+  it('should create data', function () {
+    const instance = new MainPageData(2)
+    // console.log(instance.washers[0].widgets)
+    console.log(instance.widgetsSummary)
   })
 })
