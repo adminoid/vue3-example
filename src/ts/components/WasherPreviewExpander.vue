@@ -36,13 +36,11 @@ export default defineComponent({
     const open = ref(false)
     const store = useStore()
     watchEffect(() => {
-      console.log(store.state.mainPage.expanded)
       open.value =
         store.state.mainPage.expanded &&
         store.state.mainPage.expanded === props.washer?.info.id
     })
     const toggle = () => {
-      console.info('toggle', open.value)
       if (open.value) {
         store.commit('mainPage/toggleExpanded')
       } else {
@@ -50,7 +48,6 @@ export default defineComponent({
       }
     }
     const closeWindow = () => {
-      console.info('closeWindow')
       if (open.value) store.commit('mainPage/toggleExpanded', false)
     }
     const classes = computed(() => ({

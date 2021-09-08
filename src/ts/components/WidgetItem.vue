@@ -5,8 +5,7 @@
   :class="classes"
 )
   h6.widget-item__common-header(v-if="isCommon") {{ widget.name }}
-  a.widget-item__body.mx-auto.p-2.d-block(href="#" @click.prevent)
-    i.bi(:class="widget.icon")
+  span.widget-item__body.mx-auto.p-2.d-block {{ widget.data }}
 </template>
 
 <script lang="ts">
