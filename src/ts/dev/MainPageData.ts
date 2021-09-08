@@ -1,4 +1,4 @@
-import { widgetsTemplate } from './templates'
+import { widgetsTemplate } from './widgetsTemplate'
 import Helpers from './Helpers'
 
 export class MainPageData {
@@ -6,15 +6,15 @@ export class MainPageData {
   washers: any
   widgetsCommon: any[] = []
 
-  // h: { [keyof Helpers]: typeof Helpers} = Helpers
   h: any = Helpers
 
   constructor (totalWashers: number) {
+    if (totalWashers < 1) {
+      throw new Error('least one washer needed')
+    }
     this._totalWashers = totalWashers
     // this.washers = this.makeWashers()
 
-    // const widgetsCommon = this.makeWidgets(true)
-    // console.log(widgetsCommon)
     // this.data = {
     //   user: {
     //     name: 'Вячеслав'
@@ -32,19 +32,30 @@ export class MainPageData {
     // }
   }
 
-  makeWidgets (isCommon: boolean = false) {
-    const collect = widgetsTemplate.map(item => {
-      const additional = this.h[item.process.method](item.process.params)
-
-      console.log(item.process.method, additional)
-
-      return item.initial
+  makeWidgets () {
+    const isFirstIteration = this.widgetsCommon.length === 0
+    // generate data for each widget
+    const collect = widgetsTemplate.map((item, index) => {
+      const data = this.h[item.process.method](item.process.params)
+      if (!isFirstIteration) this.increaseWidgetsCommon(index, data)
+      // data property below overwrites data prop on initial
+      return {
+        ...item.initial,
+        data
+      }
     })
-
-    console.log(collect.length)
-    console.log(this.widgetsCommon.length)
-
+    if (isFirstIteration) {
+      // if widgetCommon is empty - just assign collect to
+      this.widgetsCommon = collect
+    }
     return collect
+  }
+
+  increaseWidgetsCommon (index: number, data: any) {
+    const current = this.widgetsCommon[index].data
+    for (const key in current) {
+      current[key] += data[key]
+    }
   }
 
   // makeWashers () {
