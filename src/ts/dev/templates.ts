@@ -2,14 +2,14 @@ export const widgetsTemplate = [
   {
     initial: {
       name: 'Клиенты',
-      type: 'clients',
+      type: 'threshold',
       data: {
         value: 0,
         changed: 0
       }
     },
     process: {
-      method: 'makeJumpsData',
+      method: 'makeThresholdData',
       params: {
         from: 0,
         to: 20,
@@ -21,14 +21,14 @@ export const widgetsTemplate = [
   {
     initial: {
       name: 'Касса',
-      type: 'cash',
+      type: 'threshold',
       data: {
         value: 0,
         changed: 0
       }
     },
     process: {
-      method: 'makeJumpsData',
+      method: 'makeThresholdData',
       params: {
         from: 0,
         to: 50000,
@@ -40,14 +40,14 @@ export const widgetsTemplate = [
   {
     initial: {
       name: 'Выручка',
-      type: 'proceeds',
+      type: 'threshold',
       data: {
         value: 0,
         changed: 0
       }
     },
     process: {
-      method: 'makeJumpsData',
+      method: 'makeThresholdData',
       params: {
         from: 0,
         to: 10000,
@@ -59,35 +59,59 @@ export const widgetsTemplate = [
   {
     initial: {
       name: 'Аварии',
-      type: 'accidents'
+      type: 'warning',
+      data: {
+        warning: 0,
+        danger: 0
+      }
     },
     process: {
-      method: 'makeDangerWarning',
+      method: 'makeWarningData',
+      params: {
+        warning: {
+          probability: 0.5,
+          from: 1,
+          to: 3
+        },
+        danger: {
+          probability: 0.5,
+          from: 1,
+          to: 3
+        }
+      },
       increase: ['warning', 'danger']
-    },
-    data: {
-      warning: 0,
-      danger: 0
     }
   },
   {
     initial: {
       name: 'Химия',
-      type: 'chemicals'
+      type: 'warning',
+      data: {
+        warning: 0,
+        danger: 0
+      }
     },
     process: {
-      method: 'makeDangerWarning',
+      method: 'makeWarningData',
+      params: {
+        warning: {
+          probability: 0.5,
+          from: 1,
+          to: 3
+        },
+        danger: {
+          probability: 0.5,
+          from: 1,
+          to: 3
+        }
+      },
       increase: ['warning', 'danger']
-    },
-    data: {
-      warning: 0,
-      danger: 0
     }
   },
   {
     initial: {
       name: 'Вода',
-      type: 'water',
+      type: 'value',
       data: {
         value: 0
       }
@@ -104,10 +128,18 @@ export const widgetsTemplate = [
   {
     initial: {
       name: 'Связь',
-      type: 'messages',
+      type: 'value',
       data: {
         value: 0
       }
+    },
+    process: {
+      method: 'random',
+      params: {
+        from: 0,
+        to: 7
+      },
+      increase: ['value']
     }
   }
 ]
