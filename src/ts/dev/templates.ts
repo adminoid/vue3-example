@@ -1,41 +1,113 @@
 export const widgetsTemplate = [
   {
-    name: 'Клиенты',
-    icon: 'bi-person-fill',
-    type: 'clients'
+    initial: {
+      name: 'Клиенты',
+      type: 'clients',
+      data: {
+        value: 0,
+        changed: 0
+      }
+    },
+    process: {
+      method: 'makeJumpsData',
+      params: {
+        from: 0,
+        to: 20,
+        threshold: 10
+      },
+      increase: ['value']
+    }
   },
   {
-    name: 'Касса',
-    icon: 'bi-cash-coin',
-    type: 'cash'
+    initial: {
+      name: 'Касса',
+      type: 'cash',
+      data: {
+        value: 0,
+        changed: 0
+      }
+    },
+    process: {
+      method: 'makeJumpsData',
+      params: {
+        from: 0,
+        to: 50000,
+        threshold: 25000
+      },
+      increase: ['value']
+    }
   },
   {
-    name: 'Выручка',
-    icon: 'bi-wallet2',
-    type: 'proceeds'
+    initial: {
+      name: 'Выручка',
+      type: 'proceeds',
+      data: {
+        value: 0,
+        changed: 0
+      }
+    },
+    process: {
+      method: 'makeJumpsData',
+      params: {
+        from: 0,
+        to: 10000,
+        threshold: 5000
+      },
+      increase: ['value']
+    }
   },
   {
-    name: 'Аварии',
-    icon: 'bi-exclamation-triangle-fill',
-    type: 'accidents'
+    initial: {
+      name: 'Аварии',
+      type: 'accidents'
+    },
+    process: {
+      method: 'makeDangerWarning',
+      increase: ['warning', 'danger']
+    },
+    data: {
+      warning: 0,
+      danger: 0
+    }
   },
   {
-    name: 'Химия',
-    icon: 'bi-moisture',
-    type: 'chemicals'
+    initial: {
+      name: 'Химия',
+      type: 'chemicals'
+    },
+    process: {
+      method: 'makeDangerWarning',
+      increase: ['warning', 'danger']
+    },
+    data: {
+      warning: 0,
+      danger: 0
+    }
   },
   {
-    name: 'Вода',
-    icon: 'bi-bar-chart-line-fill',
-    type: 'water'
+    initial: {
+      name: 'Вода',
+      type: 'water',
+      data: {
+        value: 0
+      }
+    },
+    process: {
+      method: 'random',
+      params: {
+        from: 0,
+        to: 1000
+      },
+      increase: ['value']
+    }
   },
   {
-    name: 'Связь',
-    icon: 'bi-droplet-half',
-    type: 'messages'
+    initial: {
+      name: 'Связь',
+      type: 'messages',
+      data: {
+        value: 0
+      }
+    }
   }
-]
-
-export const thresholds = [
-  10, 25000, 5000
 ]

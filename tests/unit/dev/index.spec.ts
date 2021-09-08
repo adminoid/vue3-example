@@ -4,7 +4,7 @@ describe('dev class MainPageData', () => {
   it('makeJumpsData method', () => {
     const threshold = 100
     const instance = new MainPageData(1)
-    const data = instance.makeJumpsData(10, 120, threshold)
+    const data = instance.makeJumpsData(100, 120)
 
     expect(typeof data.value).toBe('number')
     expect(data.value > 0).toBeTruthy()
@@ -30,7 +30,10 @@ describe('dev class MainPageData', () => {
 describe('debugging', () => {
   it('should create data', function () {
     const instance = new MainPageData(2)
-    // console.log(instance.washers[0].widgets)
-    console.log(instance.widgetsSummary)
+    console.log(instance.washers)
+    // const first = instance.washers[0].widgets
+    // const second = instance.washers[1].widgets
+    // const common = instance.widgetsSummary
+    // console.log(common)
   })
 })
