@@ -1,38 +1,70 @@
 import { widgetsTemplate } from './widgetsTemplate'
 import Helpers from './Helpers'
+import { cloneDeep } from 'lodash'
 
 export class MainPageData {
   _totalWashers: number
-  washers: any
+  h: any = Helpers
+  washers: any[]
   widgetsCommon: any[] = []
 
-  h: any = Helpers
+  data: any
 
   constructor (totalWashers: number) {
     if (totalWashers < 1) {
       throw new Error('least one washer needed')
     }
     this._totalWashers = totalWashers
-    // this.washers = this.makeWashers()
-
-    // this.data = {
-    //   user: {
-    //     name: 'Вячеслав'
-    //   },
-    //   summary: {
-    //     info: {
-    //       company: 'ООО "Мойка"',
-    //       owner: 'Иванов И.П.',
-    //       total: 12,
-    //       tariff: 'БОНУС ПЛЮС'
-    //     },
-    //     widgetsCommon
-    //   },
-    //   this.washers
-    // }
+    this.washers = this.makeWashers()
+    this.data = {
+      user: {
+        name: 'Вячеслав'
+      },
+      summary: {
+        info: {
+          company: 'ООО "Мойка"',
+          owner: 'Иванов И.П.',
+          total: 12,
+          tariff: 'БОНУС ПЛЮС'
+        },
+        widgets: this.widgetsCommon
+      },
+      washers: this.washers
+    }
   }
 
-  makeWidgets () {
+  makeWashers () {
+    const washers = []
+    let i = 0
+    while (i < this._totalWashers) {
+      const widgets = this.makeWidgets()
+      washers.push({
+        info: {
+          id: `SW01022020${i}`,
+          version: '4.6.9/4.7.3',
+          posts: {
+            dry: this.h.random(3, 6),
+            wet: this.h.random(1, 4)
+          },
+          address: 'Москва, ул. Радищева, д. 28',
+          contact: {
+            name: 'Сидоров А.А.',
+            phone: '+7(926)340-21-12'
+          },
+          geo: {
+            latitude: '123123.123123',
+            longitude: '123123.123123'
+          },
+          ip: '192.168.0.1'
+        },
+        widgets
+      })
+      i++
+    }
+    return washers
+  }
+
+  makeWidgets (): any {
     const isFirstIteration = this.widgetsCommon.length === 0
     // generate data for each widget
     const collect = widgetsTemplate.map((item, index) => {
@@ -46,7 +78,7 @@ export class MainPageData {
     })
     if (isFirstIteration) {
       // if widgetCommon is empty - just assign collect to
-      this.widgetsCommon = collect
+      this.widgetsCommon = cloneDeep(collect)
     }
     return collect
   }
@@ -57,34 +89,4 @@ export class MainPageData {
       current[key] += data[key]
     }
   }
-
-  // makeWashers () {
-  //   const washers = []
-  //   let i = 0
-  //   while (i < this._totalWashers) {
-  //     washers.push({
-  //       info: {
-  //         id: `SW01022020${i}`,
-  //         version: '4.6.9/4.7.3',
-  //         posts: {
-  //           dry: this.h.random(3, 6),
-  //           wet: this.h.random(1, 4)
-  //         },
-  //         address: 'Москва, ул. Радищева, д. 28',
-  //         contact: {
-  //           name: 'Сидоров А.А.',
-  //           phone: '+7(926)340-21-12'
-  //         },
-  //         geo: {
-  //           latitude: '123123.123123',
-  //           longitude: '123123.123123'
-  //         },
-  //         ip: '192.168.0.1'
-  //       },
-  //       widgets: this.makeWidgets()
-  //     })
-  //     i++
-  //   }
-  //   return washers
-  // }
 }

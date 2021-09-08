@@ -1,4 +1,4 @@
-import { MainPageData } from 't@/dev'
+import { MainPageData } from 't@/dev/MainPageData'
 
 // let mpUrl : string // main page data url
 // if (process.env.VUE_APP_LOCAL === 'true') {
