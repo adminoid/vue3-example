@@ -14,8 +14,7 @@ export const widgetsTemplate = [
         from: 0,
         to: 20,
         threshold: 10
-      },
-      increase: ['value']
+      }
     }
   },
   {
@@ -33,8 +32,7 @@ export const widgetsTemplate = [
         from: 0,
         to: 50000,
         threshold: 25000
-      },
-      increase: ['value']
+      }
     }
   },
   {
@@ -52,8 +50,7 @@ export const widgetsTemplate = [
         from: 0,
         to: 10000,
         threshold: 5000
-      },
-      increase: ['value']
+      }
     }
   },
   {
@@ -78,8 +75,7 @@ export const widgetsTemplate = [
           from: 1,
           to: 3
         }
-      },
-      increase: ['warning', 'danger']
+      }
     }
   },
   {
@@ -104,8 +100,7 @@ export const widgetsTemplate = [
           from: 1,
           to: 3
         }
-      },
-      increase: ['warning', 'danger']
+      }
     }
   },
   {
@@ -121,8 +116,7 @@ export const widgetsTemplate = [
       params: {
         from: 0,
         to: 1000
-      },
-      increase: ['value']
+      }
     }
   },
   {
@@ -138,8 +132,7 @@ export const widgetsTemplate = [
       params: {
         from: 0,
         to: 7
-      },
-      increase: ['value']
+      }
     }
   }
 ]
