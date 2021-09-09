@@ -6,7 +6,7 @@
 )
   h6.widget-item__common-header(v-if="isCommon")
     | {{ widget.name }}
-  .widget-item__body.mx-auto.p-2.d-block
+  .widget-item__body.mx-auto.p-2.d-flex.justify-content-center
     component(:is="widget.type" :data="widget.data")
 </template>
 

@@ -8,6 +8,8 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue'
 
+// todo: move styling to sass (1)
+
 type TThreshold = {
   value: number,
   changed: number
@@ -21,8 +23,6 @@ export default defineComponent({
   },
 
   setup (props) {
-    // todo: move styling to sass
-
     const isFall = computed(() => props.data && props.data?.changed < 0)
 
     return {
@@ -36,9 +36,9 @@ export default defineComponent({
 <style lang="sass">
 .widgets-threshold
   .widgets-threshold__value
-    font-size: 12px
+    //font-size: 12px
   .widgets-threshold__changed
     position: relative
-    font-size: 7px
+    font-size: 12px
     top: -12px
 </style>
