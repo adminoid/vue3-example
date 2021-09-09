@@ -1,5 +1,5 @@
 <template lang="pug">
-p V:{{ data }}
+.warnings-value {{ data.value }}
 </template>
 
 <script lang="ts">

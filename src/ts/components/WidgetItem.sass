@@ -1,7 +1,6 @@
 .widget-item
-  height: 100%
   width: 100%
-  min-height: 3 * $spacer
+  min-height: 4.375 * $spacer
   min-width: 5.3 * $spacer
   border-right: 1px solid $gray-400
   &:last-child
@@ -11,6 +10,6 @@
     .widget-item__common-header
       color: $red
   .widget-item__body
-    @extend .py-2
+    flex-grow: 1
     &:hover
       border-color: $primary

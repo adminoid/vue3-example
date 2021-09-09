@@ -1,12 +1,12 @@
 <template lang="pug">
-.widget-item.text-center.px-2.py-3(
+.widget-item.flex-column.text-center.px-2.py-3.d-flex.align-items-center.justify-content-center(
   @mouseover="onMouseover"
   @mouseleave="onMouseleave"
   :class="classes"
 )
   h6.widget-item__common-header(v-if="isCommon")
     | {{ widget.name }}
-  .widget-item__body.mx-auto.p-2.d-flex.justify-content-center
+  .widget-item__body.mx-auto.d-flex.justify-content-center.align-items-center.p-0
     component(:is="widget.type" :data="widget.data")
 </template>
 
